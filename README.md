@@ -1,4 +1,4 @@
- ## deleteme  `**deprecated**`  
+## delete me  `**deprecated**`  
 .  
 .  
 .  
