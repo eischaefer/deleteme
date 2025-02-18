@@ -48,4 +48,4 @@
 .  
 .  
 
-[go to deleteme](#deleteme  `*deprecated*`)
+[go to deleteme](#deleteme%20%20`*deprecated*`)
