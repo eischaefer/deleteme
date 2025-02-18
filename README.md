@@ -1,4 +1,4 @@
-# deleteme  `*deprecated*`
+# deleteme  `*deprecated*`  
 .  
 .  
 .  
@@ -48,4 +48,4 @@
 .  
 .  
 
-[go to deleteme](#deleteme)
+[go to deleteme](#deleteme  `*deprecated*`)
