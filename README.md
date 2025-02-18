@@ -1,1 +1,3 @@
 # deleteme
+
+[go to deleteme](#deleteme)
