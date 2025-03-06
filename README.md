@@ -48,4 +48,4 @@
 .  
 .  
 
-[go to deleteme](#deleteme--deprecated)
+[go to deleteme](#delete-me--deprecated)
