@@ -1,51 +1,370 @@
-##    delete me  `**deprecated**`  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-
-[go to deleteme](#delete-me--deprecated)
+PDS4 Magellan Mission Data Dictionary User's Guide  
+[Last edited](#edit-history): 2025-03-06  
+  
+# Introduction  
+1. Purpose of this User's Guide  
+    - This User's Guide provides an overview of the Magellan Mission Data Dictionary. The guide details how to include the dictionary in a PDS4 label, describes the organization of the dictionary's classes and attributes, provides definitions for these classes and attributes, and lists example excerpts from labels that use them.  
+2. Audience  
+    - This User's Guide should be useful to data providers intending to archive Magellan data with PDS as well as PDS Nodes who are working with these data providers.  
+  
+# Overview of the Magellan Mission Data Dictionary  
+The Magellan Mission Data Dictionary contains classes and attributes specific to the Magellan mission and its instruments.  
+Steward: Jennifer Ward, PDS Geosciences Node, geosci@wunder.wustl.edu  
+  
+# How to Include the Magellan Mission Data Dictionary in a PDS4 Label  
+The dictionary consists of a set of files with names in the form PDS4_MGN_xxxx_yyyy.ext, where  
+- xxxx = the PDS4 Information Model version, e.g. 1M00  
+- yyyy = the Magellan Mission Data Dictionary version, e.g. 1100  
+  
+and the file extensions are  
+  
+- .csv = A comma-separated value table of dictionary attributes  
+- .JSON = The dictionary contents in JSON format  
+- .sch = The dictionary "rules" as an XML Schematron file  
+- .txt = The report generated when the dictionary was built  
+- .xml = The PDS4 label that describes this set of files  
+- .xsd = The dictionary contents as an XML schema file  
+  
+Only the schema and Schematron files are needed for validating a PDS4 label.  
+  
+The latest version of this dictionary may be found on the PDS web site at https://pds.nasa.gov/datastandards/dictionaries/index-missions.shtml#mgn.  
+  
+The following is an example showing the use of this dictionary in a PDS4 label.  
+  
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1M00.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://pds.nasa.gov/pds4/mission/mgn/v1/PDS4_MGN_1M00_1100.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Observational xmlns="http://pds.nasa.gov/pds4/pds/v1"
+    xmlns:mgn="http://pds.nasa.gov/pds4/mission/mgn/v1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1  https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1M00.xsd
+                        http://pds.nasa.gov/pds4/mission/mgn/v1  https://pds.nasa.gov/pds4/mission/mgn/v1/PDS4_MGN_1M00_1100.xsd">
+```  
+  
+The following is a schematic example showing the location of every Magellan Mission Data Dictionary class and attribute in a PDS4 label. Note that not all classes and attributes may be mutually compatible, and the example does not include any recursion, even if recursion is allowed.  
+  
+```
+<Observation_Area>
+  ...
+  <Mission_Area>
+    <mgn:Magellan_Parameters>
+      <mgn:product_type/>
+      <mgn:product_version_id/>
+      <mgn:mapping_cycle/>
+      <mgn:orbit_number/>
+      <mgn:start_orbit_number/>
+      <mgn:stop_orbit_number/>
+      <mgn:mission_phase_name/>
+      <mgn:radar_look_direction/>
+      <mgn:spacecraft_clock_count_partition/>
+      <mgn:spacecraft_clock_start_count/>
+      <mgn:spacecraft_clock_stop_count/>
+      <mgn:band_name/>
+      <mgn:received_polarization_type/>
+      <mgn:dsn_station_number/>
+      <mgn:organization_id/>
+      <mgn:producer_institution_name/>
+      <mgn:original_pds_volume_id/>
+    </mgn:Magellan_Parameters>
+  </Mission_Area>
+  ...
+</Observation_Area>
+```  
+  
+The namespace for the Magellan Mission Data Dictionary is http://pds.nasa.gov/pds4/mission/mgn/v1, abbreviated "mgn:".  
+  
+# Organization of Classes and Attributes  
+  
+## Class Organization  
+Below is a structured list showing the organization of classes, ordered by appearance in the PDS4 label. Each class name is linked to its complete definition in the [Definitions](#definitions) section.  
+- [Magellan_Parameters](#magellan_parameters)  
+  
+## Attributes by Class  
+The attributes of each class are listed below. Both classes and attributes are ordered by appearance in the PDS4 label; however, each class is listed only once, even if that class can appear in more than one place in a PDS4 label (unless that class requires multiple entries in [Definitions](#definitions)). Each class and attribute name is linked to its complete definition in the [Definitions](#definitions) section.  
+  
+### [Magellan_Parameters](#magellan_parameters)  (attribute list)  
+- [product_type](#product_type)  
+- [product_version_id](#product_version_id)  
+- [mapping_cycle](#mapping_cycle)  
+- [orbit_number](#orbit_number)  
+- [start_orbit_number](#start_orbit_number)  
+- [stop_orbit_number](#stop_orbit_number)  
+- [mission_phase_name](#mission_phase_name)  
+- [radar_look_direction](#radar_look_direction)  
+- [spacecraft_clock_count_partition](#spacecraft_clock_count_partition)  
+- [spacecraft_clock_start_count](#spacecraft_clock_start_count)  
+- [spacecraft_clock_stop_count](#spacecraft_clock_stop_count)  
+- [band_name](#band_name)  
+- [received_polarization_type](#received_polarization_type)  
+- [dsn_station_number](#dsn_station_number)  
+- [organization_id](#organization_id)  
+- [producer_institution_name](#producer_institution_name)  
+- [original_pds_volume_id](#original_pds_volume_id)  
+  
+# Definitions  
+  
+## Classes (in alphabetical order)  
+  
+### Magellan_Parameters  
+The Magellan_Parameters class is the container for mission-specific metadata elements.  
+- [go to attribute list](#magellan_parameters--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+  
+## Attributes (in alphabetical order)  
+  
+### *band_name*  
+ The name of the radio band in which the signal was received.  
+- PDS4 data type: ASCII_Short_String_Collapsed  
+- Valid values:  
+  - S  
+    - Description: S band  
+  - X  
+    - Description: X band  
+- Minimum Length: 1  
+- Maximum Length: 255  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
+  
+### *dsn_station_number*  
+ The number of the DSN antenna used to collect the data.  
+- PDS4 data type: ASCII_NonNegative_Integer  
+- Valid values: N/A  
+- Minimum value: 0  
+- Maximum value: 99  
+- Regex Pattern: [0-9]+  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
+  
+### *mapping_cycle*  
+The mapping cycle in which the data were acquired. Should be 1 to 6.  
+- PDS4 data type: ASCII_NonNegative_Integer  
+- Valid values: N/A  
+- Minimum value: 1  
+- Maximum value: 6  
+- Regex Pattern: [0-9]+  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
+  
+### *mission_phase_name*  
+ The mission_phase_name attribute provides the mission-defined name of a time period within the mission.  
+- PDS4 data type: ASCII_Short_String_Collapsed  
+- Valid values:  
+  - Aerobraking  
+    - Description: The aerobraking phase extended from completion of the fourth mapping cycle through achievement of a near-circular orbit. Circularization was achieved more quickly than expected; the first gravity data collection in the circular orbit was not scheduled until 11 days later. Orbits included within the aerobraking phase were 7627 through 8392. Started 1993-05-26 and ended on 1993-08-05.  
+  - Mapping Cycle 1  
+    - Description: The first mapping cycle extended from completion of the orbit trim and checkout phase until completion of one cycle of radar mapping (approximately 243 days). Started 1990-09-15 and ended 1991-05-15.  
+  - Mapping Cycle 2  
+    - Description: The second mapping cycle extended from completion of the first mapping cycle through an additional cycle of mapping. Acquisition of 'right-looking' SAR data was emphasized. Radio occultation measurements were carried out on orbits 3212-3214. A period of battery reconditioning followed completion of Cycle 2. Started 1991-05-16 and ended 1992-01-17.  
+  - Mapping Cycle 3  
+    - Description: The third mapping cycle extended from completion of battery reconditioning through an additional cycle of mapping (approximately 243 days). Acquisition of 'stereo' SAR data was emphasized. The last orbit in the third cycle was orbit 5747. Started 1992-01-24 and ended 1992-09-14.  
+  - Mapping Cycle 4  
+    - Description: The fourth mapping cycle extended from completion of the third mapping cycle through an additional cycle of mapping. Acquisition of radio tracking data for gravity studies was emphasized. Radio occultation measurements were carried out on orbits 6369, 6370, 6471, and 6472. Because of poor observing geometry for gravity data collection at the beginning of the cycle, this cycle was extended 10 days beyond the nominal 243 days. Orbits included within the fourth cycle were 5748 through 7626. Periapsis was lowered on orbit 5752 to improve sensitivity to gravity features in Cycle 4. Started 1992-09-14 and ended 1993-05-25.  
+  - Mapping Cycle 5  
+    - Description: The fifth mapping cycle extended from completion of the aerobraking phase through an additional cycle of mapping (approximately 243 days). Acquisition of radio tracking data for gravity studies was emphasized. The first orbit in the fifth cycle was orbit 8393. Started on 1993-08-16 and ended on 1994-04-15.  
+  - Mapping Cycle 6  
+    - Description: The sixth mapping cycle extended from completion of the fifth mapping cycle through an additional cycle of mapping (approximately 243 days). Acquisition of radio tracking data for gravity studies was emphasized. The first orbit in the sixth cycle was orbit 12249. Started on 1994-04-16.  
+  - Primary Mission  
+    - Description: The prime science phase of the mission. This value occurs in the original PDS labels of the MIDR products.  
+- Minimum Length: 1  
+- Maximum Length: 255  
+- Minimum occurrences: 0  
+- Maximum occurrences: unbounded  
+- Nillable: No  
+  
+### *orbit_number*  
+The orbit_number attribute identifies the number of the orbital revolution around a target body.  
+- PDS4 data type: ASCII_NonNegative_Integer  
+- Valid values: N/A  
+- Minimum value: 1  
+- Maximum value: 20000  
+- Regex Pattern: [0-9]+  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
+  
+### *organization_id*  
+ The organization that produced the data.  
+- PDS4 data type: ASCII_Short_String_Collapsed  
+- Valid values:  
+  - SUE  
+    - Description: Stanford University Element of the Venus Express Radio Science Team  
+- Minimum Length: 1  
+- Maximum Length: 255  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
+  
+### *original_pds_volume_id*  
+The original PDS volume_id of where the Magellan data are located.  
+- PDS4 data type: ASCII_Short_String_Collapsed  
+- Valid values: N/A  
+- Minimum Length: 1  
+- Maximum Length: 255  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
+  
+### *producer_institution_name*  
+The producer_institution_name attribute identifies a university, research center, NASA center, or other institution associated with the production of a data product.  
+- PDS4 data type: ASCII_Short_String_Collapsed  
+- Valid values: N/A  
+- Minimum Length: 1  
+- Maximum Length: 255  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
+  
+### *product_type*  
+The product_type attribute indicates the type of data for an individual data product. The values are based on the values used by the Magellan project for their delivery to PDS.  
+- PDS4 data type: ASCII_Short_String_Collapsed  
+- Valid values:  
+  - ARCDR  
+    - Description: Altimetry and Radiometry Composite Data Record  
+  - BSR  
+    - Description: Bistatic Radar  
+  - C-BIDR  
+    - Description: Compressed Basic Image Data Record  
+  - C1-MIDR  
+    - Description: Compressed one time Mosaicked Image Data Record  
+  - C2-MIDR  
+    - Description: Compressed two times Mosaicked Image Data Record  
+  - C3-MIDR  
+    - Description: Compressed three times Mosaicked Image Data Record  
+  - F-BIDR  
+    - Description: Full resolution Basic Image Data Record  
+  - F-MIDR  
+    - Description: Full resolution Mosaicked Image Data Record  
+  - GEDR  
+    - Description: Global emissivity map data record  
+  - GREDR  
+    - Description: Global reflectivity map data record  
+  - GSDR  
+    - Description: Global slope map data record  
+  - GTDR  
+    - Description: Global topography map data record  
+  - GVDR  
+    - Description: Global Vector Data Record  
+  - GXDR  
+    - Description: Global map image Data Record with maps for topography, emissivity, slope and reflectivity  
+  - LOSAPDR  
+    - Description: Line Of Sight Acceleration Profile Data Record  
+  - P-MIDR  
+    - Description: Polar projected Mosaicked Image Data Record  
+  - SCVDR  
+    - Description: Surface Characteristics Vector Data Record  
+  - SHXDR  
+    - Description: Spherical Harmonic Data Record for topography and gravity models  
+- Minimum Length: 1  
+- Maximum Length: 255  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
+  
+### *product_version_id*  
+The product_version_id attribute identifies the version of an individual data product.  
+- PDS4 data type: ASCII_Short_String_Collapsed  
+- Valid values: N/A  
+- Minimum Length: 1  
+- Maximum Length: 255  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
+  
+### *radar_look_direction*  
+ The radar_look_direction attribute provides the direction the radar antenna was pointing relative to the spacecraft ground track along a given orbit. Most cases were Left or Right. Stereo indicates left looking with an incidence angle for stereo measurements. Maxwell is a special case for observing the Maxwell feature.  
+- PDS4 data type: ASCII_Short_String_Collapsed  
+- Valid values:  
+  - Left  
+    - Description: Left looking observation  
+  - Maxwell  
+    - Description: Maxwell observation  
+  - Mixed  
+    - Description: Mixed looking observation (both left and right)  
+  - Right  
+    - Description: Right looking observation  
+  - Stereo  
+    - Description: Stereo observation  
+- Minimum Length: 1  
+- Maximum Length: 255  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
+  
+### *received_polarization_type*  
+ The radio polarization of the receiving antenna and feed.  
+- PDS4 data type: ASCII_Short_String_Collapsed  
+- Valid values:  
+  - left circular  
+    - Description: Left circular polarization  
+  - right circular  
+    - Description: Right circular polarization  
+- Minimum Length: 1  
+- Maximum Length: 255  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
+  
+### *spacecraft_clock_count_partition*  
+The spacecraft_clock_count_partition attribute indicates the clock partition active for the spacecraft_clock_start_count and spacecraft_clock_stop_count attributes.  
+- PDS4 data type: ASCII_NonNegative_Integer  
+- Valid values: N/A  
+- Minimum value: 0  
+- Maximum value: 18446744073709551615  
+- Regex Pattern: [0-9]+  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
+  
+### *spacecraft_clock_start_count*  
+The spacecraft_clock_start_count attribute provides the value of the spacecraft clock at the beginning of a time period of interest.  
+- PDS4 data type: ASCII_Short_String_Collapsed  
+- Valid values: N/A  
+- Minimum Length: 1  
+- Maximum Length: 255  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: Yes  
+  
+### *spacecraft_clock_stop_count*  
+The spacecraft_clock_stop_count attribute provides the value of the spacecraft clock at the end of a time period of interest.  
+- PDS4 data type: ASCII_Short_String_Collapsed  
+- Valid values: N/A  
+- Minimum Length: 1  
+- Maximum Length: 255  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: Yes  
+  
+### *start_orbit_number*  
+Provides the the lowest revolution orbit number that contributed data to a given data product.  
+- PDS4 data type: ASCII_NonNegative_Integer  
+- Valid values: N/A  
+- Minimum value: 1  
+- Maximum value: 20000  
+- Regex Pattern: [0-9]+  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
+  
+### *stop_orbit_number*  
+Provides the the highest revolution orbit number that contributed data to a given data product.  
+- PDS4 data type: ASCII_NonNegative_Integer  
+- Valid values: N/A  
+- Minimum value: 1  
+- Maximum value: 20000  
+- Regex Pattern: [0-9]+  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
+  
+# Examples  
+  
+  
+# Edit History  
+*See also: [MGN change log](https://github.com/pds-data-dictionaries/ldd-mgn/blob/main/CHANGELOG.md).*  
+2025-03-06  Jennifer Ward
