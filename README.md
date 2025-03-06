@@ -116,17 +116,17 @@ The Magellan_Parameters class is the container for mission-specific metadata ele
   
 ### *band_name*  
  The name of the radio band in which the signal was received.  
-- PDS4 data type: ASCII_Short_String_Collapsed  
-- Valid values:  
+- *PDS4 data type:* ASCII_Short_String_Collapsed  
+- *Valid values*:  
   - S  
-    - Description: S band  
+    - *Description:* S band  
   - X  
-    - Description: X band  
-- Minimum Length: 1  
-- Maximum Length: 255  
-- Minimum occurrences: 0  
-- Maximum occurrences: 1  
-- Nillable: No  
+    - *Description:* X band  
+- *Minimum Length:* 1  
+- *Maximum Length:* 255  
+- *Minimum occurrences:* 0  
+- *Maximum occurrences:* 1  
+- *Nillable:* No  
   
 ### *dsn_station_number*  
  The number of the DSN antenna used to collect the data.  
