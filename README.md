@@ -2358,30 +2358,57 @@ The attributes of each class are listed below. Both classes and attributes are o
   
 ### Articulation_Device_Parameters  
 The Articulation_Device_Parameters class contains those attributes and sub-classes that describe an articulation device. An articulation device is anything that can move independently of the spacecraft to which it is attached. Examples include mast heads, wheel bogies, arms, filter wheel, scan platforms.  
+- [go to attribute list](#articulation_device_parameters--attribute-list)  
+- Minimum occurrences: 0  
+- Maximum occurrences: unbounded  
   
 ### CAHVORE_Model  
 The CAHVORE model is built upon CAHVOR (see CAHVOR_Model), adding support for fisheye lenses. It adds one more 3-vector and two scalars to CAHVOR. E (Entrance_Terms) contains the coefficients of a polynomial function used to model movement of the entrance pupil. The two scalars, cahvore_model_type and cahvore_model_parameter, together specify the type of lens being modeled.  
+- [go to attribute list](#cahvore_model--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
   
 ### CAHVOR_Model  
 The CAHVOR model is built upon CAHV (see CAHV_Model), adding radial (barrel or pincushion) distortion to the linear model. It adds two more 3-vectors to CAHV. O (Vector_Optical) is a unit vector representing the axis of symmetry for the radial distortion. R (Radial_Terms) contains the coefficients of a polynomial function that describes the radial distortion.  
+- [go to attribute list](#cahvor_model--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
   
 ### CAHV_Model  
 The CAHV model is a linear, perspective-projection camera model (equivalent to a pinhole camera). It consists of four 3-vectors (C,A,H,V) that describe the internal and external camera model parameters needed to translate between 2D image coordinates and 3D world coordinates. C (Vector_Center) is the 3D position of the pinhole (center of the entrance pupil). A (Vector_Axis) is a unit vector normal to the image plane pointing outward. H (Vector_Horizontal) is a composite vector encoding three quantities: H' (a vector in the image plane perpendicular to the vertical columns), Hs (the distance between the lens center and image plane, measured in horizontal pixels), and Hc (the horizontal image coordinate directly under C when moving parallel to A). V (Vector_Vertical) similarly composites the analogous V', Vs, and Vc in the vertical direction.  
+- [go to attribute list](#cahv_model--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
   
 ### Camera_Model_Parameters  
 A camera model describes the mathematical relationship between the coordinates of a point in 3-dimensional space and its projection onto a 2-dimensional image plane. There are numerous types of camera models.  
+- [go to attribute list](#camera_model_parameters--attribute-list)  
+- Minimum occurrences: 0  
+- Maximum occurrences: unbounded  
   
 ### Central_Body_Identification  
 The Central_Body_Identification class uniquely identifies the body that is the central body associated with an observation (e.g., Saturn for Saturn system observations).  
+- [go to attribute list](#central_body_identification--attribute-list)  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
   
 ### Commanded_Geometry  
  Specifies how the device was commanded in order to achieve the state represented in the enclosing Articulation_Device_Parameters. Commands are often at a higher level, e.g. point at this location or move to this XYZ, which is translated by flight software to the actual pose of the device. Certain forms of command are measured in a coordinate frame; this is specified by the Coordinate_Space_Reference in this class (if not present, the Coordinate_Space_Reference in the Articulation_Device_Parameters parent should be assumed).  
+- [go to attribute list](#commanded_geometry--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Commanded_Position  
  Specifies a Cartesian position used in commanding the device.  
+- [go to attribute list](#commanded_position--attribute-list)  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
   
 ### Coordinate_Space_Definition  
 The Coordinate_Space classes are typically used for lander/rover geometry while the Coordinate_System construction is used for orbiter/flyby geometry.  
+- [go to attribute list](#coordinate_space_definition--attribute-list)  
+- Minimum occurrences: 0  
+- Maximum occurrences: unbounded  
   
 ### Coordinate_Space_Identification  
 The Coordinate_Space_Identification class uniquely identifies a coordinate space (i.e., reference frame + position) with respect to which the values of the attributes in the containing class are defined.  
@@ -2391,9 +2418,15 @@ The Coordinate_Space_Identification class uniquely identifies a coordinate space
   
 ### Coordinate_Space_Index  
 Identifies a coordinate space using an index value given in an identified list.  
+- [go to attribute list](#coordinate_space_index--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Coordinate_Space_Indexed  
 The Coordinate_Space_Indexed class contains the attributes and classes identifying the indexed coordinate space.  
+- [go to attribute list](#coordinate_space_indexed--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Coordinate_Space_Present  `in Articulation_Device_Parameters`  
 The Coordinate_Space_Present class includes the attributes that identifies the coordinate space presently being defined.  
@@ -2409,6 +2442,9 @@ The Coordinate_Space_Present class includes the attributes that identifies the c
   
 ### Coordinate_Space_Quality  
 Parameters that indicate the quality of the coordinate space knowledge.  
+- [go to attribute list](#coordinate_space_quality--attribute-list)  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
   
 ### Coordinate_Space_Reference  `in Articulation_Device_Parameters`  
 The Coordinate_Space_Reference class includes the attributes that identify the coordinate space being used to express coordinates in the class in which it appears.  
@@ -2442,15 +2478,27 @@ The Coordinate_Space_Reference class includes the attributes that identify the c
   
 ### Coordinate_Space_SPICE  
 Identifies a coordinate space using SPICE names for the frame and origin.  
+- [go to attribute list](#coordinate_space_spice--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Coordinate_System_Identification  
 The Coordinate_System_Identification class fully describes a coordinate system. This class is typically used for orbiter/flyby geometry while the Coordinate_Space construction is used for lander/rover geometry. Coordinate_System_Identification provides the reference frame, coordinate system type (cartesian, planetocentric, etc.), origin, and the instantiation time of the system when appropriate. The instantiation time (coordinate_system_time_utc) is used when a rotating frame has been 'frozen' at a particular epoch. Instantiation time is not needed for inertial or rotating frames.  
+- [go to attribute list](#coordinate_system_identification--attribute-list)  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
   
 ### Coordinate_System_Origin_Identification  
 The Coordinate_System_Origin_Identification class uniquely identifies the "body" that is the origin of a coordinate system. Typically body centered coordinate systems place the origin at the center of mass of the body. In addition to physical bodies, the origin may be defined at a point in space such as a system barycenter. Note that the origin of coordinate system does not necessarily correspond to either end point of a vector.  
+- [go to attribute list](#coordinate_system_origin_identification--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
   
 ### Derived_Geometry  
 The Derived_Geometry class is a container for surface based observations (lander or rover). It is used to provide some geometric quantities relative to a specific Reference Coordinate Space.  
+- [go to attribute list](#derived_geometry--attribute-list)  
+- Minimum occurrences: 0  
+- Maximum occurrences: unbounded  
   
 ### Device_Angle  `in Articulation_Device_Parameters`  
 The Device_Angle class is a container for the set of angles between the various components or devices of the spacecraft.  
@@ -2466,57 +2514,111 @@ The Device_Angle class is a container for the set of angles between the various 
   
 ### Device_Angle_Index  
 The Device_Angle class is a container for the set of angles the spacecraft device specified in the parent Articulation_Device_Parameters class.  
+- [go to attribute list](#device_angle_index--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Device_Component_State  
 The Device_Component_State class is a container for the states of the various components of the articulation device.  
+- [go to attribute list](#device_component_state--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Device_Component_State_Index  
 The Device_Component_State_Index class is a container for one state of a component of the articulation device.  
+- [go to attribute list](#device_component_state_index--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Device_Motor_Counts  
 The Device_Motor_Counts class is a container for the classes that describe the motor step count information for device components.  
+- [go to attribute list](#device_motor_counts--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Device_Motor_Counts_Index  
 The Device_Motor_Counts_Index class is a container for the attributes that describe the motor step count information for a single motor on a device.  
+- [go to attribute list](#device_motor_counts_index--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Device_Pose  
 Defines the pose of this articulation device. The name indicates what exactly is being measured and how, and disambiguates if there is more than one Device_Pose. For example, Mars 2020 has "arm_attitude_reference", which indicates the pose of the rover that was used to calculate gravity droop of the arm. The interpretation of the pose is mission-specific; see the mission documentation.  
+- [go to attribute list](#device_pose--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Device_Temperature  
 The Device_Temperature class is a container for all available device temperatures of an articulated device and/or part(s) of a device.  
+- [go to attribute list](#device_temperature--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Device_Temperature_Index  
 The Device_Temperature_Index class specifies the attributes describing the temperature of one device or some part of a device.  
+- [go to attribute list](#device_temperature_index--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Display_Direction  
 Note: For all image objects, the expectation is that the image orientation will be given using the disp:Display_Direction class. In the unusual case where an image object does not have an associated disp:Display_Direction class, then, and only then, Display_Direction class defined here should be present. The Display_Direction class specifies which two of the dimensions of an Array object should be displayed and how they should be displayed in the vertical (line) and horizontal (sample) dimensions of a display device. This class is essentially the same as the class of the same name in the Display Dictionary, and is redefined here for convenience.  
+- [go to attribute list](#display_direction--attribute-list)  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
   
 ### Distance_Generic  
 The distance between the two objects, both of which must be specified.  
+- [go to attribute list](#distance_generic--attribute-list)  
+- Minimum occurrences: 0  
+- Maximum occurrences: unbounded  
   
 ### Distances  
 The Distances class is a container of distance classes.  
+- [go to attribute list](#distances--attribute-list)  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
   
 ### Distances_Min_Max  
 The Distances_Min_Max class is a container class for named distances given as minimum-maximum pairs. For distance, if either the minimum or maximum parameter is given, both must be provided.  
+- [go to attribute list](#distances_min_max--attribute-list)  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
   
 ### Distances_Specific  
 The Distances_Specific class is a container class for specific distances defined in this dictionary.  
+- [go to attribute list](#distances_specific--attribute-list)  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
   
 ### Distances_Start_Stop  
 The Distances_Start_Stop class is a container class for named distances given as pairs corresponding to the beginning and end of the observation. For a distance, if either the start or stop parameter is given, both must be provided. If any values from this class are included in the label, the parameters geometry_start_time_utc and geometry_stop_time_utc must be given in the enclosing Geometry_Orbiter class.  
+- [go to attribute list](#distances_start_stop--attribute-list)  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
   
 ### Entrance_Terms  
 The Entrance_Terms contains the coefficients of a polynomial function used to model movement of the entrance pupil.  
+- [go to attribute list](#entrance_terms--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
   
 ### Expanded_Geometry  
 The Expanded_Geometry class provides a mechanism to reference additional geometric metadata contained in a separate object or product (e.g., a table of metadata).  
+- [go to attribute list](#expanded_geometry--attribute-list)  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
   
 ### Footprint_Vertices  
 The Footprint_Vertices class provides a set of latitude and longitude pairs which are the vertices of a polygon representing the projected footprint of the field of view on the target surface (or on a map). Note this is intended for products such as maps, or where the target fills the field of view. The vertices should be listed either in clockwise or counterclockwise order.  
+- [go to attribute list](#footprint_vertices--attribute-list)  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
   
 ### Generic_Vectors  
 The Generic_Vectors class is a container class for all of the build your own vector templates.  
+- [go to attribute list](#generic_vectors--attribute-list)  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
   
 ### Geometry  
 The Geometry class is a container for all geometric information in the label. The Image_Display_Geometry class should have one instance if the primary data object is an Array object for which two of the dimensions are suitable for display in the vertical (line) and horizontal (sample) dimensions of a display device. Multiple instances of the Image_Display_Geometry class are only appropriate if the data product contains multiple Array objects and the orientations of the various objects are not the same.  
@@ -2526,9 +2628,15 @@ The Geometry class is a container for all geometric information in the label. Th
   
 ### Geometry_Lander  
 The Geometry_Lander class is a container for all geometric information in the label relating to a landed spacecraft, including rovers.  
+- [go to attribute list](#geometry_lander--attribute-list)  
+- Minimum occurrences: 0  
+- Maximum occurrences: unbounded  
   
 ### Geometry_Orbiter  
 The Geometry_Orbiter class is a container for geometric information (positions, velocities, orientations, etc.) relevant to orbiter or flyby spacecraft observations. If any of the contained classes or attributes have central body, and or target in the class or attribute name (e.g., spacecraft_to_central_body_distance, Vector_Planetocentric_Position_Spacecraft_To_Target), then the central body and or target must be identified in this class. If more than one geometry_reference_time_utc, target or central body need to be identified to fully describe the data, use multiple instances of the Geometry_Orbiter class. Do not use Coordinate_System at this level if more than one coordinate system is used in the contained classes. If more than one coordinate system is used, specify Coordinate_System in each of the subordinate classes where it is appropriate.  
+- [go to attribute list](#geometry_orbiter--attribute-list)  
+- Minimum occurrences: 0  
+- Maximum occurrences: unbounded  
   
 ### Geometry_Target_Identification  `in Distance_Generic`  
 The object to which the associated set of geometric parameters are given. Within the Geometry dictionary context, a "Target" is the body on the "to" end of a vector, or other translation through space.  
@@ -2580,18 +2688,33 @@ The object to which the associated set of geometric parameters are given. Within
   
 ### Illumination_Geometry  
 The Illumination_Geometry class is a container for illumination geometry classes.  
+- [go to attribute list](#illumination_geometry--attribute-list)  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
   
 ### Illumination_Min_Max  
 The Illumination_Min_Max class contains attributes providing illumination parameters as minimum/maximum pairs. For any given illumination parameter if one of minimum or maximum is given, both must be given. If a target is specified using the Geometry_Target_Identification class in the Orbiter_Identification class under the same parent Geometry_Orbiter class, the min-max pairs for each illumination parameter provide the range of that parameter in the observation on that target. Otherwise the pair provides the range for the entire field of view.  
+- [go to attribute list](#illumination_min_max--attribute-list)  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
   
 ### Illumination_Specific  
 The Illumination_Specific class contains attributes providing illumination parameters at a single location in the field of view. That location is specified by using one, and only one of reference_location, reference_pixel_location, or Reference_Pixel, If reference_location is used, and indicates a point on a target, the target must be the one specified using Geometry_Target_Identification in the parent Geometry_Orbiter class. The provided value for each illumination attribute must correspond to the time given by geometry_reference_time_utc.  
+- [go to attribute list](#illumination_specific--attribute-list)  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
   
 ### Illumination_Start_Stop  
 The Illumination_Start_Stop class contains attributes providing illumination parameters as pairs corresponding to the beginning and end of the observation. If either the start or stop parameter is given, both must be provided. If any values from this class are included in the label, the parameters geometry_start_time_utc and geometry_stop_time_utc must be given in the enclosing Geometry_Orbiter class. If a target is specified using the Geometry_Target_Identification class in the Orbiter_Identification class under the parent Geometry_Orbiter class, the start-stop pairs for each illumination parameter provide the range of that parameter in the observation on that target. Otherwise the pair provides the range for the entire field of view.  
+- [go to attribute list](#illumination_start_stop--attribute-list)  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
   
 ### Image_Display_Geometry  
 Image_Display_Geometry class provides an unambiguous description of the orientation of the image contents. This class assumes an image is displayed as described by a disp:Display_Direction class elsewhere in the label. In the unusual case where an image object does not have an associated disp:Display_Direction class, then, and only then, the optionalgeom:Display_Direction class in this class should be present. Coupled with the information in the associated Display_Direction class, any one of the Object_Orientation_* classes should allow unambiguous orientation of the contents of the image. The Local_Internal_Reference class is used to identify the object to which this instance of the Image_Display_Geometry class applies, and must be used if there is more than one instance of Image_Display_Geometry in the label. The appropriate value for local_reference_type is image_display_to_object. The Object_Orientation_North_East class is typically used for instruments for which the entire field of view is a portion of the target surface (e.g., instruments on Mars orbital spacecraft); otherwise use Object_Orientation_RA_Dec (e.g., flyby missions, missions with orbit radii much larger than the target radius such as Voyager or Cassini). At least one of these must be used. The two *_Identification classes used here are Central_Body (e.g., Saturn if you are using Planetocentric or planetographic coordinates in the Saturn system) and Target when the described object in the FoV is not the Central_Body. For example giving the orientation of the pole of Enceladus in Saturn Planetocentric coordinates, Central_Body = Saturn, Target = Enceladus. Bottom line: put in enough information so someone else can figure out the orientation of the field of view. We also offer an option to provide the pointing information as a quaternion.  
+- [go to attribute list](#image_display_geometry--attribute-list)  
+- Minimum occurrences: 0  
+- Maximum occurrences: unbounded  
   
 ### Internal_Reference  `in Camera_Model_Parameters`  
 The Internal_Reference class is used to cross-reference other products in PDS4-compliant registries of PDS and its recognized international partners.  
@@ -2655,6 +2778,9 @@ The Internal_Reference class is used to cross-reference other products in PDS4-c
   
 ### Interpolation  
 The Interpolation class defines how the camera model was interpolated from the calibration models. Interpolation is used to create models in a variable space (e.g., focus, zoom) between points at which calibration was performed. If more than one dimension of variables were interpolated, multiple Interpolation objects can exist, with interpolation_sequence defining the order.  
+- [go to attribute list](#interpolation--attribute-list)  
+- Minimum occurrences: 0  
+- Maximum occurrences: unbounded  
   
 ### List_Index_Angle  
 Used when the list values are angles.  
@@ -2724,30 +2850,57 @@ The Local Internal_Reference class is used to cross-reference other Description 
   
 ### Motion_Counter  
 The Motion_Counter class provides a set of integers that describe a (potentially) unique location (position / orientation) for a rover or other movable object. Each time an event occurs that results in a movement, a new motion counter value is created. This includes intentional motion due to drive commands, as well as potential motion due to other articulating devices, such as arms or antennae. This motion counter (or part of it) is used as a reference to define instances of coordinate systems that can move such as SITE or ROVER frames. The motion counter is defined in a mission-specific manner. Although the original intent was to have incrementing indices (e.g., MER), the motion counter could also contain any integer values that conform to the above definition, such as time or spacecraft clock values.  
+- [go to attribute list](#motion_counter--attribute-list)  
+- Minimum occurrences: 0  
+- Maximum occurrences: unbounded  
   
 ### Motion_Counter_Index  
 The Motion_Counter_Index class identifies and populates one element of a Motion_Counter list. The class should be repeated for each element of the list.  
+- [go to attribute list](#motion_counter_index--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Object_Orientation_Clock_Angles  
 The Object_Orientation_Clock_Angles class provides several clock angles which can be used to describe the orientation of the field of view with respect to various external references such as Celestial or Equatorial North.  
+- [go to attribute list](#object_orientation_clock_angles--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Object_Orientation_North_East  
 The Object_Orientation_North_East class provides the parameters needed to describe the orientation of an external coordinate system relative to the image coordinate frame as described by the Display_Direction class.  
+- [go to attribute list](#object_orientation_north_east--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Object_Orientation_RA_Dec  
 The Object_Orientation_RA_Dec class provides the parameters needed to describe the orientation of the celestial reference frame relative to the image coordinate frame as described by the Display_Direction class.  
+- [go to attribute list](#object_orientation_ra_dec--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Observer_Identification  
 Within the Geometry dictionary context, an "Observer" is the body on the "from" end of a vector, or other translation through space.  
+- [go to attribute list](#observer_identification--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
   
 ### Orbiter_Identification  
 The Orbiter_Identification class is a container of classes used to establish global identifications for the Geometry_Orbiter class.  
+- [go to attribute list](#orbiter_identification--attribute-list)  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
   
 ### PSPH_Model  
  A new camera model designed to perform better fisheye-image rectification prior to 1D stereo correlation. The primary innovation is the use of a unit projection sphere rather than an image plane. For epipolar alignment between stereo cameras the rows (for a left/right pair) or the columns (for an up/down pair) of both must lie along the same plane. Thus we use a pair of planes to define the rows and columns. Each plane will rotate around a static dedicated axis passing through the sphere center. Pixels will be located where the planes intersect with each other and the unit sphere.  
+- [go to attribute list](#psph_model--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
   
 ### Pixel_Dimensions  
 The Pixel_Dimensions class contains information regarding pixel size.  
+- [go to attribute list](#pixel_dimensions--attribute-list)  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
   
 ### Pixel_Intercept  `in Footprint_Vertices`  
 The Pixel_Intercept class provides the latitude and longitude on the surface of the target for the projection of the specified pixel. The pixel is specified using either reference_pixel_location or Reference_Pixel. Although each of these is optional, one must be used.  
@@ -2763,6 +2916,9 @@ The Pixel_Intercept class provides the latitude and longitude on the surface of 
   
 ### Pixel_Size_Projected  
 The Pixel_Size_Projected class gives the size, in units of length (e.g., kilometers) of the projection of a pixel onto the surface of the target which is specified in the parent Geometry_Orbiter class. The reference_location attribute is used to identify the specific point on the target.  
+- [go to attribute list](#pixel_size_projected--attribute-list)  
+- Minimum occurrences: 0  
+- Maximum occurrences: unbounded  
   
 ### Polynomial_Coefficients_1  
 The Polynomial_Coefficients_1 class provides a one polynomial coefficient.  
@@ -2784,6 +2940,9 @@ The Polynomial_Coefficients_3 class provides three polynomial coefficients.
   
 ### Quaternion_Model_Transform  
 The Quaternion_Model_Transform class specifies, along with Vector_Model_Transform class, the transform used for the camera model in an image. Camera models created by the calibration process have associated with them a pose, comprised of the position (offset) and orientation (quaternion) of the camera at the time it was calibrated. The model is transformed ("pointed") for a specific image by computing, generally using articulation device kinematics, a final pose for the image. The camera model is then translated and rotated from the calibration to final pose. This class specifies the quaternion portion of the final pose.  
+- [go to attribute list](#quaternion_model_transform--attribute-list)  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
   
 ### Quaternion_Plus_Direction  `in Coordinate_Space_Definition`  
 Quaternion_Plus_Direction provides the four elements of a quaternion and its direction of rotation. The two end point frames must be identified in the enclosing class. See the definition of Quaternion_Base for more details on the quaternion classes in this dictionary.  
@@ -2811,45 +2970,87 @@ Quaternion_Plus_To_From provides the four elements of a quaternion, plus attribu
   
 ### Radial_Terms  
 Radial_Terms contains the coefficients of a polynomial function used to describe the radial distortion of the camera.  
+- [go to attribute list](#radial_terms--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
   
 ### Reference_Frame_Identification  
 The Reference_Frame_Identification class is a base class for identifying reference frames. These are frames in the NAIF sense, i.e., three orthogonal axes with a specified orientation, but without a fixed origin.  
+- [go to attribute list](#reference_frame_identification--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
   
 ### Reference_Pixel  
 The Reference_Pixel class provides the pixel coordinates, line and sample, to which values in the containing class apply. Integer values indicate the center of the pixel. Sub-pixel values are permitted. For pixel_sample, the leading edge (left edge for sample increasing to the right) has a value 0.5 less than the integer value at the center, and the value for the trailing edge is the center integer value + 0.5. For pixel_line, the leading and trailing edges (top and bottom respectively for line increasing downward) again are -0.5 and +0.5 with respect to the center integer value.  
+- [go to attribute list](#reference_pixel--attribute-list)  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
   
 ### Rotate_From  
 A quaternion rotates one reference frame to another reference frame. The Rotate_From class identifies the initial frame.  
+- [go to attribute list](#rotate_from--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
   
 ### Rotate_To  
 A quaternion rotates a one reference frame to another reference frame. The Rotate_To class identifies the destination frame.  
+- [go to attribute list](#rotate_to--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
   
 ### SPICE_Kernel_Files  
 The SPICE_Kernel_Files class provides references to the SPICE files used when calculating geometric values.  
+- [go to attribute list](#spice_kernel_files--attribute-list)  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
   
 ### SPICE_Kernel_Identification  
 The SPICE_Kernel_Identification class optionally includes the SPICE kernel type and provides two alternatives for identifying the product: LIDVID using Internal_Reference, and the file name of the kernel file. Although optional, LIDVID should be given if one is available. The optional kernel_provenance attribute indicates whether the kernel is a predict or reconstructed kernel, or some combination of the two, or if it is a kernel type for which such distinctions do not apply.  
+- [go to attribute list](#spice_kernel_identification--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Surface_Geometry  
 The Surface_Geometry class is a container for surface geometry classes.  
+- [go to attribute list](#surface_geometry--attribute-list)  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
   
 ### Surface_Geometry_Min_Max  
 The Surface_Geometry_Min_Max class contains attributes providing surface geometry parameters as minimum/maximum pairs. For any given parameter if one of minimum or maximum is given, both must be given. The min-max pairs for each parameter provide the range of that parameter in the observation for the target specified using the Geometry_Target_Identification class in the Orbiter_Identification class under the parent Geometry_Orbiter class.  
+- [go to attribute list](#surface_geometry_min_max--attribute-list)  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
   
 ### Surface_Geometry_Specific  
 The Surface_Geometry_Specific class contains classes and attributes for various points on the surface of the target designated in the enclosing Geometry_Orbiter.  
+- [go to attribute list](#surface_geometry_specific--attribute-list)  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
   
 ### Surface_Geometry_Start_Stop  
 The Surface_Geometry_Start_Stop class contains attributes providing surface geometry parameters given as pairs corresponding to the beginning and end of the observation. For a parameter, if either the start or stop parameter is given, both must be provided. If any values from this class are included in the label, the parameters geometry_start_time_utc and geometry_stop_time_utc must be given in the enclosing Geometry_Orbiter class.  
+- [go to attribute list](#surface_geometry_start_stop--attribute-list)  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
   
 ### Vector_Axis  
 The Vector_Axis is a unit vector that describes the axis of the camera, defined as the normal to the image plane.  
+- [go to attribute list](#vector_axis--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
   
 ### Vector_Axis_X  
  Unit column-plane rotation axis, passing through the sphere center, typically vertical and pointing down so that positive rotations (by the right-hand rule) will rotate the forward half of the plane in the (rightward) direction of increasing column (as projected on the forward hemisphere).  
+- [go to attribute list](#vector_axis_x--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
   
 ### Vector_Axis_Y  
  Unit row-plane rotation axis, passing through the sphere center, typically horizontal and pointing left so that positive rotations (by the right-hand rule) will rotate the forward half of the plane in the (downward) direction of increasing row (as projected on the forward hemisphere).  
+- [go to attribute list](#vector_axis_y--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
   
 ### Vector_Cartesian_Acceleration_Base  
 The Vector_Cartesian_Acceleration_Base is a three dimensional, rectangular coordinates vector. Uses units of linear acceleration. The included attributes are not sufficient to identify the endpoints of the vector.  
@@ -2865,6 +3066,9 @@ The Vector_Cartesian_Acceleration_Extended_Base is a three dimensional, rectangu
   
 ### Vector_Cartesian_Acceleration_Generic  
 Vector_Cartesian_Acceleration_Generic is a three dimensional, rectangular coordinates vector. Uses units of linear acceleration. Includes attributes to identify the endpoints of the vector. While the class Coordinate_System_Identification is optional, it must be used here if the coordinate system has not been specified in the enclosing class.  
+- [go to attribute list](#vector_cartesian_acceleration_generic--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Vector_Cartesian_No_Units  
 This is a generic vector in Cartesian space. The "x", "y", and "z" component have no units.  
@@ -2886,18 +3090,33 @@ The Vector_Cartesian_Position_Base is a three dimensional, rectangular coordinat
   
 ### Vector_Cartesian_Position_Central_Body_To_Spacecraft  
 The Vector_Cartesian_Position_Central_Body_To_Spacecraft is a linear, rectangular coordinates vector from the center of mass of the central body (e.g., planet) to the spacecraft. While the class Coordinate_System_Identification is optional, it must be used here if the coordinate system has not been specified in the enclosing class.  
+- [go to attribute list](#vector_cartesian_position_central_body_to_spacecraft--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Vector_Cartesian_Position_Central_Body_To_Target  
 The Vector_Cartesian_Position_Central_Body_To_Target is a linear, rectangular coordinates vector from the center of mass of the central body (e.g., planet) to the target specified in the parent Geometry_Orbiter class. While the class Coordinate_System_Identification is optional, it must be used here if the coordinate system has not been specified in the enclosing class.  
+- [go to attribute list](#vector_cartesian_position_central_body_to_target--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Vector_Cartesian_Position_Earth_To_Central_Body  
 The Vector_Cartesian_Position_Earth_To_Central_Body is a linear, rectangular coordinates vector from the Earth to the central body (e.g., planet). While the class Coordinate_System_Identification is optional, it must be used here if the coordinate system has not been specified in the enclosing class.  
+- [go to attribute list](#vector_cartesian_position_earth_to_central_body--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Vector_Cartesian_Position_Earth_To_Spacecraft  
 The Vector_Cartesian_Position_Earth_To_Spacecraft is a linear, rectangular coordinates vector from the Earth to the spacecraft. While the class Coordinate_System_Identification is optional, it must be used here if the coordinate system has not been specified in the enclosing class.  
+- [go to attribute list](#vector_cartesian_position_earth_to_spacecraft--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Vector_Cartesian_Position_Earth_To_Target  
 The Vector_Cartesian_Position_Earth_To_Target is a linear, rectangular coordinates vector from the Earth to the target specified in the parent Geometry_Orbiter class. While the class Coordinate_System_Identification is optional, it must be used here if the coordinate system has not been specified in the enclosing class.  
+- [go to attribute list](#vector_cartesian_position_earth_to_target--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Vector_Cartesian_Position_Extended_Base  
 The Vector_Cartesian_Position_Extended_Base is a three dimensional, rectangular coordinates vector. Uses units of length. The included attributes are not sufficient to identify the endpoints of the vector. While the class Coordinate_System_Identification is optional, it must be used here if the coordinate system has not been specified in the enclosing class.  
@@ -2907,27 +3126,51 @@ The Vector_Cartesian_Position_Extended_Base is a three dimensional, rectangular 
   
 ### Vector_Cartesian_Position_Generic  
 Vector_Cartesian_Position_Generic is a three dimensional, rectangular coordinates vector. Uses units of length. Includes attributes to identify the endpoints of the vector. While the class Coordinate_System_Identification is optional, it must be used here if the coordinate system has not been specified in the enclosing class.  
+- [go to attribute list](#vector_cartesian_position_generic--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Vector_Cartesian_Position_SSB_To_Central_Body  
 The Vector_Cartesian_Position_SSB_To_Central_Body is a linear, rectangular coordinates vector from the Solar System Barycenter to the central body (e.g., planet). While the class Coordinate_System_Identification is optional, it must be used here if the coordinate system has not been specified in the enclosing class.  
+- [go to attribute list](#vector_cartesian_position_ssb_to_central_body--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Vector_Cartesian_Position_SSB_To_Spacecraft  
 The Vector_Cartesian_Position_SSB_To_Spacecraft is a linear, rectangular coordinates vector from the Solar System Barycenter to the spacecraft. While the class Coordinate_System_Identification is optional, it must be used here if the coordinate system has not been specified in the enclosing class.  
+- [go to attribute list](#vector_cartesian_position_ssb_to_spacecraft--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Vector_Cartesian_Position_SSB_To_Target  
 The Vector_Cartesian_Position_SSB_To_Target is a linear, rectangular coordinates vector from the Solar System Barycenter to the target specified in the parent Geometry_Orbiter class. While the class Coordinate_System_Identification is optional, it must be used here if the coordinate system has not been specified in the enclosing class.  
+- [go to attribute list](#vector_cartesian_position_ssb_to_target--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Vector_Cartesian_Position_Spacecraft_To_Target  
 The Vector_Cartesian_Position_Spacecraft_To_Target is a linear, rectangular coordinates vector from the spacecraft to the target specified in the parent Geometry_Orbiter class. While the class Coordinate_System_Identification is optional, it must be used here if the coordinate system has not been specified in the enclosing class.  
+- [go to attribute list](#vector_cartesian_position_spacecraft_to_target--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Vector_Cartesian_Position_Sun_To_Central_Body  
 The Vector_Cartesian_Position_Sun_To_Central_Body is a linear, rectangular coordinates vector from the Sun to the central body (e.g., planet). While the class Coordinate_System_Identification is optional, it must be used here if the coordinate system has not been specified in the enclosing class.  
+- [go to attribute list](#vector_cartesian_position_sun_to_central_body--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Vector_Cartesian_Position_Sun_To_Spacecraft  
 The Vector_Cartesian_Position_Sun_To_Spacecraft is a linear, rectangular coordinates vector from the Sun to the spacecraft. While the class Coordinate_System_Identification is optional, it must be used here if the coordinate system has not been specified in the enclosing class.  
+- [go to attribute list](#vector_cartesian_position_sun_to_spacecraft--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Vector_Cartesian_Position_Sun_To_Target  
 The Vector_Cartesian_Position_Sun_To_Target is a linear, rectangular coordinates vector from the Sun to the target specified in the parent Geometry_Orbiter class. While the class Coordinate_System_Identification is optional, it must be used here if the coordinate system has not been specified in the enclosing class.  
+- [go to attribute list](#vector_cartesian_position_sun_to_target--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Vector_Cartesian_Unit  
 This is a generic unit vector in Cartesian space. The "x", "y", and "z" component have no units and are restricted to values between -1.0 and 1.0 inclusive. Further the length of the vector square root of the (sum of the squares of the components) must be 1.0.  
@@ -2949,60 +3192,117 @@ The Vector_Cartesian_Velocity_Extended_Base is a three dimensional, rectangular 
   
 ### Vector_Cartesian_Velocity_Generic  
 Vector_Cartesian_Velocity_Generic is a three dimensional, rectangular coordinates vector. Uses units of linear velocity. Includes attributes to identify the endpoints of the vector. While the class Coordinate_System_Identification is optional, it must be used here if the coordinate system has not been specified in the enclosing class.  
+- [go to attribute list](#vector_cartesian_velocity_generic--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Vector_Cartesian_Velocity_Spacecraft_Relative_To_Central_Body  
 The Vector_Cartesian_Velocity_Spacecraft_Relative_To_Central_Body is a velocity vector in rectangular coordinates that gives the velocity of the spacecraft with respect to the central body (e.g., planet). While the class Coordinate_System_Identification is optional, it must be used here if the coordinate system has not been specified in the enclosing class.  
+- [go to attribute list](#vector_cartesian_velocity_spacecraft_relative_to_central_body--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Vector_Cartesian_Velocity_Spacecraft_Relative_To_Earth  
 The Vector_Cartesian_Velocity_Spacecraft_Relative_To_Earth is a velocity vector in rectangular coordinates that gives the velocity of the spacecraft with respect to Earth. While the class Coordinate_System_Identification is optional, it must be used here if the coordinate system has not been specified in the enclosing class.  
+- [go to attribute list](#vector_cartesian_velocity_spacecraft_relative_to_earth--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Vector_Cartesian_Velocity_Spacecraft_Relative_To_SSB  
 The Vector_Cartesian_Velocity_Spacecraft_Relative_To_SSB is a velocity vector in rectangular coordinates that gives the velocity of the spacecraft with respect to the Solar System Barycenter. While the class Coordinate_System_Identification is optional, it must be used here if the coordinate system has not been specified in the enclosing class.  
+- [go to attribute list](#vector_cartesian_velocity_spacecraft_relative_to_ssb--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Vector_Cartesian_Velocity_Spacecraft_Relative_To_Sun  
  Vector_Cartesian_Velocity_Spacecraft_Relative_To_Sun is a velocity vector in rectangular coordinates that gives the velocity of the spacecraft with respect to the center of the Sun. While the class Coordinate_System_Identification is optional, it must be used here if the coordinate system has not been specified in the enclosing class.  
+- [go to attribute list](#vector_cartesian_velocity_spacecraft_relative_to_sun--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Vector_Cartesian_Velocity_Spacecraft_Relative_To_Target  
 The Vector_Cartesian_Velocity_Spacecraft_Relative_To_Target is a velocity vector in rectangular coordinates that gives the velocity of the spacecraft with respect to the target specified in the parent Geometry_Orbiter class. While the class Coordinate_System_Identification is optional, it must be used here if the coordinate system has not been specified in the enclosing class.  
+- [go to attribute list](#vector_cartesian_velocity_spacecraft_relative_to_target--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Vector_Cartesian_Velocity_Target_Relative_To_Central_Body  
 The Vector_Cartesian_Velocity_Target_Relative_To_Central_Body is a velocity vector in rectangular coordinates that gives the velocity of the designated target with respect to the central body (e.g., planet). While the class Coordinate_System_Identification is optional, it must be used here if the coordinate system has not been specified in the enclosing class.  
+- [go to attribute list](#vector_cartesian_velocity_target_relative_to_central_body--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Vector_Cartesian_Velocity_Target_Relative_To_Earth  
 The Vector_Cartesian_Velocity_Target_Relative_To_Earth is a velocity vector in rectangular coordinates that gives the velocity of the designated target with respect to Earth. While the class Coordinate_System_Identification is optional, it must be used here if the coordinate system has not been specified in the enclosing class.  
+- [go to attribute list](#vector_cartesian_velocity_target_relative_to_earth--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Vector_Cartesian_Velocity_Target_Relative_To_SSB  
 The Vector_Cartesian_Velocity_Target_Relative_To_SSB is a velocity vector in rectangular coordinates that gives the velocity of the designated target with respect to the Solar System Barycenter. While the class Coordinate_System_Identification is optional, it must be used here if the coordinate system has not been specified in the enclosing class.  
+- [go to attribute list](#vector_cartesian_velocity_target_relative_to_ssb--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Vector_Cartesian_Velocity_Target_Relative_To_Spacecraft  
 The Vector_Cartesian_Velocity_Target_Relative_To_Spacecraft is a velocity vector in rectangular coordinates that gives the velocity of the designated target with respect to the spacecraft. While the class Coordinate_System_Identification is optional, it must be used here if the coordinate system has not been specified in the enclosing class.  
+- [go to attribute list](#vector_cartesian_velocity_target_relative_to_spacecraft--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Vector_Cartesian_Velocity_Target_Relative_To_Sun  
  Vector_Cartesian_Velocity_Target_Relative_To_Sun is a velocity vector in rectangular coordinates that gives the velocity of the designated target with respect to the center of the sun. While the class Coordinate_System_Identification is optional, it must be used here if the coordinate system has not been specified in the enclosing class.  
+- [go to attribute list](#vector_cartesian_velocity_target_relative_to_sun--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Vector_Center  
 The Vector_Center describes the location of the entrance pupil of a camera.  
+- [go to attribute list](#vector_center--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
   
 ### Vector_Device_Gravity  
 The Vector_Device_Gravity class is a unit vector that specifies the direction of an external force acting on the articulation device, in the spacecraft's coordinate system, at the time the pose was computed.  
+- [go to attribute list](#vector_device_gravity--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Vector_Device_Gravity_Magnitude  
 The Vector_Device_Gravity_Magnitude class is a vector (with magnitude) that specifies the direction of an external force acting on the articulation device, in the spacecraft's coordinate system, at the time the pose was computed.  
+- [go to attribute list](#vector_device_gravity_magnitude--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Vector_Horizontal  
 The Vector_Horizonal is a composite vector encoding three quantities: H' (a vector in the image plane perpendicular to the vertical columns), Hs (the distance between the lens center and image plane, measured in horizontal pixels), and Hc (the horizontal image coordinate directly under C when moving parallel to A). H' is often thought of as describing the orientation of rows in space, but is actually perpendicular to the columns.  
+- [go to attribute list](#vector_horizontal--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
   
 ### Vector_Model_Transform  
 The Vector_Model_Transform class specifies, along with the Quaternion_Model_Transform class, the transform used for the camera model in this image. Camera models created by the calibration process have associated with them a pose, comprised of the position (offset) and orientation (quaternion) of the camera at the time it was calibrated. The model is transformed ("pointed") for a specific image by computing, generally using articulation device kinematics, a final pose for the image. The camera model is then translated and rotated from the calibration to final pose. This class specifies the offset portion of the final pose.  
+- [go to attribute list](#vector_model_transform--attribute-list)  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
   
 ### Vector_Normal_X  
  Unit normal vector to the column plane when x equals zero, pointing in the same direction as the cross product of axis x with an outward-pointing vector that also lies in the plane.  
+- [go to attribute list](#vector_normal_x--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
   
 ### Vector_Normal_Y  
  Unit normal vector to the row plane when y equals zero, pointing in the same direction as the cross product of axis x with an outward-pointing vector that also lies in the plane.  
+- [go to attribute list](#vector_normal_y--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
   
 ### Vector_Optical  
 The Vector_Optical is a unit vector that describes the axis of symmetry for radial distortion in the camera.  
+- [go to attribute list](#vector_optical--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
   
 ### Vector_Origin_Offset  `in Coordinate_Space_Definition`  
 The Vector_Origin_Offset class contains attributes that specify the offset from the reference coordinate system's origin to the origin of the coordinate system. It is the location of the current system's origin as measured in the reference system.  
@@ -3024,9 +3324,15 @@ The Vector_Planetocentric_Position_Base is a three dimensional spherical vector 
   
 ### Vector_Planetocentric_Position_Central_Body_To_Spacecraft  
 The Vector_Planetocentric_Position_Central_Body_To_Spacecraft is a spherical position vector in Planetocentric coordinates. It extends from the center of mass of the central body (e.g., planet) to the spacecraft. While the class Coordinate_System_Identification is optional, it must be used here if the coordinate system has not been specified in the enclosing class.  
+- [go to attribute list](#vector_planetocentric_position_central_body_to_spacecraft--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Vector_Planetocentric_Position_Central_Body_To_Target  
 The Vector_Planetocentric_Position_Central_Body_To_Target is a spherical position vector in Planetocentric coordinates. It extends from the center of mass of the central body (e.g., planet) to the target specified in the parent Geometry_Orbiter class. While the class Coordinate_System_Identification is optional, it must be used here if the coordinate system has not been specified in the enclosing class.  
+- [go to attribute list](#vector_planetocentric_position_central_body_to_target--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Vector_Planetocentric_Position_Extended_Base  
 The Vector_Planetocentric_Position_Extended_Base is a three dimensional spherical vector (radius, longitude, latitude) with the angular coordinates defined to be consistent with the Planetocentric coordinate system. Uses linear units for the radius dimension, and angular units for the other two dimensions. The included attributes are not sufficient to identify the endpoints of the vector. While the class Coordinate_System_Identification is optional, it must be used here if the coordinate system has not been specified in the enclosing class.  
@@ -3036,9 +3342,15 @@ The Vector_Planetocentric_Position_Extended_Base is a three dimensional spherica
   
 ### Vector_Planetocentric_Position_Generic  
 The Vector_Planetocentric_Position_Generic is a three dimensional spherical vector (radius, longitude, latitude) with the angular coordinates defined to be consistent with the Planetocentric coordinate system. Uses linear units for the radius dimension, and angular units for the other two dimensions. Includes attributes to identify the endpoints of the vector. While the class Coordinate_System_Identification is optional, it must be used here if the coordinate system has not been specified in the enclosing class.  
+- [go to attribute list](#vector_planetocentric_position_generic--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Vector_Planetocentric_Position_Spacecraft_To_Target  
 The Vector_Planetocentric_Position_Spacecraft_To_Target is a spherical position vector in Planetocentric coordinates. It extends from the spacecraft to the target specified in the parent Geometry_Orbiter class. While the class Coordinate_System_Identification is optional, it must be used here if the coordinate system has not been specified in the enclosing class.  
+- [go to attribute list](#vector_planetocentric_position_spacecraft_to_target--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Vector_Planetocentric_Velocity_Base  
 The Vector_Planetocentric_Velocity_Base is a three dimensional spherical vector (radius, longitude, latitude) with the angular coordinates defined to be consistent with the Planetocentric coordinate system. Uses linear velocity units for the radius dimension, and angular velocity units for the other two dimensions. The included attributes are not sufficient to identify the endpoints of the vector.  
@@ -3054,30 +3366,57 @@ The Vector_Planetocentric_Velocity_Extended_Base is a three dimensional spherica
   
 ### Vector_Planetocentric_Velocity_Generic  
 The Vector_Planetocentric_Velocity_Generic is a three dimensional spherical vector (radius, longitude, latitude) with the angular coordinates defined to be consistent with the Planetocentric coordinate system. Uses linear velocity units for the radius dimension, and angular velocity units for the other two dimensions. Includes attributes to identify the endpoints of the vector. While the class Coordinate_System_Identification is optional, it must be used here if the coordinate system has not been specified in the enclosing class.  
+- [go to attribute list](#vector_planetocentric_velocity_generic--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Vector_Planetocentric_Velocity_Spacecraft_Relative_To_Target  
 The Vector_Planetocentric_Velocity_Spacecraft_Relative_To_Target is a spherical velocity vector in Planetocentric coordinates that gives the velocity of the spacecraft with respect to the designated target. While the class Coordinate_System_Identification is optional, it must be used here if the coordinate system has not been specified in the enclosing class.  
+- [go to attribute list](#vector_planetocentric_velocity_spacecraft_relative_to_target--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Vector_Planetocentric_Velocity_Target_Relative_To_Central_Body  
 The Vector_Planetocentric_Velocity_Target_Relative_To_Central_Body is a spherical velocity vector in Planetocentric coordinates that gives the velocity of the target with respect to the central body. While the class Coordinate_System_Identification is optional, it must be used here if the coordinate system has not been specified in the enclosing class.  
+- [go to attribute list](#vector_planetocentric_velocity_target_relative_to_central_body--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Vector_Planetocentric_Velocity_Target_Relative_To_Spacecraft  
 The Vector_Planetocentric_Velocity_Target_Relative_To_Spacecraft is a spherical velocity vector in Planetocentric coordinates that gives the velocity of the target with respect to the spacecraft. While the class Coordinate_System_Identification is optional, it must be used here if the coordinate system has not been specified in the enclosing class.  
+- [go to attribute list](#vector_planetocentric_velocity_target_relative_to_spacecraft--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
   
 ### Vector_Solar_Direction  
  Unit vector pointing in the direction of the Sun at the time of the observation.  
+- [go to attribute list](#vector_solar_direction--attribute-list)  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
   
 ### Vector_Vertical  
 The Vector_Vertical is a composite vector encoding three quantities: V' (a vector in the image plane perpendicular to the horizontal rows), Vs (the distance between the lens center and image plane, measured in vertical pixels), and Vc (the vertical image coordinate directly under C when moving parallel to A). V' is often thought of as describing the orientation of columns in space, but is actually perpendicular to the rows.  
+- [go to attribute list](#vector_vertical--attribute-list)  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
   
 ### Vectors  
 The Vectors class is a container of vector classes.  
+- [go to attribute list](#vectors--attribute-list)  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
   
 ### Vectors_Cartesian_Specific  
 The Vectors_Cartesian_Specific class is a container class for all cartesian vectors with pre-identified endpoints.  
+- [go to attribute list](#vectors_cartesian_specific--attribute-list)  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
   
 ### Vectors_Planetocentric_Specific  
 The Vectors_Planetocentric_Specific class is a container class for all planetocentric vectors with pre-identified endpoints.  
+- [go to attribute list](#vectors_planetocentric_specific--attribute-list)  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
   
 ## Attributes (in alphabetical order)  
   
@@ -3087,6 +3426,9 @@ Count in clock units of how long it has been since the last IMU reset, which rel
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *attitude_propagation_duration*  
 The number of seconds for how long it has been since the last IMU reset, which relates to how good the attitude measurement is due to IMU drift.  
@@ -3094,6 +3436,9 @@ The number of seconds for how long it has been since the last IMU reset, which r
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *body_spice_name*  `in Central_Body_Identification`  
 The body_spice_name attribute is a NAIF-recognized string identifier for a physical object (spacecraft, planet, instrument transmitter, system barycenter, etc.), associated with the data.  
@@ -3151,6 +3496,9 @@ The first coefficient of a polynomial.
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *c1*  
 The second coefficient of a polynomial.  
@@ -3158,6 +3506,9 @@ The second coefficient of a polynomial.
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *c2*  
 The third coefficient of a polynomial.  
@@ -3165,6 +3516,9 @@ The third coefficient of a polynomial.
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *cahvore_model_parameter*  
 The cahvore_parameter_type attribute is a scalar floating-point number used for CAHVORE Type 3 models (see cahvore_model_type). If the parameter is 1.0, the model is identical to type 1; if 0.0, it is identical to type 2. Most fish-eye lenses use a value in between.  
@@ -3172,6 +3526,9 @@ The cahvore_parameter_type attribute is a scalar floating-point number used for 
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *cahvore_model_type*  
 The cahvore_model_type attribute indicates which variant of the CAHVORE model to use. Type 1 is a perspective-projection model, similar to CAHV and CAHVOR except for the moving entrance pupil. Type 2 is a fish-eye lens model reflecting fundamentally different geometry. Type 3 is a generalization that includes the first two, and is used for most fisheye-type lenses (see cahvore_model_parameter).  
@@ -3185,6 +3542,9 @@ The cahvore_model_type attribute indicates which variant of the CAHVORE model to
     - Description: A generalization that includes the first two, and is used for most fisheye-type lenses  
 - Minimum value: -9223372036854775808  
 - Maximum value: 9223372036854775807  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *calibration_source_id*  
 The calibration_source_id is used to identify the source used in calibrating the instrument.  
@@ -3192,6 +3552,9 @@ The calibration_source_id is used to identify the source used in calibrating the
 - Valid values: N/A  
 - Minimum Length: 1  
 - Maximum Length: 255  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *celestial_east_clock_angle*  
 The celestial_east_clock_angle attribute specifies the direction of celestial east at the center of an image. It is measured from the 'upward' direction, clockwise to the direction toward celestial east, assuming the image is displayed as defined by the Display_Direction class.  
@@ -3199,6 +3562,9 @@ The celestial_east_clock_angle attribute specifies the direction of celestial ea
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 360  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
+- Nillable: No  
   
 ### *celestial_north_clock_angle*  `in Object_Orientation_Clock_Angles`  
 The celestial_north_clock_angle attribute specifies the direction of celestial north at the center of an image. It is measured from the 'upward' direction, clockwise to the direction toward celestial north, assuming the image is displayed as defined by the Display_Direction class.  
@@ -3226,6 +3592,9 @@ The central_body_north_pole_clock_angle element specifies the direction of the c
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 360  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
+- Nillable: No  
   
 ### *central_body_positive_pole_clock_angle*  
 The central_body_positive_pole_clock_angle element specifies the direction of the central body's rotation axis in an image. It is measured from the 'upward' direction in the image, clockwise to the direction of the positive rotational pole as projected into the image plane, assuming the image is displayed as defined by the Display_Direction class. The positive pole is defined as the pole toward which the thumb points when the fingers of the right hand are curled in the body's direction of rotation.  
@@ -3233,6 +3602,9 @@ The central_body_positive_pole_clock_angle element specifies the direction of th
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 360  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
+- Nillable: No  
   
 ### *command_type*  
  Specifies how the device was commanded.  
@@ -3256,6 +3628,9 @@ The central_body_positive_pole_clock_angle element specifies the direction of th
     - Description:  Specifies a pointing target as an XYZ coordinate in a given coordinate frame.  
 - Minimum Length: 1  
 - Maximum Length: 255  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *comment*  `in Coordinate_System_Identification`  
 The comment attribute is a character string expressing one or more remarks or thoughts relevant to the object.  
@@ -3569,11 +3944,17 @@ The coordinate_space_frame_type attribute identifies the type of frame being des
     - Description: Frame for right rear wheel.  
 - Minimum Length: 1  
 - Maximum Length: 255  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: Yes  
   
 ### *coordinate_system_time_utc*  
 The coordinate_system_time_utc provides the instantiation time for the coordinate system.  
 - PDS4 data type: ASCII_Date_Time_YMD_UTC  
 - Valid values: N/A  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *coordinate_system_type*  
 The coordinate_system_type distinguishes between options such as rectangular, spherical, planetocentric, etc.  
@@ -3593,6 +3974,9 @@ The coordinate_system_type distinguishes between options such as rectangular, sp
     - Description: The coordinate system uses spherical coordinates. Longitude: angle from +X axis to projection of position vector on X-Y plane increases in clockwise direction (0 to 360). Colatitude: angle between +Z axis and position vector (0 to 180).  
 - Minimum Length: 1  
 - Maximum Length: 255  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: Yes  
   
 ### *declination_angle*  
 The declination_angle (Dec) attribute provides the value of an angle on the celestial sphere, measured north from the celestial equator to the point in question. (For points south of the celestial equator, negative values are used.) Declination is used in conjunction with right ascension (right_ascension_angle or right_ascension_hour_angle) to specify a point on the sky.  
@@ -3600,12 +3984,18 @@ The declination_angle (Dec) attribute provides the value of an angle on the cele
 - Valid values: N/A  
 - Minimum value: -90  
 - Maximum value: 90  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *description*  
 The description attribute provides a statement, picture in words, or account that describes or is otherwise relevant to the object.  
 - PDS4 data type: UTF8_Text_Preserved  
 - Valid values: N/A  
 - Minimum Length: 1  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *device_id*  
 The device_id attribute specifies the abbreviated identification of an articulation device.  
@@ -3613,6 +4003,9 @@ The device_id attribute specifies the abbreviated identification of an articulat
 - Valid values: N/A  
 - Minimum Length: 1  
 - Maximum Length: 255  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *device_mode*  
 The device_mode attribute specifies the deployment state (i.e., physical configuration) of an articulation device at the time of data acquisition. Examples include 'Arm Vibe', 'Deployed', 'Free Space', 'Stowed'. Note: the value set for this attribute is mission-specific and should be declared in a mission-specific dictionary.  
@@ -3620,6 +4013,9 @@ The device_mode attribute specifies the deployment state (i.e., physical configu
 - Valid values: N/A  
 - Minimum Length: 1  
 - Maximum Length: 255  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *device_name*  
 The device_name attribute specifies the common name of an articulation device.  
@@ -3627,6 +4023,9 @@ The device_name attribute specifies the common name of an articulation device.
 - Valid values: N/A  
 - Minimum Length: 1  
 - Maximum Length: 255  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *device_phase*  
 The device_phase attribute specifies the current phase of the mission, from an articulation-device-centric point of view.  
@@ -3634,6 +4033,9 @@ The device_phase attribute specifies the current phase of the mission, from an a
 - Valid values: N/A  
 - Minimum Length: 1  
 - Maximum Length: 255  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *distance*  
 The distance attribute provides the scalar distance between to objects or points.  
@@ -3641,6 +4043,9 @@ The distance attribute provides the scalar distance between to objects or points
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *east_azimuth*  
 Assuming the image is displayed as defined by the Display_Direction class, the east_azimuth attribute provides the value of the angle between a line from the image center to the east and a reference line in the image plane. The reference line is a horizontal line from the image center to the middle right edge of the image. This angle is measured from the reference line and increases in a clockwise direction.  
@@ -3648,6 +4053,9 @@ Assuming the image is displayed as defined by the Display_Direction class, the e
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 360  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *ecliptic_east_clock_angle*  
 The ecliptic_east_clock_angle attribute specifies the direction of ecliptic east at the center of an image. It is measured from the 'upward' direction, clockwise to the direction toward ecliptic east, assuming the image is displayed as defined by the Display_Direction class.  
@@ -3655,6 +4063,9 @@ The ecliptic_east_clock_angle attribute specifies the direction of ecliptic east
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 360  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
+- Nillable: No  
   
 ### *ecliptic_north_clock_angle*  `in Object_Orientation_Clock_Angles`  
 The ecliptic_north_clock_angle attribute specifies the direction of ecliptic north at the center of an image. It is measured from the 'upward' direction, clockwise to the direction toward ecliptic north, assuming the image is displayed as defined by the Display_Direction class.  
@@ -3742,16 +4153,25 @@ The geometry reference time given in the 'Barycentric Dynamical Time' system, as
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *geometry_reference_time_utc*  
 For some observations, geometric parameters are given as instantaneous values at a specific time. Another set of instantaneous parameters are the parameters which give the minimum and maximum values in the product. In some cases, these range values are all calculated for the same time. If the label includes single valued geometric parameters or min/max range parameters determined for a specific time, geometry_reference_time_utc gives the time for which these values were calculated and must be given in the label. For some instruments, particularly those with relatively large exposure durations, (e.g., push broom cameras, many imaging spectrometers), many geometric quantities are given as ranges. If those range parameters are associated with the beginning and end of the observation (start_parameter/stop_parameter), geometry_start_time_utc/stop_time must be given. Comments within the label should be used to ensure the parameter vs. time association is unambiguous.  
 - PDS4 data type: ASCII_Date_Time_YMD_UTC  
 - Valid values: N/A  
+- Minimum occurrences: 1  
+- Maximum occurrences: 3  
+- Nillable: No  
   
 ### *geometry_start_time_utc*  
 The pair of geometry_start_time_utc/geometry_stop_time_utc may be given in the label for any observation. The pair is generally used for fairly long duration observations (a substantial portion of an hour to several hours). geometry_start_time_utc gives the time at the beginning of the observation. When either geometry_start_time_utc or geometry_stop_time_utc is given, both must be provided. Within the Geometry discipline, there are two options for providing geometric parameters as a range of values. A parameter may be given as a pair where the parameter values are those at the beginning and end of the observation (start_parameter, stop_parameter). If a (start_parameter, stop_parameter) pair is used for any geometric parameter, the pair (geometry_start_time_utc/geometry_stop_time_utc) must be given. Another option to provide geometric parameters as a pair is (minimum_parameter, maximum_parameter) defining a range of values where the values are the minimum and maximum values of that parameter for the entire observation. Comments within the label should be used to ensure the parameter vs. time association is unambiguous.  
 - PDS4 data type: ASCII_Date_Time_YMD_UTC  
 - Valid values: N/A  
+- Minimum occurrences: 1  
+- Maximum occurrences: 3  
+- Nillable: No  
   
 ### *geometry_state*  
 Specifies the state or configuration of this instance of Geometry_Lander applies. Use of this attribute enables multiple instances of Geometry_Lander, describing the geometry under different conditions. Note that it is legal for more than one instance to have the same geometry_state, in which case the local_identifier should be used to differentiate the instances, along with description. If not present, the semantics of "Telemetry" should be assumed. It is not required that instances be retained; a derived product may have an Adjusted instance but remove the Telemetry one, for example.  
@@ -3759,11 +4179,17 @@ Specifies the state or configuration of this instance of Geometry_Lander applies
 - Valid values: N/A  
 - Minimum Length: 1  
 - Maximum Length: 255  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *geometry_stop_time_utc*  
 The pair of geometry_start_time_utc/geometry_stop_time_utc may be given in the label for any observation. The pair is generally used for fairly long duration observations (a substantial portion of an hour to several hours). geometry_stop_time_utc gives the time at the end of the observation. When either geometry_start_time_utc or geometry_stop_time_utc is given, both must be provided. Within the Geometry discipline, there are two options for providing geometric parameters as a range of values. A parameter may be given as a pair where the parameter values are those at the beginning and end of the observation (start_parameter, stop_parameter). If a (start_parameter, stop_parameter) pair is used for any geometric parameter, the pair (geometry_start_time_utc/geometry_stop_time_utc) must be given. Another option to provide geometric parameters as a pair is (minimum_parameter, maximum_parameter) defining a range of values where the values are the minimum and maximum values of that parameter for the entire observation. Comments within the label should be used to ensure the parameter vs. time association is unambiguous.  
 - PDS4 data type: ASCII_Date_Time_YMD_UTC  
 - Valid values: N/A  
+- Minimum occurrences: 1  
+- Maximum occurrences: 3  
+- Nillable: No  
   
 ### *horizontal_coordinate_pixel*  
 horizontal_coordinate_pixel (sample) is the horizontal coordinate of a specific pixel.  
@@ -3771,6 +4197,9 @@ horizontal_coordinate_pixel (sample) is the horizontal coordinate of a specific 
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *horizontal_display_axis*  
 The horizontal_display_axis attribute identifies, by name, the axis of an Array (or Array subclass) that is intended to be displayed in the horizontal or "sample" dimension on a display device. The value of this attribute must match the value of one, and only one, axis_name attribute in an Axis_Array class of the associated Array.  
@@ -3778,6 +4207,9 @@ The horizontal_display_axis attribute identifies, by name, the axis of an Array 
 - Valid values: N/A  
 - Minimum Length: 1  
 - Maximum Length: 255  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *horizontal_display_direction*  
 The horizontal_display_direction attribute specifies the direction across the screen of a display device that data along the horizontal axis of an Array is supposed to be displayed.  
@@ -3789,6 +4221,9 @@ The horizontal_display_direction attribute specifies the direction across the sc
     - Description: Data along the horizontal axis of an array should be displayed from right to left.  
 - Minimum Length: 1  
 - Maximum Length: 255  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *horizontal_pixel_field_of_view*  
 The horizontal_pixel_field_of_view provides the angular measure of the horizontal field of view of a single pixel, and is sometimes referred to as the instantaneous field of view. The pixel_field_of_view_method attribute will designate the method used to determine this value. If the pixel_field_of_view_method attribute is not specified, see the camera documentation for more details.  
@@ -3796,6 +4231,9 @@ The horizontal_pixel_field_of_view provides the angular measure of the horizonta
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 360  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *horizontal_pixel_footprint*  
 The horizontal_pixel_footprint provides the the size of the horizontal field of view of a single pixel projected onto the target specified in the parent Geometry_Orbiter class.  
@@ -3803,6 +4241,9 @@ The horizontal_pixel_footprint provides the the size of the horizontal field of 
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *incidence_angle*  `in Derived_Geometry`  
 The incidence_angle element provides a measure of the lighting condition at the intercept point. Incidence angle is the angle between the local vertical at the intercept point (surface) and a vector from the intercept point to the sun. The incidence_angle varies from 0 degrees when the intercept point coincides with the subsolar point to 90 degrees when the intercept point is at the terminator (i.e., in the shadowed or dark portion of the target body).  
@@ -3830,6 +4271,9 @@ The index_id attribute supplies a short name (identifier) for the associated val
 - Valid values: N/A  
 - Minimum Length: 1  
 - Maximum Length: 255  
+- Minimum occurrences: 1  
+- Maximum occurrences: 3  
+- Nillable: No  
   
 ### *index_name*  
 The index_name attribute supplies the formal name for the associated value in a group of related values.  
@@ -3837,6 +4281,9 @@ The index_name attribute supplies the formal name for the associated value in a 
 - Valid values: N/A  
 - Minimum Length: 1  
 - Maximum Length: 255  
+- Minimum occurrences: 1  
+- Maximum occurrences: 3  
+- Nillable: No  
   
 ### *index_sequence_number*  
 The index_sequence_number attribute supplies the sequence identifier for the associated value in a group of related values.  
@@ -3844,6 +4291,9 @@ The index_sequence_number attribute supplies the sequence identifier for the ass
 - Valid values: N/A  
 - Minimum Length: 1  
 - Maximum Length: 255  
+- Minimum occurrences: 1  
+- Maximum occurrences: 3  
+- Nillable: No  
   
 ### *index_value_angle*  
 The index_value_angle attribute provides the value of an angle as named by the associated index_id, index_name, or index_sequence_number.  
@@ -3851,6 +4301,9 @@ The index_value_angle attribute provides the value of an angle as named by the a
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: unbounded  
+- Nillable: No  
   
 ### *index_value_length*  
 The index_value_length attribute provides the value of a length as named by the associated index_id or index_name.  
@@ -3858,6 +4311,9 @@ The index_value_length attribute provides the value of a length as named by the 
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: unbounded  
+- Nillable: No  
   
 ### *index_value_number*  
 The index_value_number attribute provides the value with no applicable units as named by the associated index_id or index_name.  
@@ -3865,6 +4321,9 @@ The index_value_number attribute provides the value with no applicable units as 
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: unbounded  
+- Nillable: No  
   
 ### *index_value_string*  
 The index_value attribute provides the string value as named by the associated index_id or index_name.  
@@ -3872,6 +4331,9 @@ The index_value attribute provides the string value as named by the associated i
 - Valid values: N/A  
 - Minimum Length: 1  
 - Maximum Length: 255  
+- Minimum occurrences: 0  
+- Maximum occurrences: unbounded  
+- Nillable: No  
   
 ### *index_value_temperature*  
 The index_value_temperature attribute provides the value of a temperature as named by the associated index_id or index_name.  
@@ -3879,6 +4341,9 @@ The index_value_temperature attribute provides the value of a temperature as nam
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: unbounded  
+- Nillable: No  
   
 ### *instrument_azimuth*  
 The instrument_azimuth attribute specifies the value for an instrument's rotation in the horizontal direction. It may be measured from a low hard stop, or relative to a coordinate frame. Although it may be used for any instrument where it makes sense, it is primarily intended for use in surface-based instruments that measure pointing in terms of azimuth and elevation. If this value is expressed using a coordinate system, the coordinate system is specified by the Coordinate_Space_Reference class. The interpretation of exactly what part of the instrument is being pointed is mission-specific. It could be the boresight, the camera head direction, the CAHV camera model A vector direction, or any of a number of other things. As such, for multimission use this value should be used mostly as an approximation, e.g. identifying scenes which might contain a given object.  
@@ -3886,6 +4351,9 @@ The instrument_azimuth attribute specifies the value for an instrument's rotatio
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
+- Nillable: No  
   
 ### *instrument_elevation*  
 The instrument_elevation attribute specifies the value for an instrument's rotation in the vertical direction. It may be usually measured from a low hard stop, or relative to a coordinate frame. Although it may be used for any instrument where it makes sense, it is primarily intended for use in surface-based instruments that measure pointing in terms of azimuth and elevation. If this value is expressed using a coordinate system, the coordinate system is specified by the Coordinate_Space_Reference class. The interpretation of exactly what part of the instrument is being pointed is mission-specific. It could be the boresight, the camera head direction, the CAHV camera model A vector direction, or any of a number of other things. As such, for multimission use this value should be used mostly as an approximation, e.g. identifying scenes that might contain a given object.  
@@ -3893,6 +4361,9 @@ The instrument_elevation attribute specifies the value for an instrument's rotat
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
+- Nillable: No  
   
 ### *interpolation_algorithm*  
 The interpolation_algorithm defines how interpolation was performed. For example, "Piecewise Bilinear" does a piecewise bilinear interpolation between calibration models nearest to the interpolation_value.  
@@ -3900,6 +4371,9 @@ The interpolation_algorithm defines how interpolation was performed. For example
 - Valid values: N/A  
 - Minimum Length: 1  
 - Maximum Length: 255  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *interpolation_sequence*  
 When more than one dimension is interpolated, interpolation_sequence define the ordering. Sequence value 1 was interpolated first, directly from calibration; sequence value 2 was interpolated from those results, etc.  
@@ -3907,6 +4381,9 @@ When more than one dimension is interpolated, interpolation_sequence define the 
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 9223372036854775807  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *interpolation_value*  
 The interpolation_value specifies the value of the variable to which the model was interpolated. The interpretation of the value depends on what the variable is and should be documented in the mission documentation.  
@@ -3914,6 +4391,9 @@ The interpolation_value specifies the value of the variable to which the model w
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *interpolation_variable*  
 The interpolation_variable defines the parameter across which interpolation is being performed. Examples of variables include Focus, Zoom, and Temperature.  
@@ -3921,6 +4401,9 @@ The interpolation_variable defines the parameter across which interpolation is b
 - Valid values: N/A  
 - Minimum Length: 1  
 - Maximum Length: 255  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *kernel_provenance*  
 The kernel_provenance attribute indicates whether a kernel file is a predict kernel, a reconstructed kernel, some combination of the two, or a kernel for which the distinction is not applicable.  
@@ -3936,6 +4419,9 @@ The kernel_provenance attribute indicates whether a kernel file is a predict ker
     - Description: This kernel is reconstructed based on improved information (e.g. a post-encounter reconstructed spacecraft trajectory SPK based on improved navigation information).  
 - Minimum Length: 1  
 - Maximum Length: 255  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *kernel_type*  
 The kernel_type attribute identifies the type of SPICE kernel.  
@@ -3965,6 +4451,9 @@ The kernel_type attribute identifies the type of SPICE kernel.
     - Description: SPICE_Kernel is type SPK (ephemeris kernel)  
 - Minimum Length: 1  
 - Maximum Length: 255  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *lat_long_method*  
 The lat_long_method is used with the attributes start_latitude, stop_latitude, start_longitude and stop_longitude. For most observations these parameters would be multivalued. lat_long_method is used to characterize the start and stop latitude and longitude. The possible values are: 'center' indicating the latitude and longitude values are those at the center of the field of view at the beginning and end of the observation. 'median' indicating the latitude and longitude values are the median values at the beginning and end of the observation. 'mean' indicating the latitude and longitude values are the mean values at the beginning and end of the observation.  
@@ -3978,6 +4467,9 @@ The lat_long_method is used with the attributes start_latitude, stop_latitude, s
     - Description: The latitude and longitude values given using start_ and stop_ latitude and longitude are the median values at the beginning and end of the observation.  
 - Minimum Length: 1  
 - Maximum Length: 255  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *latitude_position*  
 The latitude component of a Planetocentric position vector. Planetocentric latitude is the angle between the equator plane and a vector connecting the point of interest and the origin of the coordinate system. Latitudes are defined to be positive in the northern (as defined by the IAU) hemisphere.  
@@ -3985,6 +4477,9 @@ The latitude component of a Planetocentric position vector. Planetocentric latit
 - Valid values: N/A  
 - Minimum value: -90  
 - Maximum value: 90  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *latitude_velocity*  
 The latitude component of a Planetocentric velocity vector. Planetocentric latitude is the angle between the equator plane and a vector connecting the point of interest and the origin of the coordinate system. Latitudes are defined to be positive in the northern (as defined by the IAU) hemisphere.  
@@ -3992,6 +4487,9 @@ The latitude component of a Planetocentric velocity vector. Planetocentric latit
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *light_time_correction_applied*  
 The light_time_correction_applied indicates whether or not light travel time correction and stellar aberration correction were used when calculating the values in the enclosing class. The attribute is nillable with nill_reason = unknown, but only for migrated data. Note: generally, received light travel time is calculated unless a transmitter (e.g., radar, radio) was involved in which the calculation typically is transmitted light time.  
@@ -4009,6 +4507,9 @@ The light_time_correction_applied indicates whether or not light travel time cor
     - Description: Transmitted light travel time and stellar aberration were used when calculating the values in the enclosing class.  
 - Minimum Length: 1  
 - Maximum Length: 255  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: Yes  
   
 ### *local_identifier*  `in Articulation_Device_Parameters`  
 The local_identifier attribute provides a character string which uniquely identifies the containing object within the label.  
@@ -4166,6 +4667,9 @@ The longitudinal component of a Planetocentric position vector. Planetocentric l
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 360  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *longitude_velocity*  
 The longitudinal component of a Planetocentric velocity vector. Planetocentric longitude is measured from the IAU approved prime meridian for the body and increases toward the east.  
@@ -4173,6 +4677,9 @@ The longitudinal component of a Planetocentric velocity vector. Planetocentric l
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *maximum_emission_angle*  
 The maximum_emission_angle element provides the largest value during the observation for the emission angle at the target specified in the parent Geometry_Orbiter class.  
@@ -4180,6 +4687,9 @@ The maximum_emission_angle element provides the largest value during the observa
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 180  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *maximum_incidence_angle*  
 The maximum_incidence_angle element provides the largest value during the observation for the incidence angle at the target specified in the parent Geometry_Orbiter class.  
@@ -4187,6 +4697,9 @@ The maximum_incidence_angle element provides the largest value during the observ
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 180  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *maximum_latitude*  
 The maximum_latitude attribute identifies the final end of the range of values for Planetocentric latitude in an image.  
@@ -4194,6 +4707,9 @@ The maximum_latitude attribute identifies the final end of the range of values f
 - Valid values: N/A  
 - Minimum value: -90  
 - Maximum value: 90  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *maximum_longitude*  
 The maximum_longitude attribute identifies the final end of the range of values for Planetocentric longitude in an image. Note that since Planetocentric longitude has values in [0,360], if the range in the product crosses the prime meridian, the value of minimum_longitude will be greater than the value of the maximum_longitude.  
@@ -4201,6 +4717,9 @@ The maximum_longitude attribute identifies the final end of the range of values 
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 360  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *maximum_phase_angle*  
 The maximum_phase_angle element provides the largest value during the observation for the phase angle at the target specified in the parent Geometry_Orbiter class.  
@@ -4208,6 +4727,9 @@ The maximum_phase_angle element provides the largest value during the observatio
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 180  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *maximum_solar_elongation*  
 The maximum_solar_elongation element provides the largest value during the observation for the solar elongation.  
@@ -4215,6 +4737,9 @@ The maximum_solar_elongation element provides the largest value during the obser
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 180  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *maximum_spacecraft_central_body_distance*  
 The maximum_spacecraft_central_body_distance attribute provides the largest value during the observation for the distance between the spacecraft and the center of the central body (e.g., the center of Mars when opperating in the Mars system).  
@@ -4222,6 +4747,9 @@ The maximum_spacecraft_central_body_distance attribute provides the largest valu
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *maximum_spacecraft_geocentric_distance*  
 The maximum_spacecraft_geocentric_distance attribute provides the largest value during the observation for the distance between the spacecraft and the center of Earth.  
@@ -4229,6 +4757,9 @@ The maximum_spacecraft_geocentric_distance attribute provides the largest value 
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *maximum_spacecraft_heliocentric_distance*  
 The maximum_spacecraft_heliocentric_distance attribute provides the largest value during the observation for the distance between the spacecraft and the center of the Sun.  
@@ -4236,6 +4767,9 @@ The maximum_spacecraft_heliocentric_distance attribute provides the largest valu
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *maximum_spacecraft_target_boresight_intercept_distance*  
 The maximum_spacecraft_target_boresight_intercept_distance attribute provides the largest value during the observation for the distance between the spacecraft and the boresight vector intercept point on the surface of the target specified in the parent Geometry_Orbiter class.  
@@ -4243,6 +4777,9 @@ The maximum_spacecraft_target_boresight_intercept_distance attribute provides th
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *maximum_spacecraft_target_center_distance*  
 The maximum_spacecraft_target_center_distance attribute provides the largest value during the observation for the distance between the spacecraft and the center of the target specified in the parent Geometry_Orbiter class.  
@@ -4250,6 +4787,9 @@ The maximum_spacecraft_target_center_distance attribute provides the largest val
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *maximum_spacecraft_target_subspacecraft_distance*  
 The maximum_spacecraft_target_subspacecraft_distance attribute provides the largest value during the observation for the distance between the spacecraft and the subspacecraft point on the surface of the target specified in the parent Geometry_Orbiter class.  
@@ -4257,6 +4797,9 @@ The maximum_spacecraft_target_subspacecraft_distance attribute provides the larg
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *maximum_subsolar_azimuth*  
 The maximum_subsolar_azimuth attribute identifies the final end of the range of values for subsolar azimuth in an image. Note that since subsolar azimuth has values in [0,360], if the range in the image crosses the horizontal reference corresponding to zero, the value of minimum_subsolar_azimuth will be greater than the value of the maximum_subsolar_azimuth.  
@@ -4264,6 +4807,9 @@ The maximum_subsolar_azimuth attribute identifies the final end of the range of 
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 360  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *maximum_subsolar_latitude*  
 The maximum_subsolar_latitude attribute identifies the final end of the range of values for subsolar latitude in an image.  
@@ -4271,6 +4817,9 @@ The maximum_subsolar_latitude attribute identifies the final end of the range of
 - Valid values: N/A  
 - Minimum value: -90  
 - Maximum value: 90  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *maximum_subsolar_longitude*  
 The maximum_subsolar_longitude attribute identifies the final end of the range of values for subsolar longitude in an image. Note that since subsolar longitude has values in [0,360], if the range in the product crosses the prime meridian, the value of minimum_subsolar_longitude will be greater than the value of the maximum_subsolar_longitude.  
@@ -4278,6 +4827,9 @@ The maximum_subsolar_longitude attribute identifies the final end of the range o
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 360  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *maximum_subspacecraft_azimuth*  
 The maximum_subspacecraft_azimuth attribute identifies the final end of the range of values for subspacecraft azimuth in an image. Note that since subspacecraft azimuth has values in [0,360], if the range in the image crosses the horizontal reference corresponding to zero, the value of minimum_subspacecraft_azimuth will be greater than the value of the maximum_subspacecraft_azimuth.  
@@ -4285,6 +4837,9 @@ The maximum_subspacecraft_azimuth attribute identifies the final end of the rang
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 360  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *maximum_subspacecraft_latitude*  
 The maximum_subspacecraft_latitude attribute identifies the final end of the range of values for subspacecraft latitude in an image.  
@@ -4292,6 +4847,9 @@ The maximum_subspacecraft_latitude attribute identifies the final end of the ran
 - Valid values: N/A  
 - Minimum value: -90  
 - Maximum value: 90  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *maximum_subspacecraft_longitude*  
 The maximum_subspacecraft_longitude attribute identifies the final end of the range of values for subspacecraft longitude in an image. Note that since subspacecraft longitude has values in [0,360], if the range in the product crosses the prime meridian, the value of minimum_subspacecraft_longitude will be greater than the value of the maximum_subspacecraft_longitude.  
@@ -4299,6 +4857,9 @@ The maximum_subspacecraft_longitude attribute identifies the final end of the ra
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 360  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *maximum_target_geocentric_distance*  
 The maximum_target_geocentric_distance attribute provides the largest value for the distance between the center of the target and the center of the Earth during the observation.  
@@ -4306,6 +4867,9 @@ The maximum_target_geocentric_distance attribute provides the largest value for 
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *maximum_target_heliocentric_distance*  
 The maximum_target_heliocentric_distance attribute provides the largest value for the distance between the center of the target and the center of the Sun during the observation.  
@@ -4313,6 +4877,9 @@ The maximum_target_heliocentric_distance attribute provides the largest value fo
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *maximum_target_ssb_distance*  
 The maximum_target_ssb_distance attribute provides the largest value for the distance between the center of the target and the Solar System Barycenter during the observation.  
@@ -4320,6 +4887,9 @@ The maximum_target_ssb_distance attribute provides the largest value for the dis
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *minimum_emission_angle*  
 The minimum_emission_angle attribute provides the smallest value during the observation for the emission angle at the target specified in the parent Geometry_Orbiter class.  
@@ -4327,6 +4897,9 @@ The minimum_emission_angle attribute provides the smallest value during the obse
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 180  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *minimum_incidence_angle*  
 The minimum_incidence_angle attribute provides the smallest value during the observation for the incidence angle at the target specified in the parent Geometry_Orbiter class.  
@@ -4334,6 +4907,9 @@ The minimum_incidence_angle attribute provides the smallest value during the obs
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 180  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *minimum_latitude*  
 The minimum_latitude attribute identifies the initial end of the range of values for Planetocentric latitude in an image.  
@@ -4341,6 +4917,9 @@ The minimum_latitude attribute identifies the initial end of the range of values
 - Valid values: N/A  
 - Minimum value: -90  
 - Maximum value: 90  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *minimum_longitude*  
 The minimum_longitude attribute identifies the initial end of the range of values for Planetocentric longitude. Note that since Planetocentric longitude has values in [0,360], if the range in the product crosses the prime meridian, the value of minimum_longitude will be greater than the value of the maximum_longitude.  
@@ -4348,6 +4927,9 @@ The minimum_longitude attribute identifies the initial end of the range of value
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 360  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *minimum_phase_angle*  
 The minimum_phase_angle attribute provides the smallest value during the observation for the phase angle at the target specified in the parent Geometry_Orbiter class.  
@@ -4355,6 +4937,9 @@ The minimum_phase_angle attribute provides the smallest value during the observa
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 180  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *minimum_solar_elongation*  
 The minimum_solar_elongation attribute provides the smallest value during the observation for the solar elongation.  
@@ -4362,6 +4947,9 @@ The minimum_solar_elongation attribute provides the smallest value during the ob
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 180  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *minimum_spacecraft_central_body_distance*  
 The minimum_spacecraft_central_body_distance attribute provides the smallest value during the observation for the distance between the spacecraft and the center of the central body (e.g., the center of Mars when opperating in the Mars system).  
@@ -4369,6 +4957,9 @@ The minimum_spacecraft_central_body_distance attribute provides the smallest val
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *minimum_spacecraft_geocentric_distance*  
 The minimum_spacecraft_geocentric_distance attribute provides the smallest value during the observation for the distance between the spacecraft and the center of Earth.  
@@ -4376,6 +4967,9 @@ The minimum_spacecraft_geocentric_distance attribute provides the smallest value
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *minimum_spacecraft_heliocentric_distance*  
 The minimum_spacecraft_heliocentric_distance attribute provides the smallest value during the observation for the distance between the spacecraft and the center of the Sun.  
@@ -4383,6 +4977,9 @@ The minimum_spacecraft_heliocentric_distance attribute provides the smallest val
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *minimum_spacecraft_target_boresight_intercept_distance*  
 The minimum_spacecraft_target_boresight_intercept_distance attribute provides the smallest value during the observation for the distance between the spacecraft and the boresight vector intercept point on the surface of the target specified in the parent Geometry_Orbiter class.  
@@ -4390,6 +4987,9 @@ The minimum_spacecraft_target_boresight_intercept_distance attribute provides th
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *minimum_spacecraft_target_center_distance*  
 The minimum_spacecraft_target_center_distance attribute provides the smallest value during the observation for the distance between the spacecraft and the center of the target specified in the parent Geometry_Orbiter class.  
@@ -4397,6 +4997,9 @@ The minimum_spacecraft_target_center_distance attribute provides the smallest va
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *minimum_spacecraft_target_subspacecraft_distance*  
 The minimum_spacecraft_target_subspacecraft_distance attribute provides the smallest value during the observation for the distance between the spacecraft and the subspacecraft point on the surface of the target specified in the parent Geometry_Orbiter class.  
@@ -4404,6 +5007,9 @@ The minimum_spacecraft_target_subspacecraft_distance attribute provides the smal
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *minimum_subsolar_azimuth*  
 The minimum_subsolar_azimuth attribute identifies the initial end of the range of values for subsolar azimuth in an image. Note that since subsolar azimuth has values in [0,360], if the range in the image crosses the horizontal reference corresponding to zero, the value of minimum_subsolar_azimuth will be greater than the value of the maximum_subsolar_azimuth.  
@@ -4411,6 +5017,9 @@ The minimum_subsolar_azimuth attribute identifies the initial end of the range o
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 360  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *minimum_subsolar_latitude*  
 The minimum_subsolar_latitude attribute identifies the initial end of the range of values for subsolar latitude in an image.  
@@ -4418,6 +5027,9 @@ The minimum_subsolar_latitude attribute identifies the initial end of the range 
 - Valid values: N/A  
 - Minimum value: -90  
 - Maximum value: 90  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *minimum_subsolar_longitude*  
 The minimum_subsolar_longitude attribute identifies the initial end of the range of values for subsolar longitude. Note that since subsolar longitude has values in [0,360], if the range in the product crosses the prime meridian, the value of minimum_subsolar_longitude will be greater than the value of the maximum_subsolar_longitude.  
@@ -4425,6 +5037,9 @@ The minimum_subsolar_longitude attribute identifies the initial end of the range
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 360  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *minimum_subspacecraft_azimuth*  
 The minimum_subspacecraft_azimuth attribute identifies the initial end of the range of values for subspacecraft azimuth in an image. Note that since subspacecraft azimuth has values in [0,360], if the range in the image crosses the horizontal reference corresponding to zero, the value of minimum_subspacecraft_azimuth will be greater than the value of the maximum_subspacecraft_azimuth.  
@@ -4432,6 +5047,9 @@ The minimum_subspacecraft_azimuth attribute identifies the initial end of the ra
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 360  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *minimum_subspacecraft_latitude*  
 The minimum_subspacecraft_latitude attribute identifies the initial end of the range of values for subspacecraft latitude in an image.  
@@ -4439,6 +5057,9 @@ The minimum_subspacecraft_latitude attribute identifies the initial end of the r
 - Valid values: N/A  
 - Minimum value: -90  
 - Maximum value: 90  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *minimum_subspacecraft_longitude*  
 The minimum_subspacecraft_longitude attribute identifies the initial end of the range of values for subspacecraft longitude. Note that since subspacecraft longitude has values in [0,360], if the range in the product crosses the prime meridian, the value of minimum_subspacecraft_longitude will be greater than the value of the maximum_subspacecraft_longitude.  
@@ -4446,6 +5067,9 @@ The minimum_subspacecraft_longitude attribute identifies the initial end of the 
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 360  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *minimum_target_geocentric_distance*  
 The minimum_target_geocentric_distance attribute provides the smallest value for the distance between the center of the target and the center of the Earth during the observation.  
@@ -4453,6 +5077,9 @@ The minimum_target_geocentric_distance attribute provides the smallest value for
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *minimum_target_heliocentric_distance*  
 The minimum_target_heliocentric_distance attribute provides the smallest value for the distance between the center of the target and the center of the Sun during the observation.  
@@ -4460,6 +5087,9 @@ The minimum_target_heliocentric_distance attribute provides the smallest value f
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *minimum_target_ssb_distance*  
 The minimum_target_ssb_distance attribute provides the smallest value for the distance between the center of the target and the Solar System Barycenter during the observation.  
@@ -4467,6 +5097,9 @@ The minimum_target_ssb_distance attribute provides the smallest value for the di
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *model_type*  
 The model_type attribute specifies an identifier for the type or kind of model. The value should be one of a well defined set, providing an application program with sufficient information to know how to handle the rest of the parameters within the model. This value will correlate directly with the specific camera model class that is a subclass of the Camera_Model_Parameters class.  
@@ -4482,6 +5115,9 @@ The model_type attribute specifies an identifier for the type or kind of model. 
     - Description: The PSPH model is designed to perform better fisheye-image rectification prior to 1D stereo correlation.  
 - Minimum Length: 1  
 - Maximum Length: 255  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *name*  `in Central_Body_Identification`  
 The name attribute provides a word or combination of words by which the object is known.  
@@ -4579,6 +5215,9 @@ Assuming the image is displayed as defined by the Display_Direction class, the n
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 360  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *phase_angle*  `in Derived_Geometry`  
 The phase_angle element provides a measure of the relationship between the instrument viewing position and incident illumination (such as solar light). Phase angle is measured at the target; it is the angle between a vector to the illumination source and a vector to the instrument. If illumination is from behind the instrument, phase_angle will be small.  
@@ -4612,6 +5251,9 @@ The pixel_field_of_view_method provides the method used to get the values of the
     - Description: Pixel field of view does not vary across the camera field of view  
 - Minimum Length: 1  
 - Maximum Length: 255  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *pixel_latitude*  
 The pixel_latitude attribute gives the value of the planetocentric latitude on the target of the projection of a specified pixel.  
@@ -4619,6 +5261,9 @@ The pixel_latitude attribute gives the value of the planetocentric latitude on t
 - Valid values: N/A  
 - Minimum value: -90  
 - Maximum value: 90  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *pixel_longitude*  
 The pixel_longitude attribute gives the value of the planetocentric longitude on the target of the projection of a specified pixel.  
@@ -4626,6 +5271,9 @@ The pixel_longitude attribute gives the value of the planetocentric longitude on
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 360  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *positive_azimuth_direction*  
 The positive_azimuth_direction attribute specifies the direction in which azimuth is measured in positive degrees for an observer on the surface of a body. The azimuth is measured with respect to the elevation reference plane. A value of 'clockwise' indicates that azimuth is measured positively clockwise, and 'counterclockwise' indicates that azimuth increases positively counter-clockwise.  
@@ -4641,6 +5289,9 @@ The positive_azimuth_direction attribute specifies the direction in which azimut
     - Description: Indicates that azimuth is measured positively Counter-clockwise.  
 - Minimum Length: 1  
 - Maximum Length: 255  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *positive_elevation_direction*  
 The positive_elevation_direction attribute provides the direction in which elevation is measured in positive degrees for an observer on the surface of a body. The elevation is measured with respect to the azimuthal reference plane. A value of UP or ZENITH indicates that elevation is measured positively upwards, i.e., the zenith point would be at +90 degrees and the nadir point at -90 degrees. DOWN or NADIR indicates that the elevation is measured positively downwards; the zenith point would be at -90 degrees and the nadir point at +90 degrees.  
@@ -4656,6 +5307,9 @@ The positive_elevation_direction attribute provides the direction in which eleva
     - Description: Indicates that elevation is measured positively upwards, i.e., the zenith point would be at +90 degrees and the nadir point at -90 degrees.  
 - Minimum Length: 1  
 - Maximum Length: 255  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *psph_model_scale_x*  
  Column scale factor to convert between x coordinate and rotation around axis x, expressed in radians/pixel.  
@@ -4663,6 +5317,9 @@ The positive_elevation_direction attribute provides the direction in which eleva
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *psph_model_scale_y*  
  Column scale factor to convert between y coordinate and rotation around axis y, expressed in radians/pixel.  
@@ -4670,6 +5327,9 @@ The positive_elevation_direction attribute provides the direction in which eleva
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *qcos*  
 qcos is the scalar component of a quaternion. qcos = cos(theta/2), where theta is the angle of rotation.  
@@ -4677,6 +5337,9 @@ qcos is the scalar component of a quaternion. qcos = cos(theta/2), where theta i
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *qsin1*  
 qsin1 is the first element of the vector component of a quaternion. qsin1 = x*sin(theta/2) where theta is the angle of rotation and (x,y,z) is the unit vector around which the rotation occurs.  
@@ -4684,6 +5347,9 @@ qsin1 is the first element of the vector component of a quaternion. qsin1 = x*si
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *qsin2*  
 qsin2 is the second element of the vector component of a quaternion. qsin2 = y*sin(theta/2) where theta is the angle of rotation and (x,y,z) is the unit vector around which the rotation occurs.  
@@ -4691,6 +5357,9 @@ qsin2 is the second element of the vector component of a quaternion. qsin2 = y*s
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *qsin3*  
 qsin3 is the third element of the vector component of a quaternion. qsin3 = z*sin(theta/2) where theta is the angle of rotation and (x,y,z) is the unit vector around which the rotation occurs.  
@@ -4698,6 +5367,9 @@ qsin3 is the third element of the vector component of a quaternion. qsin3 = z*si
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *quaternion_measurement_method*  `in Coordinate_Space_Definition`  
 Specifies the method by which the coordinate space was measured. This provides an indication of the quality of the definition.  
@@ -4749,6 +5421,9 @@ The radial component of a spherical or cylindrical velocity vector.
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *radius_position*  
 The radial component of a spherical or cylindrical position vector (e.g., the radius coordinate in Planetocentric coordinates).  
@@ -4756,6 +5431,9 @@ The radial component of a spherical or cylindrical position vector (e.g., the ra
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *reference_location*  `in Illumination_Specific`  
 The reference_location indicates the position to which values in the containing class apply. If the reference location is on a target, the target is the one specified in the parent Geometry_Orbiter class.  
@@ -4809,6 +5487,9 @@ The reference_pixel_location indicates the position of the pixel to which values
     - Description: Values were determined for the intersection of a vector through the upper right corner of the field of view with the specified target.  
 - Minimum Length: 1  
 - Maximum Length: 255  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *right_ascension_angle*  
 The right_ascension_angle attribute provides the value of right ascension (RA) as an angle. Right ascension is measured from the vernal equinox or the first point of Aries, which is the place on the celestial sphere where the Sun crosses the celestial equator from south to north at the March equinox. Right ascension is measured continuously in a full circle from that equinox towards the east. Right ascension is used in conjunction with the declination attribute to specify a point on the sky. Note Right Ascension also may be given in hour angles in which case the appropriate attribute is right_ascension_hour_angle.  
@@ -4816,6 +5497,9 @@ The right_ascension_angle attribute provides the value of right ascension (RA) a
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 360  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *right_ascension_hour_angle*  
 The right_ascension_hour_angle attribute provides the value of right ascension (RA) as in terms of hour angles (hh.xxx...). Right ascension is measured from the vernal equinox or the first point of Aries, which is the place on the celestial sphere where the Sun crosses the celestial equator from south to north at the March equinox. Right ascension is measured continuously in a full circle from that equinox towards the east. Right ascension is used in conjunction with the declination attribute to specify a point on the sky.  
@@ -4823,6 +5507,9 @@ The right_ascension_hour_angle attribute provides the value of right ascension (
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *rotation_direction*  
 The rotation_direction attribute identifies the direction of the rotation for a specific quaternion. This is used when the two frames involved are unambiguously identifed in the enclosing classes.  
@@ -4842,6 +5529,9 @@ The rotation_direction attribute identifies the direction of the rotation for a 
     - Description: Reference frames are generally defined sequentially from a base reference frame (e.g., base frames might be ICRF, IAU Mars, or the landing site from which a rover begins its exploration). rotation_direction = Toward Base corresponds to rotation toward the base frame.  
 - Minimum Length: 1  
 - Maximum Length: 255  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *selected_instrument_id*  
 The selected_instrument_id attribute specifies an abbreviated name or acronym that identifies the selected instrument mounted on the articulation device.  
@@ -4849,6 +5539,9 @@ The selected_instrument_id attribute specifies an abbreviated name or acronym th
 - Valid values: N/A  
 - Minimum Length: 1  
 - Maximum Length: 255  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *solar_azimuth*  
 The solar_azimuth attribute specifies one of two angular measurements indicating the direction to the Sun as measured from a specific point on the surface of a planet (eg., from a lander or rover). The positive direction of azimuth is set by the positive_azimuth_direction attribute in the reference coordinate space. The azimuth is measured in the clockwise or counterclockwise direction (as viewed from above) with the meridian passing through the positive spin axis of the planet (i.e., the north pole) defining the zero reference.  
@@ -4856,6 +5549,9 @@ The solar_azimuth attribute specifies one of two angular measurements indicating
 - Valid values: N/A  
 - Minimum value: 0.0  
 - Maximum value: 360.0  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
+- Nillable: No  
   
 ### *solar_elevation*  
 The solar_elevation attribute specifies one of two angular measurements indicating the direction to the Sun as measured from a specific point on the surface of a planet (eg., from a lander or rover). The positive direction of the elevation is set by the positive_elevation_direction attribute in the reference coordinate space. The elevation is measured from the plane which is normal to the line passing between the surface point and the planet's center of mass, and that intersects the surface point.  
@@ -4863,6 +5559,9 @@ The solar_elevation attribute specifies one of two angular measurements indicati
 - Valid values: N/A  
 - Minimum value: -90.0  
 - Maximum value: 90.0  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
+- Nillable: No  
   
 ### *solar_elongation*  
 The solar_elongation element gives the angle between the line of sight of observation and the direction of the Sun. Note: For IRAS: The line of sight of observation is the boresight of the telescope as measured by the satellite sun sensor.  
@@ -4870,6 +5569,9 @@ The solar_elongation element gives the angle between the line of sight of observ
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 180  
+- Minimum occurrences: 1  
+- Maximum occurrences: 4  
+- Nillable: No  
   
 ### *solar_image_clock_angle*  
 Describes the direction of the sun in terms of the image plane, defined as a clock angle (clockwise) around the center of the image with 0 pointing to the top of the image, with respect to the display orientation (usually defined by disp:vertical_display_direction).  
@@ -4877,6 +5579,9 @@ Describes the direction of the sun in terms of the image plane, defined as a clo
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
+- Nillable: No  
   
 ### *solution_id*  
 The solution_id attribute specifies the unique identifier for the solution set to which the values in the group belong. For certain kinds of information, such as pointing correction (pointing models) and rover localization (coordinate system definitions), the "true" value is unknown and only estimates of the true value exist. Thus, more than one set of estimates may exist simultaneously, each valid for its intended purpose. Each of these sets is called a "solution" to the unknown true value. The solution_id attribute is used to identify which solution is being expressed by the containing group. No specific naming convention is defined here, however it is recommended that projects adopt one. The intent is to be able to identify who created the solution, and why. Possible components of the naming convention include user, institution, purpose, request ID, version, program, date/time.  
@@ -4884,6 +5589,9 @@ The solution_id attribute specifies the unique identifier for the solution set t
 - Valid values: N/A  
 - Minimum Length: 1  
 - Maximum Length: 255  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *spacecraft_central_body_distance*  
 The spacecraft_central_body_distance attribute provides the scalar distance between the spacecraft and the center of the central body (e.g., the center of Mars when opperating in the Mars system).  
@@ -4891,6 +5599,9 @@ The spacecraft_central_body_distance attribute provides the scalar distance betw
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
+- Nillable: No  
   
 ### *spacecraft_geocentric_distance*  
 The spacecraft_geocentric_distance attribute provides the scalar distance between the spacecraft and the center of Earth.  
@@ -4898,6 +5609,9 @@ The spacecraft_geocentric_distance attribute provides the scalar distance betwee
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
+- Nillable: No  
   
 ### *spacecraft_heliocentric_distance*  
 The spacecraft_heliocentric_distance attribute provides the scalar distance between the spacecraft and the center of the Sun.  
@@ -4905,6 +5619,9 @@ The spacecraft_heliocentric_distance attribute provides the scalar distance betw
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
+- Nillable: No  
   
 ### *spacecraft_target_boresight_intercept_distance*  
 The spacecraft_target_boresight_intercept_distance attribute provides the scalar distance between the spacecraft and the boresight vector intercept point on the surface of the target specified in the parent Geometry_Orbiter class.  
@@ -4912,6 +5629,9 @@ The spacecraft_target_boresight_intercept_distance attribute provides the scalar
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
+- Nillable: No  
   
 ### *spacecraft_target_center_distance*  
 The spacecraft_target_center_distance attribute provides the scalar distance between the spacecraft and the center of the target specified in the parent Geometry_Orbiter class.  
@@ -4919,6 +5639,9 @@ The spacecraft_target_center_distance attribute provides the scalar distance bet
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
+- Nillable: No  
   
 ### *spacecraft_target_subspacecraft_distance*  
 The spacecraft_target_subspacecraft_distance attribute provides the scalar distance between the spacecraft and the subspacecraft point on the surface of the target specified in the parent Geometry_Orbiter class.  
@@ -4926,6 +5649,9 @@ The spacecraft_target_subspacecraft_distance attribute provides the scalar dista
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
+- Nillable: No  
   
 ### *spice_kernel_file_name*  
 The spice_kernel_file_name attribute provides the file name of a SPICE kernel file used to process the data or to produce geometric quantities given in the label.  
@@ -4933,6 +5659,9 @@ The spice_kernel_file_name attribute provides the file name of a SPICE kernel fi
 - Valid values: N/A  
 - Minimum Length: 1  
 - Maximum Length: 255  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *start_azimuth*  
 The start_azimuth attribute specifies the angular distance from a fixed reference position at which an image or observation starts. Azimuth is measured in a spherical coordinate system, in a plane normal to the principal axis. Azimuth values increase according to the right hand rule relative to the positive direction of the principal axis of the spherical coordinate system. When applied to a site or surface projection coordinate space, specifies the azimuth of the left edge of the output map. Applies to Cylindrical and Cylindrical-Perspective projections only.  
@@ -4940,6 +5669,9 @@ The start_azimuth attribute specifies the angular distance from a fixed referenc
 - Valid values: N/A  
 - Minimum value: 0.0  
 - Maximum value: 360.0  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
+- Nillable: No  
   
 ### *start_emission_angle*  
 The start_emission_angle attribute provides the value at the beginning of the observation (geometry_start_time_utc) for the emission angle at the target specified in the parent Geometry_Orbiter class.  
@@ -4947,6 +5679,9 @@ The start_emission_angle attribute provides the value at the beginning of the ob
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 180  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *start_incidence_angle*  
 The start_incidence_angle attribute provides the value at the beginning of the observation (geometry_start_time_utc) for the incidence angle at the target specified in the parent Geometry_Orbiter class.  
@@ -4954,6 +5689,9 @@ The start_incidence_angle attribute provides the value at the beginning of the o
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 180  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *start_latitude*  
 The start_latitude attribute identifies the value of the Planetocentric latitude at the beginning of the observation (geometry_start_time_utc). When either start_latitude or stop_latitude is used, both must be used. In addition the attribute lat_long_method must be used.  
@@ -4961,6 +5699,9 @@ The start_latitude attribute identifies the value of the Planetocentric latitude
 - Valid values: N/A  
 - Minimum value: -90  
 - Maximum value: 90  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *start_longitude*  
 The start_longitude attribute identifies the value of the Planetocentric longitude at the beginning of the observation (geometry_start_time_utc).  
@@ -4968,6 +5709,9 @@ The start_longitude attribute identifies the value of the Planetocentric longitu
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 360  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *start_phase_angle*  
 The start_phase_angle attribute provides the value at the beginning of the observation (geometry_start_time_utc) for the phase angle at the target specified in the parent Geometry_Orbiter class.  
@@ -4975,6 +5719,9 @@ The start_phase_angle attribute provides the value at the beginning of the obser
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 180  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *start_solar_elongation*  
 The start_solar_elongation attribute provides the value at the beginning of the observation (geometry_start_time_utc) for the solar elongation.  
@@ -4982,6 +5729,9 @@ The start_solar_elongation attribute provides the value at the beginning of the 
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 180  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *start_spacecraft_central_body_distance*  
 The start_spacecraft_central_body_distance attribute provides the scalar distance at the beginning of the observation (geometry_start_time_utc) between the spacecraft and the center of the central body (e.g., the center of Mars when opperating in the Mars system).  
@@ -4989,6 +5739,9 @@ The start_spacecraft_central_body_distance attribute provides the scalar distanc
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *start_spacecraft_geocentric_distance*  
 The start_spacecraft_geocentric_distance attribute provides the scalar distance at the beginning of the observation (geometry_start_time_utc) between the spacecraft and the center of Earth.  
@@ -4996,6 +5749,9 @@ The start_spacecraft_geocentric_distance attribute provides the scalar distance 
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *start_spacecraft_heliocentric_distance*  
 The start_spacecraft_heliocentric_distance attribute provides the scalar distance at the beginning of the observation (geometry_start_time_utc) between the spacecraft and the center of the Sun.  
@@ -5003,6 +5759,9 @@ The start_spacecraft_heliocentric_distance attribute provides the scalar distanc
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *start_spacecraft_target_boresight_intercept_distance*  
 The start_spacecraft_target_boresight_intercept_distance attribute provides the scalar distance at the beginning of the observation (geometry_start_time_utc) between the spacecraft and the boresight vector intercept point on the surface of the target specified in the parent Geometry_Orbiter class.  
@@ -5010,6 +5769,9 @@ The start_spacecraft_target_boresight_intercept_distance attribute provides the 
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *start_spacecraft_target_center_distance*  
 The start_spacecraft_target_center_distance attribute provides the scalar distance at the beginning of the observation (geometry_start_time_utc) between the spacecraft and the center of the target specified in the parent Geometry_Orbiter class.  
@@ -5017,6 +5779,9 @@ The start_spacecraft_target_center_distance attribute provides the scalar distan
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *start_spacecraft_target_subspacecraft_distance*  
 The start_spacecraft_target_subspacecraft_distance attribute provides the scalar distance at the beginning of the observation (geometry_start_time_utc) between the spacecraft and the subspacecraft point on the surface of the target specified in the parent Geometry_Orbiter class.  
@@ -5024,6 +5789,9 @@ The start_spacecraft_target_subspacecraft_distance attribute provides the scalar
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *start_subsolar_azimuth*  
 The start_subsolar_azimuth attribute identifies the value of the subsolar azimuth at the beginning of the observation (geometry_start_time_utc).  
@@ -5031,6 +5799,9 @@ The start_subsolar_azimuth attribute identifies the value of the subsolar azimut
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 360  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *start_subsolar_latitude*  
 The start_subsolar_latitude attribute identifies the value of the subsolar latitude at the beginning of the observation (geometry_start_time_utc).  
@@ -5038,6 +5809,9 @@ The start_subsolar_latitude attribute identifies the value of the subsolar latit
 - Valid values: N/A  
 - Minimum value: -90  
 - Maximum value: 90  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *start_subsolar_longitude*  
 The start_subsolar_longitude attribute identifies the value of the subsolar longitude at the beginning of the observation (geometry_start_time_utc).  
@@ -5045,6 +5819,9 @@ The start_subsolar_longitude attribute identifies the value of the subsolar long
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 360  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *start_subspacecraft_azimuth*  
 The start_subspacecraft_azimuth attribute identifies the value of the subspacecraft azimuth at the beginning of the observation (geometry_start_time_utc).  
@@ -5052,6 +5829,9 @@ The start_subspacecraft_azimuth attribute identifies the value of the subspacecr
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 360  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *start_subspacecraft_latitude*  
 The start_subspacecraft_latitude attribute identifies the value of the subspacecraft latitude at the beginning of the observation (geometry_start_time_utc).  
@@ -5059,6 +5839,9 @@ The start_subspacecraft_latitude attribute identifies the value of the subspacec
 - Valid values: N/A  
 - Minimum value: -90  
 - Maximum value: 90  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *start_subspacecraft_longitude*  
 The start_subspacecraft_longitude attribute identifies the value of the subspacecraft longitude at the beginning of the observation (geometry_start_time_utc).  
@@ -5066,6 +5849,9 @@ The start_subspacecraft_longitude attribute identifies the value of the subspace
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 360  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *start_target_geocentric_distance*  
 The start_target_geocentric_distance attribute provides the scalar distance between the center of the target and the center of the Earth at the beginning of the observation (geometry_start_time_utc).  
@@ -5073,6 +5859,9 @@ The start_target_geocentric_distance attribute provides the scalar distance betw
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *start_target_heliocentric_distance*  
 The start_target_heliocentric_distance attribute provides the scalar distance between the center of the target and the center of the Sun at the beginning of the observation (geometry_start_time_utc).  
@@ -5080,6 +5869,9 @@ The start_target_heliocentric_distance attribute provides the scalar distance be
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *start_target_ssb_distance*  
 The start_target_ssb_distance attribute provides the scalar distance between the center of the target and the Solar System Barycenter at the beginning of the observation (geometry_start_time_utc).  
@@ -5087,6 +5879,9 @@ The start_target_ssb_distance attribute provides the scalar distance between the
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *stop_azimuth*  
 The stop_azimuth attribute specifies the angular distance from a fixed reference position at which an image or observation stops. Azimuth is measured in a spherical coordinate system, in a plane normal to the principal axis. Azimuth values increase according to the right hand rule relative to the positive direction of the principal axis of the spherical coordinate system. When applied to a site or surface projection coordinate space, specifies the azimuth of the right edge of the output map. Applies to Cylindrical and Cylindrical-Perspective projections only.  
@@ -5094,6 +5889,9 @@ The stop_azimuth attribute specifies the angular distance from a fixed reference
 - Valid values: N/A  
 - Minimum value: 0.0  
 - Maximum value: 360.0  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
+- Nillable: No  
   
 ### *stop_emission_angle*  
 The stop_emission_angle attribute provides the value at the end of the observation (geometry_stop_time_utc) for the emission angle at the target specified in the parent Geometry_Orbiter class.  
@@ -5101,6 +5899,9 @@ The stop_emission_angle attribute provides the value at the end of the observati
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 180  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *stop_incidence_angle*  
 The stop_incidence_angle attribute provides the value at the end of the observation (geometry_stop_time_utc) for the incidence angle at the target specified in the parent Geometry_Orbiter class.  
@@ -5108,6 +5909,9 @@ The stop_incidence_angle attribute provides the value at the end of the observat
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 180  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *stop_latitude*  
 The stop_latitude attribute identifies the value of the Planetocentric latitude at the end of the observation (geometry_stop_time_utc). When either start_latitude or stop_latitude is used, both must be used. In addition the attribute lat_long_method must be used.  
@@ -5115,6 +5919,9 @@ The stop_latitude attribute identifies the value of the Planetocentric latitude 
 - Valid values: N/A  
 - Minimum value: -90  
 - Maximum value: 90  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *stop_longitude*  
 The stop_longitude attribute identifies the value of the Planetocentric longitude at the end of the observation (geometry_stop_time_utc).  
@@ -5122,6 +5929,9 @@ The stop_longitude attribute identifies the value of the Planetocentric longitud
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 360  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *stop_phase_angle*  
 The stop_phase_angle attribute provides the value at the end of the observation (geometry_stop_time_utc) for the phase angle at the target specified in the parent Geometry_Orbiter class.  
@@ -5129,6 +5939,9 @@ The stop_phase_angle attribute provides the value at the end of the observation 
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 180  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *stop_solar_elongation*  
 The stop_solar_elongation attribute provides the value at the end of the observation (geometry_stop_time_utc) for the solar elongation.  
@@ -5136,6 +5949,9 @@ The stop_solar_elongation attribute provides the value at the end of the observa
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 180  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *stop_spacecraft_central_body_distance*  
 The stop_spacecraft_central_body_distance attribute provides the scalar distance at the end of the observation (geometry_stop_time_utc) between the spacecraft and the center of the central body (e.g., the center of Mars when opperating in the Mars system).  
@@ -5143,6 +5959,9 @@ The stop_spacecraft_central_body_distance attribute provides the scalar distance
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *stop_spacecraft_geocentric_distance*  
 The stop_spacecraft_geocentric_distance attribute provides the scalar distance at the end of the observation (geometry_stop_time_utc) between the spacecraft and the center of Earth.  
@@ -5150,6 +5969,9 @@ The stop_spacecraft_geocentric_distance attribute provides the scalar distance a
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *stop_spacecraft_heliocentric_distance*  
 The stop_spacecraft_heliocentric_distance attribute provides the scalar distance at the end of the observation (geometry_stop_time_utc) between the spacecraft and the center of the Sun.  
@@ -5157,6 +5979,9 @@ The stop_spacecraft_heliocentric_distance attribute provides the scalar distance
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *stop_spacecraft_target_boresight_intercept_distance*  
 The stop_spacecraft_target_boresight_intercept_distance attribute provides the scalar distance at the end of the observation (geometry_stop_time_utc) between the spacecraft and the boresight vector intercept point on the surface of the target specified in the parent Geometry_Orbiter class.  
@@ -5164,6 +5989,9 @@ The stop_spacecraft_target_boresight_intercept_distance attribute provides the s
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *stop_spacecraft_target_center_distance*  
 The stop_spacecraft_target_center_distance attribute provides the scalar distance at the end of the observation (geometry_stop_time_utc) between the spacecraft and the center of the target specified in the parent Geometry_Orbiter class.  
@@ -5171,6 +5999,9 @@ The stop_spacecraft_target_center_distance attribute provides the scalar distanc
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *stop_spacecraft_target_subspacecraft_distance*  
 The stop_spacecraft_target_subspacecraft_distance attribute provides the scalar distance at the end of the observation (geometry_stop_time_utc) between the spacecraft and the subspacecraft point on the surface of the target specified in the parent Geometry_Orbiter class.  
@@ -5178,6 +6009,9 @@ The stop_spacecraft_target_subspacecraft_distance attribute provides the scalar 
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *stop_subsolar_azimuth*  
 The stop_subsolar_azimuth attribute identifies the value of the subsolar azimuth at the end of the observation (geometry_stop_time_utc).  
@@ -5185,6 +6019,9 @@ The stop_subsolar_azimuth attribute identifies the value of the subsolar azimuth
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 360  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *stop_subsolar_latitude*  
 The stop_subsolar_latitude attribute identifies the value of the subsolar latitude at the end of the observation (geometry_stop_time_utc).  
@@ -5192,6 +6029,9 @@ The stop_subsolar_latitude attribute identifies the value of the subsolar latitu
 - Valid values: N/A  
 - Minimum value: -90  
 - Maximum value: 90  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *stop_subsolar_longitude*  
 The stop_subsolar_longitude attribute identifies the value of the subsolar longitude at the end of the observation (geometry_stop_time_utc).  
@@ -5199,6 +6039,9 @@ The stop_subsolar_longitude attribute identifies the value of the subsolar longi
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 360  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *stop_subspacecraft_azimuth*  
 The stop_subspacecraft_azimuth attribute identifies the value of the subspacecraft azimuth at the end of the observation (geometry_stop_time_utc).  
@@ -5206,6 +6049,9 @@ The stop_subspacecraft_azimuth attribute identifies the value of the subspacecra
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 360  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *stop_subspacecraft_latitude*  
 The stop_subspacecraft_latitude attribute identifies the value of the subspacecraft latitude at the end of the observation (geometry_stop_time_utc).  
@@ -5213,6 +6059,9 @@ The stop_subspacecraft_latitude attribute identifies the value of the subspacecr
 - Valid values: N/A  
 - Minimum value: -90  
 - Maximum value: 90  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *stop_subspacecraft_longitude*  
 The stop_subspacecraft_longitude attribute identifies the value of the subspacecraft longitude at the end of the observation (geometry_stop_time_utc).  
@@ -5220,6 +6069,9 @@ The stop_subspacecraft_longitude attribute identifies the value of the subspacec
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 360  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *stop_target_geocentric_distance*  
 The stop_target_geocentric_distance attribute provides the scalar distance between the center of the target and the center of the Earth at the end of the observation (geometry_stop_time_utc).  
@@ -5227,6 +6079,9 @@ The stop_target_geocentric_distance attribute provides the scalar distance betwe
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *stop_target_heliocentric_distance*  
 The stop_target_heliocentric_distance attribute provides the scalar distance between the center of the target and the center of the Sun at the end of the observation (geometry_stop_time_utc).  
@@ -5234,6 +6089,9 @@ The stop_target_heliocentric_distance attribute provides the scalar distance bet
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *stop_target_ssb_distance*  
 The stop_target_ssb_distance attribute provides the scalar distance between the center of the target and the Solar System Barycenter at the end of the observation (geometry_stop_time_utc).  
@@ -5241,6 +6099,9 @@ The stop_target_ssb_distance attribute provides the scalar distance between the 
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *subsolar_azimuth*  
 The subsolar_azimuth attribute provides the value of the angle between the line from the center of an image to the subsolar point on the target and a horizontal reference line (in the image plane) extending from the image center to the middle right edge of the image. The values of this angle increase in a clockwise direction.  
@@ -5248,6 +6109,9 @@ The subsolar_azimuth attribute provides the value of the angle between the line 
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 360  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *subsolar_latitude*  
 The subsolar_latitude attribute gives the value of the planetocentric latitude at the subsolar point on the target.  
@@ -5255,6 +6119,9 @@ The subsolar_latitude attribute gives the value of the planetocentric latitude a
 - Valid values: N/A  
 - Minimum value: -90  
 - Maximum value: 90  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *subsolar_longitude*  
 The subsolar_longitude attribute gives the value of the planetocentric longitude at the subsolar point on the target.  
@@ -5262,6 +6129,9 @@ The subsolar_longitude attribute gives the value of the planetocentric longitude
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 360  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *subspacecraft_azimuth*  
 The subspacecraft_azimuth attribute provides the value of the angle between the line from the center of an image to the subspacecraft point on the target and a horizontal reference line (in the image plane) extending from the image center to the middle right edge of the image. The values of this angle increase in a clockwise direction.  
@@ -5269,6 +6139,9 @@ The subspacecraft_azimuth attribute provides the value of the angle between the 
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 360  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *subspacecraft_latitude*  
 The subspacecraft_latitude attribute gives the value of the planetocentric latitude at the subspacecraft point on the target.  
@@ -5276,6 +6149,9 @@ The subspacecraft_latitude attribute gives the value of the planetocentric latit
 - Valid values: N/A  
 - Minimum value: -90  
 - Maximum value: 90  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *subspacecraft_longitude*  
 The subspacecraft_longitude attribute gives the value of the planetocentric longitude at the subspacecraft point on the target.  
@@ -5283,6 +6159,9 @@ The subspacecraft_longitude attribute gives the value of the planetocentric long
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 360  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *sun_direction_clock_angle*  
 The sun_direction_clock_angle attribute specifies the direction of the sun as an angle measured from a line 'upward' from the center of the field of view, clockwise to the direction toward sun, assuming the image is displayed as defined by the Display_Direction class.  
@@ -5290,6 +6169,9 @@ The sun_direction_clock_angle attribute specifies the direction of the sun as an
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 360  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
+- Nillable: No  
   
 ### *target_geocentric_distance*  
 The target_geocentric_distance attribute provides the scalar distance between the center of the target and the center of the Earth.  
@@ -5297,6 +6179,9 @@ The target_geocentric_distance attribute provides the scalar distance between th
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
+- Nillable: No  
   
 ### *target_heliocentric_distance*  
 The target_heliocentric_distance attribute provides the scalar distance between the center of the target and the center of the Sun.  
@@ -5304,6 +6189,9 @@ The target_heliocentric_distance attribute provides the scalar distance between 
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
+- Nillable: No  
   
 ### *target_name*  
 Specifies the name of the target location for items in this class.  
@@ -5311,6 +6199,9 @@ Specifies the name of the target location for items in this class.
 - Valid values: N/A  
 - Minimum Length: 1  
 - Maximum Length: 255  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *target_north_pole_clock_angle*  
 The target_north_pole_clock_angle element specifies the direction of the target body's rotation axis in an image. It is measured from the 'upward' direction in the image, clockwise to the direction of the northern rotational pole as projected into the image plane, assuming the image is displayed as defined by the Display_Direction class. The north pole of a planet or any of its satellites in the solar system is the pole of the rotation axis that is in the same celestial hemisphere relative to the invariable plane of the solar system as Earth's North pole.  
@@ -5318,6 +6209,9 @@ The target_north_pole_clock_angle element specifies the direction of the target 
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 360  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
+- Nillable: No  
   
 ### *target_positive_pole_clock_angle*  
 The target_positive_pole_clock_angle element specifies the direction of the target body's rotation axis in an image. It is measured from the 'upward' direction in the image, clockwise to the direction of the positive rotational pole as projected into the image plane, assuming the image is displayed as defined by the Display_Direction class. The positive pole is defined as the pole toward which the thumb points when the fingers of the right hand are curled in the body's direction of rotation.  
@@ -5325,6 +6219,9 @@ The target_positive_pole_clock_angle element specifies the direction of the targ
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 360  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
+- Nillable: No  
   
 ### *target_ssb_distance*  
 The target_ssb_distance attribute provides the scalar distance between the center of the target and the Solar System Barycenter.  
@@ -5332,6 +6229,9 @@ The target_ssb_distance attribute provides the scalar distance between the cente
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: unbounded  
+- Nillable: No  
   
 ### *vertical_coordinate_pixel*  
 vertical_coordinate_pixel (line) is the vertical coordinate of a specific pixel.  
@@ -5339,6 +6239,9 @@ vertical_coordinate_pixel (line) is the vertical coordinate of a specific pixel.
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *vertical_display_axis*  
 The vertical_display_axis attribute identifies, by name, the axis of an Array (or Array subclass) that is intended to be displayed in the vertical or "line" dimension on a display device. The value of this attribute must match the value of one, and only one, axis_name attribute in an Axis_Array class of the associated Array.  
@@ -5346,6 +6249,9 @@ The vertical_display_axis attribute identifies, by name, the axis of an Array (o
 - Valid values: N/A  
 - Minimum Length: 1  
 - Maximum Length: 255  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *vertical_display_direction*  
 The vertical_display_direction attribute specifies the direction along the screen of a display device that data along the vertical axis of an Array is supposed to be displayed.  
@@ -5357,6 +6263,9 @@ The vertical_display_direction attribute specifies the direction along the scree
     - Description: Data along the vertical axis of an array should be displayed from the top to the bottom of the display device.  
 - Minimum Length: 1  
 - Maximum Length: 255  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *vertical_pixel_field_of_view*  
 The vertical_pixel_field_of_view provides the angular measure of the vertical field of view of a single pixel, and is sometimes referred to as the instantaneous field of view. The pixel_field_of_view_method attribute will designate the method used to determine this value. If the pixel_field_of_view_method attribute is not specified, see the camera documentation for more details.  
@@ -5364,6 +6273,9 @@ The vertical_pixel_field_of_view provides the angular measure of the vertical fi
 - Valid values: N/A  
 - Minimum value: 0  
 - Maximum value: 360  
+- Minimum occurrences: 0  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *vertical_pixel_footprint*  
 The vertical_pixel_footprint provides the size of the vertical field of view of a single pixel projected onto the target specified in the parent Geometry_Orbiter class.  
@@ -5371,6 +6283,9 @@ The vertical_pixel_footprint provides the size of the vertical field of view of 
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *x*  
 The x component of a Cartesian vector which has no units.  
@@ -5378,6 +6293,9 @@ The x component of a Cartesian vector which has no units.
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *x_acceleration*  
 The x component of a Cartesian acceleration vector.  
@@ -5385,6 +6303,9 @@ The x component of a Cartesian acceleration vector.
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *x_pixel*  
 The x component of a Cartesian pixel vector; typically used in cameral models.  
@@ -5392,6 +6313,9 @@ The x component of a Cartesian pixel vector; typically used in cameral models.
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *x_position*  
 The x component of a Cartesian position vector.  
@@ -5399,6 +6323,9 @@ The x component of a Cartesian position vector.
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *x_unit*  
 The x component of a unit Cartesian vector.  
@@ -5406,6 +6333,9 @@ The x component of a unit Cartesian vector.
 - Valid values: N/A  
 - Minimum value: -1  
 - Maximum value: 1  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *x_velocity*  
 The x component of a Cartesian velocity vector.  
@@ -5413,6 +6343,9 @@ The x component of a Cartesian velocity vector.
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *y*  
 The y component of a Cartesian vector which has no units.  
@@ -5420,6 +6353,9 @@ The y component of a Cartesian vector which has no units.
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *y_acceleration*  
 The y component of a Cartesian acceleration vector.  
@@ -5427,6 +6363,9 @@ The y component of a Cartesian acceleration vector.
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *y_pixel*  
 The y component of a Cartesian pixel vector; typically used in cameral models.  
@@ -5434,6 +6373,9 @@ The y component of a Cartesian pixel vector; typically used in cameral models.
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *y_position*  
 The y component of a Cartesian position vector.  
@@ -5441,6 +6383,9 @@ The y component of a Cartesian position vector.
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *y_unit*  
 The y component of a unit Cartesian vector.  
@@ -5448,6 +6393,9 @@ The y component of a unit Cartesian vector.
 - Valid values: N/A  
 - Minimum value: -1  
 - Maximum value: 1  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *y_velocity*  
 The y component of a Cartesian velocity vector.  
@@ -5455,6 +6403,9 @@ The y component of a Cartesian velocity vector.
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *z*  
 The z component of a Cartesian vector which has no units.  
@@ -5462,6 +6413,9 @@ The z component of a Cartesian vector which has no units.
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *z_acceleration*  
 The z component of a Cartesian acceleration vector.  
@@ -5469,6 +6423,9 @@ The z component of a Cartesian acceleration vector.
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *z_pixel*  
 The z component of a Cartesian pixel vector; typically used in cameral models.  
@@ -5476,6 +6433,9 @@ The z component of a Cartesian pixel vector; typically used in cameral models.
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *z_position*  
 The z component of a Cartesian position vector.  
@@ -5483,6 +6443,9 @@ The z component of a Cartesian position vector.
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *z_unit*  
 The z component of a unit Cartesian vector.  
@@ -5490,6 +6453,9 @@ The z component of a unit Cartesian vector.
 - Valid values: N/A  
 - Minimum value: -1  
 - Maximum value: 1  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 ### *z_velocity*  
 The z component of a Cartesian velocity vector.  
@@ -5497,6 +6463,9 @@ The z component of a Cartesian velocity vector.
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
 - Maximum value: 1.7976931348623157e+308  
+- Minimum occurrences: 1  
+- Maximum occurrences: 1  
+- Nillable: No  
   
 # Examples  
   
