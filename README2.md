@@ -3248,11 +3248,7 @@ Count in clock units of how long it has been since the last IMU reset, which rel
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -3262,11 +3258,7 @@ The number of seconds for how long it has been since the last IMU reset, which r
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -3275,16 +3267,9 @@ The number of seconds for how long it has been since the last IMU reset, which r
 The body_spice_name attribute is a NAIF-recognized string identifier for a physical object (spacecraft, planet, instrument transmitter, system barycenter, etc.), associated with the data.  
 - PDS4 data type: ASCII_Short_String_Collapsed  
 - Valid values: N/A  
-- Nillable: No  
-- Nillable: No  
 - Minimum Length: 1  
-- Nillable: No  
 - Maximum Length: 255  
 - Nillable: No  
-- Nillable: No  
-- in [Coordinate_Space_SPICE](#coordinate_space_spice):  
-  - Minimum occurrences: 1  
-  - Maximum occurrences: 1  
 - in [Central_Body_Identification](#central_body_identification):  
   - Minimum occurrences: 0  
   - Maximum occurrences: 1  
@@ -3297,17 +3282,16 @@ The body_spice_name attribute is a NAIF-recognized string identifier for a physi
 - in [Observer_Identification](#observer_identification):  
   - Minimum occurrences: 0  
   - Maximum occurrences: 1  
+- in [Coordinate_Space_SPICE](#coordinate_space_spice):  
+  - Minimum occurrences: 1  
+  - Maximum occurrences: 1  
   
 ### *c0*  
 The first coefficient of a polynomial.  
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -3317,11 +3301,7 @@ The second coefficient of a polynomial.
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -3331,11 +3311,7 @@ The third coefficient of a polynomial.
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -3345,11 +3321,7 @@ The cahvore_parameter_type attribute is a scalar floating-point number used for 
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -3365,11 +3337,7 @@ The cahvore_model_type attribute indicates which variant of the CAHVORE model to
   - 3  
     - Description: A generalization that includes the first two, and is used for most fisheye-type lenses  
 - Minimum value: -9223372036854775808  
-- Nillable: No  
 - Maximum value: 9223372036854775807  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -3378,12 +3346,8 @@ The cahvore_model_type attribute indicates which variant of the CAHVORE model to
 The calibration_source_id is used to identify the source used in calibrating the instrument.  
 - PDS4 data type: ASCII_Short_String_Collapsed  
 - Valid values: N/A  
-- Nillable: No  
-- Nillable: No  
 - Minimum Length: 1  
-- Nillable: No  
 - Maximum Length: 255  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -3393,11 +3357,7 @@ The celestial_east_clock_angle attribute specifies the direction of celestial ea
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 360  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: unbounded  
@@ -3407,29 +3367,21 @@ The celestial_north_clock_angle attribute specifies the direction of celestial n
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: Yes  
 - Maximum value: 360  
 - Nillable: Yes  
-- Nillable: Yes  
-- Nillable: Yes  
-- Nillable: Yes  
-- in [Object_Orientation_Clock_Angles](#object_orientation_clock_angles):  
-  - Minimum occurrences: 1  
-  - Maximum occurrences: unbounded  
 - in [Object_Orientation_RA_Dec](#object_orientation_ra_dec):  
   - Minimum occurrences: 1  
   - Maximum occurrences: 2  
+- in [Object_Orientation_Clock_Angles](#object_orientation_clock_angles):  
+  - Minimum occurrences: 1  
+  - Maximum occurrences: unbounded  
   
 ### *central_body_north_pole_clock_angle*  
 The central_body_north_pole_clock_angle element specifies the direction of the central body's (e.g., planet's)rotation axis in an image. It is measured from the 'upward' direction in the image, clockwise to the direction of the northern rotational pole as projected into the image plane, assuming the image is displayed as defined by the Display_Direction class. The north pole of a planet or any of its satellites in the solar system is the pole of the rotation axis that is in the same celestial hemisphere relative to the invariable plane of the solar system as Earth's North pole.  
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 360  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: unbounded  
@@ -3439,11 +3391,7 @@ The central_body_positive_pole_clock_angle element specifies the direction of th
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 360  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: unbounded  
@@ -3468,12 +3416,8 @@ The central_body_positive_pole_clock_angle element specifies the direction of th
     - Description:  Unspecified commanding.  
   - XYZ  
     - Description:  Specifies a pointing target as an XYZ coordinate in a given coordinate frame.  
-- Nillable: No  
-- Nillable: No  
 - Minimum Length: 1  
-- Nillable: No  
 - Maximum Length: 255  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -3482,17 +3426,10 @@ The central_body_positive_pole_clock_angle element specifies the direction of th
 The comment attribute is a character string expressing one or more remarks or thoughts relevant to the object.  
 - PDS4 data type: ASCII_Short_String_Collapsed  
 - Valid values: N/A  
-- Nillable: No  
-- Nillable: No  
 - Minimum Length: 1  
-- Nillable: No  
 - Maximum Length: 255  
 - Nillable: No  
-- Nillable: No  
-- in [Coordinate_System_Identification](#coordinate_system_identification):  
-  - Minimum occurrences: 0  
-  - Maximum occurrences: 1  
-- in [Display_Direction](#display_direction):  
+- in [Distances](#distances):  
   - Minimum occurrences: 0  
   - Maximum occurrences: 1  
 - in [Generic_Vectors](#generic_vectors):  
@@ -3501,7 +3438,7 @@ The comment attribute is a character string expressing one or more remarks or th
 - in [Vectors](#vectors):  
   - Minimum occurrences: 0  
   - Maximum occurrences: 1  
-- in [Distances](#distances):  
+- in [Surface_Geometry](#surface_geometry):  
   - Minimum occurrences: 0  
   - Maximum occurrences: 1  
 - in [Reference_Frame_Identification](#reference_frame_identification):  
@@ -3513,10 +3450,13 @@ The comment attribute is a character string expressing one or more remarks or th
 - in [Rotate_To](#rotate_to):  
   - Minimum occurrences: 0  
   - Maximum occurrences: 1  
-- in [Surface_Geometry](#surface_geometry):  
+- in [Coordinate_System_Identification](#coordinate_system_identification):  
   - Minimum occurrences: 0  
   - Maximum occurrences: 1  
 - in [Illumination_Geometry](#illumination_geometry):  
+  - Minimum occurrences: 0  
+  - Maximum occurrences: 1  
+- in [Display_Direction](#display_direction):  
   - Minimum occurrences: 0  
   - Maximum occurrences: 1  
 - in [SPICE_Kernel_Files](#spice_kernel_files):  
@@ -3723,12 +3663,8 @@ The coordinate_space_frame_type attribute identifies the type of frame being des
     - Description: Frame for right middle wheel.  
   - Wheel_RR  
     - Description: Frame for right rear wheel.  
-- Nillable: Yes  
-- Nillable: Yes  
 - Minimum Length: 1  
-- Nillable: Yes  
 - Maximum Length: 255  
-- Nillable: Yes  
 - Nillable: Yes  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -3737,10 +3673,6 @@ The coordinate_space_frame_type attribute identifies the type of frame being des
 The coordinate_system_time_utc provides the instantiation time for the coordinate system.  
 - PDS4 data type: ASCII_Date_Time_YMD_UTC  
 - Valid values: N/A  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -3761,12 +3693,8 @@ The coordinate_system_type distinguishes between options such as rectangular, sp
     - Description: The coordinate system uses planetographic coordinates. For planet and satellite planetographic coordinate systems: Planetographic longitude is usually defined such that the sub-observer longitude increases with time as seen by a distant, fixed observer (0 to 360). The earth, moon and sun are exceptions; planetographic longitude is positive east by default (0 to 360). Planetographic latitude is planetodetic latitude (-90 to +90). For dwarf planets, asteroids and comets: there are multiple, inconsistent standards. Currently, for these objects, PDS permits planetographic coordinates to be provided in addition to, not in lieu of, either planetocentric or planetodetic coordinates.  
   - Spherical  
     - Description: The coordinate system uses spherical coordinates. Longitude: angle from +X axis to projection of position vector on X-Y plane increases in clockwise direction (0 to 360). Colatitude: angle between +Z axis and position vector (0 to 180).  
-- Nillable: Yes  
-- Nillable: Yes  
 - Minimum Length: 1  
-- Nillable: Yes  
 - Maximum Length: 255  
-- Nillable: Yes  
 - Nillable: Yes  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -3776,11 +3704,7 @@ The declination_angle (Dec) attribute provides the value of an angle on the cele
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -90  
-- Nillable: No  
 - Maximum value: 90  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -3789,11 +3713,7 @@ The declination_angle (Dec) attribute provides the value of an angle on the cele
 The description attribute provides a statement, picture in words, or account that describes or is otherwise relevant to the object.  
 - PDS4 data type: UTF8_Text_Preserved  
 - Valid values: N/A  
-- Nillable: No  
-- Nillable: No  
 - Minimum Length: 1  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -3802,12 +3722,8 @@ The description attribute provides a statement, picture in words, or account tha
 The device_id attribute specifies the abbreviated identification of an articulation device.  
 - PDS4 data type: ASCII_Short_String_Collapsed  
 - Valid values: N/A  
-- Nillable: No  
-- Nillable: No  
 - Minimum Length: 1  
-- Nillable: No  
 - Maximum Length: 255  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -3816,12 +3732,8 @@ The device_id attribute specifies the abbreviated identification of an articulat
 The device_mode attribute specifies the deployment state (i.e., physical configuration) of an articulation device at the time of data acquisition. Examples include 'Arm Vibe', 'Deployed', 'Free Space', 'Stowed'. Note: the value set for this attribute is mission-specific and should be declared in a mission-specific dictionary.  
 - PDS4 data type: ASCII_Short_String_Collapsed  
 - Valid values: N/A  
-- Nillable: No  
-- Nillable: No  
 - Minimum Length: 1  
-- Nillable: No  
 - Maximum Length: 255  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -3830,12 +3742,8 @@ The device_mode attribute specifies the deployment state (i.e., physical configu
 The device_name attribute specifies the common name of an articulation device.  
 - PDS4 data type: ASCII_Short_String_Collapsed  
 - Valid values: N/A  
-- Nillable: No  
-- Nillable: No  
 - Minimum Length: 1  
-- Nillable: No  
 - Maximum Length: 255  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -3844,12 +3752,8 @@ The device_name attribute specifies the common name of an articulation device.
 The device_phase attribute specifies the current phase of the mission, from an articulation-device-centric point of view.  
 - PDS4 data type: ASCII_Short_String_Collapsed  
 - Valid values: N/A  
-- Nillable: No  
-- Nillable: No  
 - Minimum Length: 1  
-- Nillable: No  
 - Maximum Length: 255  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -3859,11 +3763,7 @@ The distance attribute provides the scalar distance between to objects or points
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -3873,11 +3773,7 @@ Assuming the image is displayed as defined by the Display_Direction class, the e
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 360  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -3887,11 +3783,7 @@ The ecliptic_east_clock_angle attribute specifies the direction of ecliptic east
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 360  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: unbounded  
@@ -3901,11 +3793,7 @@ The ecliptic_north_clock_angle attribute specifies the direction of ecliptic nor
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: Yes  
 - Maximum value: 360  
-- Nillable: Yes  
-- Nillable: Yes  
-- Nillable: Yes  
 - Nillable: Yes  
 - in [Object_Orientation_Clock_Angles](#object_orientation_clock_angles):  
   - Minimum occurrences: 1  
@@ -3919,11 +3807,7 @@ The emission_angle element provides the value of the angle between the surface n
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 180  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - in [Illumination_Specific](#illumination_specific):  
   - Minimum occurrences: 1  
@@ -3936,12 +3820,8 @@ The emission_angle element provides the value of the angle between the surface n
 The frame_spice_name attribute is a NAIF-recognized string identifier for a reference frame associated with the data.  
 - PDS4 data type: ASCII_Short_String_Collapsed  
 - Valid values: N/A  
-- Nillable: No  
-- Nillable: No  
 - Minimum Length: 1  
-- Nillable: No  
 - Maximum Length: 255  
-- Nillable: No  
 - Nillable: No  
 - in [Reference_Frame_Identification](#reference_frame_identification):  
   - Minimum occurrences: 0  
@@ -3961,11 +3841,7 @@ The geometry reference time given in the 'Barycentric Dynamical Time' system, as
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -3975,10 +3851,6 @@ For some observations, geometric parameters are given as instantaneous values at
 - PDS4 data type: ASCII_Date_Time_YMD_UTC  
 - Valid values: N/A  
 - Nillable: No  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 3  
   
@@ -3987,10 +3859,6 @@ The pair of geometry_start_time_utc/geometry_stop_time_utc may be given in the l
 - PDS4 data type: ASCII_Date_Time_YMD_UTC  
 - Valid values: N/A  
 - Nillable: No  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 3  
   
@@ -3998,12 +3866,8 @@ The pair of geometry_start_time_utc/geometry_stop_time_utc may be given in the l
 Specifies the state or configuration of this instance of Geometry_Lander applies. Use of this attribute enables multiple instances of Geometry_Lander, describing the geometry under different conditions. Note that it is legal for more than one instance to have the same geometry_state, in which case the local_identifier should be used to differentiate the instances, along with description. If not present, the semantics of "Telemetry" should be assumed. It is not required that instances be retained; a derived product may have an Adjusted instance but remove the Telemetry one, for example.  
 - PDS4 data type: ASCII_Short_String_Collapsed  
 - Valid values: N/A  
-- Nillable: No  
-- Nillable: No  
 - Minimum Length: 1  
-- Nillable: No  
 - Maximum Length: 255  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -4013,10 +3877,6 @@ The pair of geometry_start_time_utc/geometry_stop_time_utc may be given in the l
 - PDS4 data type: ASCII_Date_Time_YMD_UTC  
 - Valid values: N/A  
 - Nillable: No  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 3  
   
@@ -4025,11 +3885,7 @@ horizontal_coordinate_pixel (sample) is the horizontal coordinate of a specific 
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -4038,12 +3894,8 @@ horizontal_coordinate_pixel (sample) is the horizontal coordinate of a specific 
 The horizontal_display_axis attribute identifies, by name, the axis of an Array (or Array subclass) that is intended to be displayed in the horizontal or "sample" dimension on a display device. The value of this attribute must match the value of one, and only one, axis_name attribute in an Axis_Array class of the associated Array.  
 - PDS4 data type: ASCII_Short_String_Collapsed  
 - Valid values: N/A  
-- Nillable: No  
-- Nillable: No  
 - Minimum Length: 1  
-- Nillable: No  
 - Maximum Length: 255  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -4056,12 +3908,8 @@ The horizontal_display_direction attribute specifies the direction across the sc
     - Description: Data along the horizontal axis of an array should be displayed from left to right.  
   - Right to Left  
     - Description: Data along the horizontal axis of an array should be displayed from right to left.  
-- Nillable: No  
-- Nillable: No  
 - Minimum Length: 1  
-- Nillable: No  
 - Maximum Length: 255  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -4071,11 +3919,7 @@ The horizontal_pixel_field_of_view provides the angular measure of the horizonta
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 360  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -4085,11 +3929,7 @@ The horizontal_pixel_footprint provides the the size of the horizontal field of 
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -4099,29 +3939,21 @@ The incidence_angle element provides a measure of the lighting condition at the 
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 180  
 - Nillable: No  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
-- in [Illumination_Specific](#illumination_specific):  
-  - Minimum occurrences: 1  
-  - Maximum occurrences: 4  
 - in [Derived_Geometry](#derived_geometry):  
   - Minimum occurrences: 1  
   - Maximum occurrences: unbounded  
+- in [Illumination_Specific](#illumination_specific):  
+  - Minimum occurrences: 1  
+  - Maximum occurrences: 4  
   
 ### *index_id*  
 The index_id attribute supplies a short name (identifier) for the associated value in a group of related values.  
 - PDS4 data type: ASCII_Short_String_Collapsed  
 - Valid values: N/A  
-- Nillable: No  
-- Nillable: No  
 - Minimum Length: 1  
-- Nillable: No  
 - Maximum Length: 255  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 3  
@@ -4130,12 +3962,8 @@ The index_id attribute supplies a short name (identifier) for the associated val
 The index_name attribute supplies the formal name for the associated value in a group of related values.  
 - PDS4 data type: ASCII_Short_String_Collapsed  
 - Valid values: N/A  
-- Nillable: No  
-- Nillable: No  
 - Minimum Length: 1  
-- Nillable: No  
 - Maximum Length: 255  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 3  
@@ -4144,12 +3972,8 @@ The index_name attribute supplies the formal name for the associated value in a 
 The index_sequence_number attribute supplies the sequence identifier for the associated value in a group of related values.  
 - PDS4 data type: ASCII_Short_String_Collapsed  
 - Valid values: N/A  
-- Nillable: No  
-- Nillable: No  
 - Minimum Length: 1  
-- Nillable: No  
 - Maximum Length: 255  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 3  
@@ -4159,11 +3983,7 @@ The index_value_angle attribute provides the value of an angle as named by the a
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: unbounded  
@@ -4173,11 +3993,7 @@ The index_value_length attribute provides the value of a length as named by the 
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: unbounded  
@@ -4187,11 +4003,7 @@ The index_value_number attribute provides the value with no applicable units as 
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: unbounded  
@@ -4200,12 +4012,8 @@ The index_value_number attribute provides the value with no applicable units as 
 The index_value attribute provides the string value as named by the associated index_id or index_name.  
 - PDS4 data type: ASCII_Short_String_Collapsed  
 - Valid values: N/A  
-- Nillable: No  
-- Nillable: No  
 - Minimum Length: 1  
-- Nillable: No  
 - Maximum Length: 255  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: unbounded  
@@ -4215,11 +4023,7 @@ The index_value_temperature attribute provides the value of a temperature as nam
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: unbounded  
@@ -4229,11 +4033,7 @@ The instrument_azimuth attribute specifies the value for an instrument's rotatio
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: unbounded  
@@ -4243,11 +4043,7 @@ The instrument_elevation attribute specifies the value for an instrument's rotat
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: unbounded  
@@ -4256,12 +4052,8 @@ The instrument_elevation attribute specifies the value for an instrument's rotat
 The interpolation_algorithm defines how interpolation was performed. For example, "Piecewise Bilinear" does a piecewise bilinear interpolation between calibration models nearest to the interpolation_value.  
 - PDS4 data type: ASCII_Short_String_Collapsed  
 - Valid values: N/A  
-- Nillable: No  
-- Nillable: No  
 - Minimum Length: 1  
-- Nillable: No  
 - Maximum Length: 255  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -4271,11 +4063,7 @@ When more than one dimension is interpolated, interpolation_sequence define the 
 - PDS4 data type: ASCII_Integer  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 9223372036854775807  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -4285,11 +4073,7 @@ The interpolation_value specifies the value of the variable to which the model w
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -4298,12 +4082,8 @@ The interpolation_value specifies the value of the variable to which the model w
 The interpolation_variable defines the parameter across which interpolation is being performed. Examples of variables include Focus, Zoom, and Temperature.  
 - PDS4 data type: ASCII_Short_String_Collapsed  
 - Valid values: N/A  
-- Nillable: No  
-- Nillable: No  
 - Minimum Length: 1  
-- Nillable: No  
 - Maximum Length: 255  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -4320,12 +4100,8 @@ The kernel_provenance attribute indicates whether a kernel file is a predict ker
     - Description: This kernel does not fit into any of the other categories (e.g., LSKs, SCLKs, text PCKs).  
   - Reconstructed  
     - Description: This kernel is reconstructed based on improved information (e.g. a post-encounter reconstructed spacecraft trajectory SPK based on improved navigation information).  
-- Nillable: No  
-- Nillable: No  
 - Minimum Length: 1  
-- Nillable: No  
 - Maximum Length: 255  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -4356,12 +4132,8 @@ The kernel_type attribute identifies the type of SPICE kernel.
     - Description: SPICE_Kernel is type SCLK (spacecraft clock kernel)  
   - SPK  
     - Description: SPICE_Kernel is type SPK (ephemeris kernel)  
-- Nillable: No  
-- Nillable: No  
 - Minimum Length: 1  
-- Nillable: No  
 - Maximum Length: 255  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -4376,12 +4148,8 @@ The lat_long_method is used with the attributes start_latitude, stop_latitude, s
     - Description: The latitude and longitude values given using start_ and stop_ latitude and longitude are the mean values at the beginning and end of the observation.  
   - Median  
     - Description: The latitude and longitude values given using start_ and stop_ latitude and longitude are the median values at the beginning and end of the observation.  
-- Nillable: No  
-- Nillable: No  
 - Minimum Length: 1  
-- Nillable: No  
 - Maximum Length: 255  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -4391,11 +4159,7 @@ The latitude component of a Planetocentric position vector. Planetocentric latit
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -90  
-- Nillable: No  
 - Maximum value: 90  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -4405,11 +4169,7 @@ The latitude component of a Planetocentric velocity vector. Planetocentric latit
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -4428,12 +4188,8 @@ The light_time_correction_applied indicates whether or not light travel time cor
     - Description: Transmitted light travel time, but not stellar aberration was used when calculating the values in the enclosing class.  
   - Transmitted_Light_Time_Stellar_Abb  
     - Description: Transmitted light travel time and stellar aberration were used when calculating the values in the enclosing class.  
-- Nillable: Yes  
-- Nillable: Yes  
 - Minimum Length: 1  
-- Nillable: Yes  
 - Maximum Length: 255  
-- Nillable: Yes  
 - Nillable: Yes  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -4442,44 +4198,13 @@ The light_time_correction_applied indicates whether or not light travel time cor
 The local_identifier attribute provides a character string which uniquely identifies the containing object within the label.  
 - PDS4 data type: ASCII_Local_Identifier  
 - Valid values: N/A  
-- Nillable: No  
-- Nillable: No  
 - Minimum Length: 1  
-- Nillable: No  
 - Maximum Length: 255  
 - Nillable: No  
-- Nillable: No  
-- in [Device_Component_State](#device_component_state):  
-  - Minimum occurrences: 0  
-  - Maximum occurrences: 1  
-- in [Articulation_Device_Parameters](#articulation_device_parameters):  
-  - Minimum occurrences: 0  
-  - Maximum occurrences: unbounded  
-- in [Geometry_Lander](#geometry_lander):  
-  - Minimum occurrences: 0  
-  - Maximum occurrences: 1  
-- in [Device_Angle](#device_angle):  
-  - Minimum occurrences: 0  
-  - Maximum occurrences: 1  
-- in [Central_Body_Identification](#central_body_identification):  
-  - Minimum occurrences: 0  
-  - Maximum occurrences: 1  
-- in [Coordinate_System_Origin_Identification](#coordinate_system_origin_identification):  
-  - Minimum occurrences: 0  
-  - Maximum occurrences: 1  
-- in [Geometry_Target_Identification](#geometry_target_identification):  
-  - Minimum occurrences: 0  
-  - Maximum occurrences: 1  
-- in [Observer_Identification](#observer_identification):  
-  - Minimum occurrences: 0  
-  - Maximum occurrences: 1  
-- in [Motion_Counter](#motion_counter):  
-  - Minimum occurrences: 0  
-  - Maximum occurrences: 1  
-- in [Device_Motor_Counts](#device_motor_counts):  
-  - Minimum occurrences: 0  
-  - Maximum occurrences: 1  
 - in [Device_Temperature](#device_temperature):  
+  - Minimum occurrences: 0  
+  - Maximum occurrences: 1  
+- in [Geometry_Lander](#geometry_lander):  
   - Minimum occurrences: 0  
   - Maximum occurrences: 1  
 - in [Coordinate_Space_Definition](#coordinate_space_definition):  
@@ -4494,17 +4219,40 @@ The local_identifier attribute provides a character string which uniquely identi
 - in [Rotate_To](#rotate_to):  
   - Minimum occurrences: 0  
   - Maximum occurrences: 1  
+- in [Device_Component_State](#device_component_state):  
+  - Minimum occurrences: 0  
+  - Maximum occurrences: 1  
+- in [Motion_Counter](#motion_counter):  
+  - Minimum occurrences: 0  
+  - Maximum occurrences: 1  
+- in [Device_Motor_Counts](#device_motor_counts):  
+  - Minimum occurrences: 0  
+  - Maximum occurrences: 1  
+- in [Articulation_Device_Parameters](#articulation_device_parameters):  
+  - Minimum occurrences: 0  
+  - Maximum occurrences: unbounded  
+- in [Central_Body_Identification](#central_body_identification):  
+  - Minimum occurrences: 0  
+  - Maximum occurrences: 1  
+- in [Coordinate_System_Origin_Identification](#coordinate_system_origin_identification):  
+  - Minimum occurrences: 0  
+  - Maximum occurrences: 1  
+- in [Geometry_Target_Identification](#geometry_target_identification):  
+  - Minimum occurrences: 0  
+  - Maximum occurrences: 1  
+- in [Observer_Identification](#observer_identification):  
+  - Minimum occurrences: 0  
+  - Maximum occurrences: 1  
+- in [Device_Angle](#device_angle):  
+  - Minimum occurrences: 0  
+  - Maximum occurrences: 1  
   
 ### *longitude_position*  
 The longitudinal component of a Planetocentric position vector. Planetocentric longitude is measured from the IAU approved prime meridian for the body and increases toward the east.  
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 360  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -4514,11 +4262,7 @@ The longitudinal component of a Planetocentric velocity vector. Planetocentric l
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -4528,11 +4272,7 @@ The maximum_emission_angle element provides the largest value during the observa
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 180  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -4542,11 +4282,7 @@ The maximum_incidence_angle element provides the largest value during the observ
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 180  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -4556,11 +4292,7 @@ The maximum_latitude attribute identifies the final end of the range of values f
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -90  
-- Nillable: No  
 - Maximum value: 90  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -4570,11 +4302,7 @@ The maximum_longitude attribute identifies the final end of the range of values 
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 360  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -4584,11 +4312,7 @@ The maximum_phase_angle element provides the largest value during the observatio
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 180  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -4598,11 +4322,7 @@ The maximum_solar_elongation element provides the largest value during the obser
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 180  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -4612,11 +4332,7 @@ The maximum_spacecraft_central_body_distance attribute provides the largest valu
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -4626,11 +4342,7 @@ The maximum_spacecraft_geocentric_distance attribute provides the largest value 
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -4640,11 +4352,7 @@ The maximum_spacecraft_heliocentric_distance attribute provides the largest valu
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -4654,11 +4362,7 @@ The maximum_spacecraft_target_boresight_intercept_distance attribute provides th
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -4668,11 +4372,7 @@ The maximum_spacecraft_target_center_distance attribute provides the largest val
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -4682,11 +4382,7 @@ The maximum_spacecraft_target_subspacecraft_distance attribute provides the larg
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -4696,11 +4392,7 @@ The maximum_subsolar_azimuth attribute identifies the final end of the range of 
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 360  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -4710,11 +4402,7 @@ The maximum_subsolar_latitude attribute identifies the final end of the range of
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -90  
-- Nillable: No  
 - Maximum value: 90  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -4724,11 +4412,7 @@ The maximum_subsolar_longitude attribute identifies the final end of the range o
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 360  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -4738,11 +4422,7 @@ The maximum_subspacecraft_azimuth attribute identifies the final end of the rang
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 360  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -4752,11 +4432,7 @@ The maximum_subspacecraft_latitude attribute identifies the final end of the ran
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -90  
-- Nillable: No  
 - Maximum value: 90  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -4766,11 +4442,7 @@ The maximum_subspacecraft_longitude attribute identifies the final end of the ra
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 360  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -4780,11 +4452,7 @@ The maximum_target_geocentric_distance attribute provides the largest value for 
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -4794,11 +4462,7 @@ The maximum_target_heliocentric_distance attribute provides the largest value fo
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -4808,11 +4472,7 @@ The maximum_target_ssb_distance attribute provides the largest value for the dis
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -4822,11 +4482,7 @@ The minimum_emission_angle attribute provides the smallest value during the obse
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 180  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -4836,11 +4492,7 @@ The minimum_incidence_angle attribute provides the smallest value during the obs
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 180  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -4850,11 +4502,7 @@ The minimum_latitude attribute identifies the initial end of the range of values
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -90  
-- Nillable: No  
 - Maximum value: 90  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -4864,11 +4512,7 @@ The minimum_longitude attribute identifies the initial end of the range of value
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 360  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -4878,11 +4522,7 @@ The minimum_phase_angle attribute provides the smallest value during the observa
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 180  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -4892,11 +4532,7 @@ The minimum_solar_elongation attribute provides the smallest value during the ob
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 180  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -4906,11 +4542,7 @@ The minimum_spacecraft_central_body_distance attribute provides the smallest val
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -4920,11 +4552,7 @@ The minimum_spacecraft_geocentric_distance attribute provides the smallest value
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -4934,11 +4562,7 @@ The minimum_spacecraft_heliocentric_distance attribute provides the smallest val
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -4948,11 +4572,7 @@ The minimum_spacecraft_target_boresight_intercept_distance attribute provides th
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -4962,11 +4582,7 @@ The minimum_spacecraft_target_center_distance attribute provides the smallest va
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -4976,11 +4592,7 @@ The minimum_spacecraft_target_subspacecraft_distance attribute provides the smal
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -4990,11 +4602,7 @@ The minimum_subsolar_azimuth attribute identifies the initial end of the range o
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 360  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -5004,11 +4612,7 @@ The minimum_subsolar_latitude attribute identifies the initial end of the range 
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -90  
-- Nillable: No  
 - Maximum value: 90  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -5018,11 +4622,7 @@ The minimum_subsolar_longitude attribute identifies the initial end of the range
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 360  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -5032,11 +4632,7 @@ The minimum_subspacecraft_azimuth attribute identifies the initial end of the ra
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 360  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -5046,11 +4642,7 @@ The minimum_subspacecraft_latitude attribute identifies the initial end of the r
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -90  
-- Nillable: No  
 - Maximum value: 90  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -5060,11 +4652,7 @@ The minimum_subspacecraft_longitude attribute identifies the initial end of the 
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 360  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -5074,11 +4662,7 @@ The minimum_target_geocentric_distance attribute provides the smallest value for
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -5088,11 +4672,7 @@ The minimum_target_heliocentric_distance attribute provides the smallest value f
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -5102,11 +4682,7 @@ The minimum_target_ssb_distance attribute provides the smallest value for the di
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -5123,12 +4699,8 @@ The model_type attribute specifies an identifier for the type or kind of model. 
     - Description: The CAHVORE model is built upon CAHVOR (see CAHVOR_Model), adding support for fisheye lenses.  
   - PSPH  
     - Description: The PSPH model is designed to perform better fisheye-image rectification prior to 1D stereo correlation.  
-- Nillable: No  
-- Nillable: No  
 - Minimum Length: 1  
-- Nillable: No  
 - Maximum Length: 255  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -5137,27 +4709,11 @@ The model_type attribute specifies an identifier for the type or kind of model. 
 The name attribute provides a word or combination of words by which the object is known.  
 - PDS4 data type: UTF8_Short_String_Collapsed  
 - Valid values: N/A  
-- Nillable: No  
-- Nillable: No  
 - Minimum Length: 1  
-- Nillable: No  
 - Maximum Length: 255  
 - Nillable: No  
-- Nillable: No  
-- in [Reference_Frame_Identification](#reference_frame_identification):  
-  - Minimum occurrences: 0  
-  - Maximum occurrences: 1  
-- in [Rotate_From](#rotate_from):  
-  - Minimum occurrences: 0  
-  - Maximum occurrences: 1  
-- in [Rotate_To](#rotate_to):  
-  - Minimum occurrences: 0  
-  - Maximum occurrences: 1  
 - in [Device_Pose](#device_pose):  
   - Minimum occurrences: 1  
-  - Maximum occurrences: 1  
-- in [Motion_Counter](#motion_counter):  
-  - Minimum occurrences: 0  
   - Maximum occurrences: 1  
 - in [Central_Body_Identification](#central_body_identification):  
   - Minimum occurrences: 0  
@@ -5171,17 +4727,25 @@ The name attribute provides a word or combination of words by which the object i
 - in [Observer_Identification](#observer_identification):  
   - Minimum occurrences: 0  
   - Maximum occurrences: 1  
+- in [Reference_Frame_Identification](#reference_frame_identification):  
+  - Minimum occurrences: 0  
+  - Maximum occurrences: 1  
+- in [Rotate_From](#rotate_from):  
+  - Minimum occurrences: 0  
+  - Maximum occurrences: 1  
+- in [Rotate_To](#rotate_to):  
+  - Minimum occurrences: 0  
+  - Maximum occurrences: 1  
+- in [Motion_Counter](#motion_counter):  
+  - Minimum occurrences: 0  
+  - Maximum occurrences: 1  
   
 ### *north_azimuth*  
 Assuming the image is displayed as defined by the Display_Direction class, the north_azimuth attribute provides the value of the angle between a line from the image center to the north pole and a reference line in the image plane. The reference line is a horizontal line from the image center to the middle right edge of the image. This angle is measured from the reference line and increases in a clockwise direction.  
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 360  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -5191,11 +4755,7 @@ The phase_angle element provides a measure of the relationship between the instr
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 180  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - in [Illumination_Specific](#illumination_specific):  
   - Minimum occurrences: 1  
@@ -5214,12 +4774,8 @@ The pixel_field_of_view_method provides the method used to get the values of the
     - Description: Pixel field of view varies across the camera field of view and represents the FOV of the central pixel of the camera  
   - Constant  
     - Description: Pixel field of view does not vary across the camera field of view  
-- Nillable: No  
-- Nillable: No  
 - Minimum Length: 1  
-- Nillable: No  
 - Maximum Length: 255  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -5229,11 +4785,7 @@ The pixel_latitude attribute gives the value of the planetocentric latitude on t
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -90  
-- Nillable: No  
 - Maximum value: 90  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -5243,11 +4795,7 @@ The pixel_longitude attribute gives the value of the planetocentric longitude on
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 360  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -5264,12 +4812,8 @@ The positive_azimuth_direction attribute specifies the direction in which azimut
     - Description: Indicates that azimuth is measured positively Clockwise.  
   - Counterclockwise  
     - Description: Indicates that azimuth is measured positively Counter-clockwise.  
-- Nillable: No  
-- Nillable: No  
 - Minimum Length: 1  
-- Nillable: No  
 - Maximum Length: 255  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -5286,12 +4830,8 @@ The positive_elevation_direction attribute provides the direction in which eleva
     - Description: Indicates that elevation is measured positively upwards, i.e., the zenith point would be at +90 degrees and the nadir point at -90 degrees.  
   - Zenith  
     - Description: Indicates that elevation is measured positively upwards, i.e., the zenith point would be at +90 degrees and the nadir point at -90 degrees.  
-- Nillable: No  
-- Nillable: No  
 - Minimum Length: 1  
-- Nillable: No  
 - Maximum Length: 255  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -5301,11 +4841,7 @@ The positive_elevation_direction attribute provides the direction in which eleva
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -5315,11 +4851,7 @@ The positive_elevation_direction attribute provides the direction in which eleva
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -5329,11 +4861,7 @@ qcos is the scalar component of a quaternion. qcos = cos(theta/2), where theta i
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -5343,11 +4871,7 @@ qsin1 is the first element of the vector component of a quaternion. qsin1 = x*si
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -5357,11 +4881,7 @@ qsin2 is the second element of the vector component of a quaternion. qsin2 = y*s
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -5371,11 +4891,7 @@ qsin3 is the third element of the vector component of a quaternion. qsin3 = z*si
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -5396,18 +4912,14 @@ Specifies the method by which the coordinate space was measured. This provides a
     - Description: The attitude estimate is only good for tilt (2-axis) determination.  
   - Unknown  
     - Description: The attitude should not be trusted.  
-- Nillable: No  
-- Nillable: No  
 - Minimum Length: 1  
-- Nillable: No  
 - Maximum Length: 255  
 - Nillable: No  
-- Nillable: No  
-- in [Coordinate_Space_Quality](#coordinate_space_quality):  
-  - Minimum occurrences: 1  
-  - Maximum occurrences: 1  
 - in [Coordinate_Space_Definition](#coordinate_space_definition):  
   - Minimum occurrences: 0  
+  - Maximum occurrences: 1  
+- in [Coordinate_Space_Quality](#coordinate_space_quality):  
+  - Minimum occurrences: 1  
   - Maximum occurrences: 1  
   
 ### *radial_velocity*  
@@ -5415,11 +4927,7 @@ The radial component of a spherical or cylindrical velocity vector.
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -5429,11 +4937,7 @@ The radial component of a spherical or cylindrical position vector (e.g., the ra
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -5450,18 +4954,14 @@ The reference_location indicates the position to which values in the containing 
     - Description: Values were determined for the subspacecraft point on the designated target.  
   - Target Center  
     - Description: Values were determined for the center of the designated target.  
-- Nillable: No  
-- Nillable: No  
 - Minimum Length: 1  
-- Nillable: No  
 - Maximum Length: 255  
 - Nillable: No  
-- Nillable: No  
-- in [Illumination_Specific](#illumination_specific):  
-  - Minimum occurrences: 0  
-  - Maximum occurrences: 1  
 - in [Pixel_Size_Projected](#pixel_size_projected):  
   - Minimum occurrences: 1  
+  - Maximum occurrences: 1  
+- in [Illumination_Specific](#illumination_specific):  
+  - Minimum occurrences: 0  
   - Maximum occurrences: 1  
   
 ### *reference_pixel_location*  
@@ -5478,12 +4978,8 @@ The reference_pixel_location indicates the position of the pixel to which values
     - Description: Values were determined for the intersection of a vector through the upper left corner of the field of view with the specified target.  
   - Upper Right Corner  
     - Description: Values were determined for the intersection of a vector through the upper right corner of the field of view with the specified target.  
-- Nillable: No  
-- Nillable: No  
 - Minimum Length: 1  
-- Nillable: No  
 - Maximum Length: 255  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -5493,11 +4989,7 @@ The right_ascension_angle attribute provides the value of right ascension (RA) a
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 360  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -5507,11 +4999,7 @@ The right_ascension_hour_angle attribute provides the value of right ascension (
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -5532,12 +5020,8 @@ The rotation_direction attribute identifies the direction of the rotation for a 
     - Description: Reference frames are generally defined sequentially from a base reference frame (e.g., base frames might be ICRF, IAU Mars, or the landing site from which a rover begins its exploration). rotation_direction = Reverse corresponds to rotation toward the base frame.  
   - Toward Base  
     - Description: Reference frames are generally defined sequentially from a base reference frame (e.g., base frames might be ICRF, IAU Mars, or the landing site from which a rover begins its exploration). rotation_direction = Toward Base corresponds to rotation toward the base frame.  
-- Nillable: No  
-- Nillable: No  
 - Minimum Length: 1  
-- Nillable: No  
 - Maximum Length: 255  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -5546,12 +5030,8 @@ The rotation_direction attribute identifies the direction of the rotation for a 
 The selected_instrument_id attribute specifies an abbreviated name or acronym that identifies the selected instrument mounted on the articulation device.  
 - PDS4 data type: ASCII_Short_String_Collapsed  
 - Valid values: N/A  
-- Nillable: No  
-- Nillable: No  
 - Minimum Length: 1  
-- Nillable: No  
 - Maximum Length: 255  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -5561,11 +5041,7 @@ The solar_azimuth attribute specifies one of two angular measurements indicating
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0.0  
-- Nillable: No  
 - Maximum value: 360.0  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: unbounded  
@@ -5575,11 +5051,7 @@ The solar_elevation attribute specifies one of two angular measurements indicati
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -90.0  
-- Nillable: No  
 - Maximum value: 90.0  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: unbounded  
@@ -5589,11 +5061,7 @@ The solar_elongation element gives the angle between the line of sight of observ
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 180  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 4  
@@ -5603,11 +5071,7 @@ Describes the direction of the sun in terms of the image plane, defined as a clo
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: unbounded  
@@ -5616,12 +5080,8 @@ Describes the direction of the sun in terms of the image plane, defined as a clo
 The solution_id attribute specifies the unique identifier for the solution set to which the values in the group belong. For certain kinds of information, such as pointing correction (pointing models) and rover localization (coordinate system definitions), the "true" value is unknown and only estimates of the true value exist. Thus, more than one set of estimates may exist simultaneously, each valid for its intended purpose. Each of these sets is called a "solution" to the unknown true value. The solution_id attribute is used to identify which solution is being expressed by the containing group. No specific naming convention is defined here, however it is recommended that projects adopt one. The intent is to be able to identify who created the solution, and why. Possible components of the naming convention include user, institution, purpose, request ID, version, program, date/time.  
 - PDS4 data type: ASCII_Short_String_Collapsed  
 - Valid values: N/A  
-- Nillable: No  
-- Nillable: No  
 - Minimum Length: 1  
-- Nillable: No  
 - Maximum Length: 255  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -5631,11 +5091,7 @@ The spacecraft_central_body_distance attribute provides the scalar distance betw
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: unbounded  
@@ -5645,11 +5101,7 @@ The spacecraft_geocentric_distance attribute provides the scalar distance betwee
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: unbounded  
@@ -5659,11 +5111,7 @@ The spacecraft_heliocentric_distance attribute provides the scalar distance betw
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: unbounded  
@@ -5673,11 +5121,7 @@ The spacecraft_target_boresight_intercept_distance attribute provides the scalar
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: unbounded  
@@ -5687,11 +5131,7 @@ The spacecraft_target_center_distance attribute provides the scalar distance bet
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: unbounded  
@@ -5701,11 +5141,7 @@ The spacecraft_target_subspacecraft_distance attribute provides the scalar dista
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: unbounded  
@@ -5714,12 +5150,8 @@ The spacecraft_target_subspacecraft_distance attribute provides the scalar dista
 The spice_kernel_file_name attribute provides the file name of a SPICE kernel file used to process the data or to produce geometric quantities given in the label.  
 - PDS4 data type: ASCII_File_Name  
 - Valid values: N/A  
-- Nillable: No  
-- Nillable: No  
 - Minimum Length: 1  
-- Nillable: No  
 - Maximum Length: 255  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -5729,11 +5161,7 @@ The start_azimuth attribute specifies the angular distance from a fixed referenc
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0.0  
-- Nillable: No  
 - Maximum value: 360.0  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: unbounded  
@@ -5743,11 +5171,7 @@ The start_emission_angle attribute provides the value at the beginning of the ob
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 180  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -5757,11 +5181,7 @@ The start_incidence_angle attribute provides the value at the beginning of the o
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 180  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -5771,11 +5191,7 @@ The start_latitude attribute identifies the value of the Planetocentric latitude
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -90  
-- Nillable: No  
 - Maximum value: 90  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -5785,11 +5201,7 @@ The start_longitude attribute identifies the value of the Planetocentric longitu
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 360  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -5799,11 +5211,7 @@ The start_phase_angle attribute provides the value at the beginning of the obser
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 180  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -5813,11 +5221,7 @@ The start_solar_elongation attribute provides the value at the beginning of the 
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 180  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -5827,11 +5231,7 @@ The start_spacecraft_central_body_distance attribute provides the scalar distanc
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -5841,11 +5241,7 @@ The start_spacecraft_geocentric_distance attribute provides the scalar distance 
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -5855,11 +5251,7 @@ The start_spacecraft_heliocentric_distance attribute provides the scalar distanc
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -5869,11 +5261,7 @@ The start_spacecraft_target_boresight_intercept_distance attribute provides the 
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -5883,11 +5271,7 @@ The start_spacecraft_target_center_distance attribute provides the scalar distan
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -5897,11 +5281,7 @@ The start_spacecraft_target_subspacecraft_distance attribute provides the scalar
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -5911,11 +5291,7 @@ The start_subsolar_azimuth attribute identifies the value of the subsolar azimut
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 360  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -5925,11 +5301,7 @@ The start_subsolar_latitude attribute identifies the value of the subsolar latit
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -90  
-- Nillable: No  
 - Maximum value: 90  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -5939,11 +5311,7 @@ The start_subsolar_longitude attribute identifies the value of the subsolar long
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 360  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -5953,11 +5321,7 @@ The start_subspacecraft_azimuth attribute identifies the value of the subspacecr
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 360  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -5967,11 +5331,7 @@ The start_subspacecraft_latitude attribute identifies the value of the subspacec
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -90  
-- Nillable: No  
 - Maximum value: 90  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -5981,11 +5341,7 @@ The start_subspacecraft_longitude attribute identifies the value of the subspace
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 360  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -5995,11 +5351,7 @@ The start_target_geocentric_distance attribute provides the scalar distance betw
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -6009,11 +5361,7 @@ The start_target_heliocentric_distance attribute provides the scalar distance be
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -6023,11 +5371,7 @@ The start_target_ssb_distance attribute provides the scalar distance between the
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -6037,11 +5381,7 @@ The stop_azimuth attribute specifies the angular distance from a fixed reference
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0.0  
-- Nillable: No  
 - Maximum value: 360.0  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: unbounded  
@@ -6051,11 +5391,7 @@ The stop_emission_angle attribute provides the value at the end of the observati
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 180  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -6065,11 +5401,7 @@ The stop_incidence_angle attribute provides the value at the end of the observat
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 180  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -6079,11 +5411,7 @@ The stop_latitude attribute identifies the value of the Planetocentric latitude 
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -90  
-- Nillable: No  
 - Maximum value: 90  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -6093,11 +5421,7 @@ The stop_longitude attribute identifies the value of the Planetocentric longitud
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 360  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -6107,11 +5431,7 @@ The stop_phase_angle attribute provides the value at the end of the observation 
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 180  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -6121,11 +5441,7 @@ The stop_solar_elongation attribute provides the value at the end of the observa
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 180  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -6135,11 +5451,7 @@ The stop_spacecraft_central_body_distance attribute provides the scalar distance
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -6149,11 +5461,7 @@ The stop_spacecraft_geocentric_distance attribute provides the scalar distance a
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -6163,11 +5471,7 @@ The stop_spacecraft_heliocentric_distance attribute provides the scalar distance
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -6177,11 +5481,7 @@ The stop_spacecraft_target_boresight_intercept_distance attribute provides the s
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -6191,11 +5491,7 @@ The stop_spacecraft_target_center_distance attribute provides the scalar distanc
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -6205,11 +5501,7 @@ The stop_spacecraft_target_subspacecraft_distance attribute provides the scalar 
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -6219,11 +5511,7 @@ The stop_subsolar_azimuth attribute identifies the value of the subsolar azimuth
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 360  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -6233,11 +5521,7 @@ The stop_subsolar_latitude attribute identifies the value of the subsolar latitu
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -90  
-- Nillable: No  
 - Maximum value: 90  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -6247,11 +5531,7 @@ The stop_subsolar_longitude attribute identifies the value of the subsolar longi
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 360  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -6261,11 +5541,7 @@ The stop_subspacecraft_azimuth attribute identifies the value of the subspacecra
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 360  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -6275,11 +5551,7 @@ The stop_subspacecraft_latitude attribute identifies the value of the subspacecr
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -90  
-- Nillable: No  
 - Maximum value: 90  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -6289,11 +5561,7 @@ The stop_subspacecraft_longitude attribute identifies the value of the subspacec
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 360  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -6303,11 +5571,7 @@ The stop_target_geocentric_distance attribute provides the scalar distance betwe
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -6317,11 +5581,7 @@ The stop_target_heliocentric_distance attribute provides the scalar distance bet
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -6331,11 +5591,7 @@ The stop_target_ssb_distance attribute provides the scalar distance between the 
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -6345,11 +5601,7 @@ The subsolar_azimuth attribute provides the value of the angle between the line 
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 360  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -6359,11 +5611,7 @@ The subsolar_latitude attribute gives the value of the planetocentric latitude a
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -90  
-- Nillable: No  
 - Maximum value: 90  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -6373,11 +5621,7 @@ The subsolar_longitude attribute gives the value of the planetocentric longitude
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 360  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -6387,11 +5631,7 @@ The subspacecraft_azimuth attribute provides the value of the angle between the 
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 360  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -6401,11 +5641,7 @@ The subspacecraft_latitude attribute gives the value of the planetocentric latit
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -90  
-- Nillable: No  
 - Maximum value: 90  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -6415,11 +5651,7 @@ The subspacecraft_longitude attribute gives the value of the planetocentric long
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 360  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -6429,11 +5661,7 @@ The sun_direction_clock_angle attribute specifies the direction of the sun as an
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 360  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: unbounded  
@@ -6443,11 +5671,7 @@ The target_geocentric_distance attribute provides the scalar distance between th
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: unbounded  
@@ -6457,11 +5681,7 @@ The target_heliocentric_distance attribute provides the scalar distance between 
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: unbounded  
@@ -6470,12 +5690,8 @@ The target_heliocentric_distance attribute provides the scalar distance between 
 Specifies the name of the target location for items in this class.  
 - PDS4 data type: ASCII_Short_String_Collapsed  
 - Valid values: N/A  
-- Nillable: No  
-- Nillable: No  
 - Minimum Length: 1  
-- Nillable: No  
 - Maximum Length: 255  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -6485,11 +5701,7 @@ The target_north_pole_clock_angle element specifies the direction of the target 
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 360  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: unbounded  
@@ -6499,11 +5711,7 @@ The target_positive_pole_clock_angle element specifies the direction of the targ
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 360  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: unbounded  
@@ -6513,11 +5721,7 @@ The target_ssb_distance attribute provides the scalar distance between the cente
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: unbounded  
@@ -6527,11 +5731,7 @@ vertical_coordinate_pixel (line) is the vertical coordinate of a specific pixel.
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -6540,12 +5740,8 @@ vertical_coordinate_pixel (line) is the vertical coordinate of a specific pixel.
 The vertical_display_axis attribute identifies, by name, the axis of an Array (or Array subclass) that is intended to be displayed in the vertical or "line" dimension on a display device. The value of this attribute must match the value of one, and only one, axis_name attribute in an Axis_Array class of the associated Array.  
 - PDS4 data type: ASCII_Short_String_Collapsed  
 - Valid values: N/A  
-- Nillable: No  
-- Nillable: No  
 - Minimum Length: 1  
-- Nillable: No  
 - Maximum Length: 255  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -6558,12 +5754,8 @@ The vertical_display_direction attribute specifies the direction along the scree
     - Description: Data along the vertical axis of an array should be displayed from the bottom to the top of the display device.  
   - Top to Bottom  
     - Description: Data along the vertical axis of an array should be displayed from the top to the bottom of the display device.  
-- Nillable: No  
-- Nillable: No  
 - Minimum Length: 1  
-- Nillable: No  
 - Maximum Length: 255  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -6573,11 +5765,7 @@ The vertical_pixel_field_of_view provides the angular measure of the vertical fi
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: 0  
-- Nillable: No  
 - Maximum value: 360  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
@@ -6587,11 +5775,7 @@ The vertical_pixel_footprint provides the size of the vertical field of view of 
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -6601,11 +5785,7 @@ The x component of a Cartesian vector which has no units.
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -6615,11 +5795,7 @@ The x component of a Cartesian acceleration vector.
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -6629,11 +5805,7 @@ The x component of a Cartesian pixel vector; typically used in cameral models.
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -6643,11 +5815,7 @@ The x component of a Cartesian position vector.
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -6657,11 +5825,7 @@ The x component of a unit Cartesian vector.
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1  
-- Nillable: No  
 - Maximum value: 1  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -6671,11 +5835,7 @@ The x component of a Cartesian velocity vector.
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -6685,11 +5845,7 @@ The y component of a Cartesian vector which has no units.
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -6699,11 +5855,7 @@ The y component of a Cartesian acceleration vector.
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -6713,11 +5865,7 @@ The y component of a Cartesian pixel vector; typically used in cameral models.
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -6727,11 +5875,7 @@ The y component of a Cartesian position vector.
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -6741,11 +5885,7 @@ The y component of a unit Cartesian vector.
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1  
-- Nillable: No  
 - Maximum value: 1  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -6755,11 +5895,7 @@ The y component of a Cartesian velocity vector.
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -6769,11 +5905,7 @@ The z component of a Cartesian vector which has no units.
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -6783,11 +5915,7 @@ The z component of a Cartesian acceleration vector.
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -6797,11 +5925,7 @@ The z component of a Cartesian pixel vector; typically used in cameral models.
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -6811,11 +5935,7 @@ The z component of a Cartesian position vector.
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -6825,11 +5945,7 @@ The z component of a unit Cartesian vector.
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1  
-- Nillable: No  
 - Maximum value: 1  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -6839,11 +5955,7 @@ The z component of a Cartesian velocity vector.
 - PDS4 data type: ASCII_Real  
 - Valid values: N/A  
 - Minimum value: -1.7976931348623157e+308  
-- Nillable: No  
 - Maximum value: 1.7976931348623157e+308  
-- Nillable: No  
-- Nillable: No  
-- Nillable: No  
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
@@ -6853,4 +5965,4 @@ The z component of a Cartesian velocity vector.
   
 # Edit History  
 *See also: [GEOM change log](https://github.com/pds-data-dictionaries/ldd-geom/blob/main/CHANGELOG.md).*  
-2025-04-03  Ethan I. Schaefer
+2025-04-03  Edward A. Guinness
