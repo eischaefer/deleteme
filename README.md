@@ -42,8 +42,9 @@ The following is an example showing the use of this dictionary in a PDS4 label.
                         http://pds.nasa.gov/pds4/geom/v1  https://pds.nasa.gov/pds4/geom/v1/PDS4_GEOM_1N00_19A0.xsd">
 ```  
   
-The following is a schematic example showing the location of every Geometry Discipline Data Dictionary class and attribute in a PDS4 label. Note that not all classes and attributes may be mutually compatible, and the example does not include any recursion, even if recursion is allowed.  
-  
+<details>
+<summary>The following is a schematic example showing the location of every Geometry Discipline Data Dictionary class and attribute in a PDS4 label. Note that not all classes and attributes may be mutually compatible, and the example does not include any recursion, even if recursion is allowed.</summary>
+
 ```
 <Observation_Area>
   ...
@@ -1161,6 +1162,7 @@ The following is a schematic example showing the location of every Geometry Disc
   ...
 </Observation_Area>
 ```  
+</details>
   
 The namespace for the Geometry Discipline Data Dictionary is http://pds.nasa.gov/pds4/geom/v1, abbreviated "geom:".  
   
@@ -1168,6 +1170,9 @@ The namespace for the Geometry Discipline Data Dictionary is http://pds.nasa.gov
   
 ## Class Organization  
 Below is a structured list showing the organization of classes, ordered by appearance in the PDS4 label. Each class name is linked to its complete definition in the [Definitions](#definitions) section.  
+<details>
+<summary>Click to expand.</summary>
+  
 - [Coordinate_Space_Identification](#coordinate_space_identification)  
   - [Coordinate_Space_Indexed](#coordinate_space_indexed)  
     - [Coordinate_Space_Index](#coordinate_space_index)  
@@ -1430,6 +1435,7 @@ Below is a structured list showing the organization of classes, ordered by appea
       - [Internal_Reference](#internal_reference)  
     - [Reference_Frame_Identification](#reference_frame_identification)  
       - [Internal_Reference](#internal_reference)  
+</details>
   
 ## Attributes by Class  
 The attributes of each class are listed below. Both classes and attributes are ordered by appearance in the PDS4 label; however, each class is listed only once, even if that class can appear in more than one place in a PDS4 label (unless that class requires multiple entries in [Definitions](#definitions)). Each class and attribute name is linked to its complete definition in the [Definitions](#definitions) section.  
