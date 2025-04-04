@@ -1,5 +1,5 @@
 PDS4 Geometry Discipline Data Dictionary User's Guide  
-[Last edited](#edit-history): 2025-04-03  
+[Last edited](#edit-history): 2025-04-04  
   
 # Introduction  
 1. Purpose of this User's Guide  
@@ -12,6 +12,9 @@ The Geometry Discipline Data Dictionary contains classes and attributes specific
 Steward: Edward A. Guinness, PDS Geosciences Node, geosci@wunder.wustl.edu  
   
 # How to Include the Geometry Discipline Data Dictionary in a PDS4 Label  
+<details>  
+<summary><i>&lt;Click to expand/collapse&gt;</i></summary>  
+  
 The dictionary consists of a set of files with names in the form PDS4_GEOM_xxxx_yyyy.ext, where  
 - xxxx = the PDS4 Information Model version, e.g. 1N00  
 - yyyy = the Geometry Discipline Data Dictionary version, e.g. 19A0  
@@ -43,8 +46,8 @@ The following is an example showing the use of this dictionary in a PDS4 label.
 ```  
   
 The following is a schematic example showing the location of every Geometry Discipline Data Dictionary class and attribute in a PDS4 label. Note that not all classes and attributes may be mutually compatible, and the example does not include any recursion, even if recursion is allowed.  
-<details>
-<summary>&lt;Click to expand/collapse&gt;</summary>
+<details>  
+<summary><i>&lt;Click to expand/collapse&gt;</i></summary>  
   
 ```
 <Observation_Area>
@@ -1163,7 +1166,8 @@ The following is a schematic example showing the location of every Geometry Disc
   ...
 </Observation_Area>
 ```  
-</details>
+</details>  
+</details>  
   
 The namespace for the Geometry Discipline Data Dictionary is http://pds.nasa.gov/pds4/geom/v1, abbreviated "geom:".  
   
@@ -1171,8 +1175,8 @@ The namespace for the Geometry Discipline Data Dictionary is http://pds.nasa.gov
   
 ## Class Organization  
 Below is a structured list showing the organization of classes, ordered by appearance in the PDS4 label. Each class name is linked to its complete definition in the [Definitions](#definitions) section.  
-<details>
-<summary>&lt;Click to expand/collapse&gt;</summary>
+<details>  
+<summary><i>&lt;Click to expand/collapse&gt;</i></summary>  
   
 - [Coordinate_Space_Identification](#coordinate_space_identification)  
   - [Coordinate_Space_Indexed](#coordinate_space_indexed)  
@@ -1436,12 +1440,12 @@ Below is a structured list showing the organization of classes, ordered by appea
       - [Internal_Reference](#internal_reference)  
     - [Reference_Frame_Identification](#reference_frame_identification)  
       - [Internal_Reference](#internal_reference)  
-</details>
+</details>  
   
 ## Attributes by Class  
-The attributes immediately under each class (if any) are listed below. Both classes and attributes are ordered by appearance in the PDS4 label; however, each class is listed only once, even if that class can appear in more than one place in a PDS4 label (unless that class requires multiple entries in [Definitions](#definitions)). Each class and attribute name is linked to its complete definition in the [Definitions](#definitions) section.  
-<details>
-<summary>&lt;Click to expand/collapse&gt;</summary>
+The attributes immediately under each class (if any) are listed below. Both classes and attributes are ordered by appearance in the PDS4 label; however, each class is listed only once, even if that class can appear in more than one place in a PDS4 label. Each class and attribute name is linked to its complete definition in the [Definitions](#definitions) section.  
+<details>  
+<summary><i>&lt;Click to expand/collapse&gt;</i></summary>  
   
 ### [Coordinate_Space_Identification](#coordinate_space_identification) (attribute list)  
   
@@ -2263,13 +2267,13 @@ The attributes immediately under each class (if any) are listed below. Both clas
 - [light_time_correction_applied](#light_time_correction_applied)  
 - [longitude_velocity](#longitude_velocity)  
 - [latitude_velocity](#latitude_velocity)  
-</details>
+</details>  
   
 # Definitions  
   
 ## Classes (in alphabetical order)  
-<details>
-<summary>&lt;Click to expand/collapse&gt;</summary>
+<details>  
+<summary><i>&lt;Click to expand/collapse&gt;</i></summary>  
   
 ### Articulation_Device_Parameters  
 The Articulation_Device_Parameters class contains those attributes and sub-classes that describe an articulation device. An articulation device is anything that can move independently of the spacecraft to which it is attached. Examples include mast heads, wheel bogies, arms, filter wheel, scan platforms.  
@@ -3252,11 +3256,11 @@ The Vectors_Planetocentric_Specific class is a container class for all planetoce
 - [go to attribute list](#vectors_planetocentric_specific-attribute-list)  
 - Minimum occurrences: 0  
 - Maximum occurrences: 1  
-</details>
+</details>  
   
 ## Attributes (in alphabetical order)  
-<details>
-<summary>&lt;Click to expand/collapse&gt;</summary>  
+<details>  
+<summary><i>&lt;Click to expand/collapse&gt;</i></summary>  
   
 ### *attitude_propagation_counter*  
 Count in clock units of how long it has been since the last IMU reset, which relates to how good the attitude measurement is due to IMU drift.  
@@ -3444,13 +3448,13 @@ The comment attribute is a character string expressing one or more remarks or th
 - Minimum Length: 1  
 - Maximum Length: 255  
 - Nillable: No  
-- in [Distances](#distances):  
-  - Minimum occurrences: 0  
-  - Maximum occurrences: 1  
 - in [Generic_Vectors](#generic_vectors):  
   - Minimum occurrences: 0  
   - Maximum occurrences: 1  
 - in [Vectors](#vectors):  
+  - Minimum occurrences: 0  
+  - Maximum occurrences: 1  
+- in [Display_Direction](#display_direction):  
   - Minimum occurrences: 0  
   - Maximum occurrences: 1  
 - in [Surface_Geometry](#surface_geometry):  
@@ -3468,15 +3472,15 @@ The comment attribute is a character string expressing one or more remarks or th
 - in [Coordinate_System_Identification](#coordinate_system_identification):  
   - Minimum occurrences: 0  
   - Maximum occurrences: 1  
-- in [Illumination_Geometry](#illumination_geometry):  
-  - Minimum occurrences: 0  
-  - Maximum occurrences: 1  
-- in [Display_Direction](#display_direction):  
-  - Minimum occurrences: 0  
-  - Maximum occurrences: 1  
 - in [SPICE_Kernel_Files](#spice_kernel_files):  
   - Minimum occurrences: 0  
   - Maximum occurrences: unbounded  
+- in [Illumination_Geometry](#illumination_geometry):  
+  - Minimum occurrences: 0  
+  - Maximum occurrences: 1  
+- in [Distances](#distances):  
+  - Minimum occurrences: 0  
+  - Maximum occurrences: 1  
   
 ### *coordinate_space_frame_type*  
 The coordinate_space_frame_type attribute identifies the type of frame being described, such as SITE, LOCAL_LEVEL, LANDER, ROVER, ARM, etc. When combined with Coordinate_Space_Index and the optional solution_id in the Coordinate_Space_Indexed class, this serves to fully name an instance of a coordinate space.  
@@ -3810,12 +3814,12 @@ The ecliptic_north_clock_angle attribute specifies the direction of ecliptic nor
 - Minimum value: 0  
 - Maximum value: 360  
 - Nillable: Yes  
-- in [Object_Orientation_Clock_Angles](#object_orientation_clock_angles):  
-  - Minimum occurrences: 1  
-  - Maximum occurrences: unbounded  
 - in [Object_Orientation_RA_Dec](#object_orientation_ra_dec):  
   - Minimum occurrences: 1  
   - Maximum occurrences: 2  
+- in [Object_Orientation_Clock_Angles](#object_orientation_clock_angles):  
+  - Minimum occurrences: 1  
+  - Maximum occurrences: unbounded  
   
 ### *emission_angle*  
 The emission_angle element provides the value of the angle between the surface normal vector at the intercept point and a vector from the intercept point to the spacecraft. The emission_angle varies from 0 degrees when the spacecraft is viewing the subspacecraft point (nadir viewing) to 90 degrees when the intercept is tangent to the surface of the target body. Thus, higher values of emission_angle indicate more oblique viewing of the target. For ring data, values in the range of 90 to 180 degrees indicate viewing on the unlit side from oblique or edge-on at 90 degrees to the unlit nadir at 180 degrees.  
@@ -3824,12 +3828,12 @@ The emission_angle element provides the value of the angle between the surface n
 - Minimum value: 0  
 - Maximum value: 180  
 - Nillable: No  
-- in [Illumination_Specific](#illumination_specific):  
-  - Minimum occurrences: 1  
-  - Maximum occurrences: 4  
 - in [Derived_Geometry](#derived_geometry):  
   - Minimum occurrences: 1  
   - Maximum occurrences: unbounded  
+- in [Illumination_Specific](#illumination_specific):  
+  - Minimum occurrences: 1  
+  - Maximum occurrences: 4  
   
 ### *frame_spice_name*  
 The frame_spice_name attribute is a NAIF-recognized string identifier for a reference frame associated with the data.  
@@ -3838,6 +3842,9 @@ The frame_spice_name attribute is a NAIF-recognized string identifier for a refe
 - Minimum Length: 1  
 - Maximum Length: 255  
 - Nillable: No  
+- in [Coordinate_Space_SPICE](#coordinate_space_spice):  
+  - Minimum occurrences: 1  
+  - Maximum occurrences: 1  
 - in [Reference_Frame_Identification](#reference_frame_identification):  
   - Minimum occurrences: 0  
   - Maximum occurrences: 1  
@@ -3846,9 +3853,6 @@ The frame_spice_name attribute is a NAIF-recognized string identifier for a refe
   - Maximum occurrences: 1  
 - in [Rotate_To](#rotate_to):  
   - Minimum occurrences: 0  
-  - Maximum occurrences: 1  
-- in [Coordinate_Space_SPICE](#coordinate_space_spice):  
-  - Minimum occurrences: 1  
   - Maximum occurrences: 1  
   
 ### *geometry_reference_time_tdb*  
@@ -4216,35 +4220,11 @@ The local_identifier attribute provides a character string which uniquely identi
 - Minimum Length: 1  
 - Maximum Length: 255  
 - Nillable: No  
-- in [Device_Temperature](#device_temperature):  
-  - Minimum occurrences: 0  
-  - Maximum occurrences: 1  
-- in [Geometry_Lander](#geometry_lander):  
+- in [Device_Motor_Counts](#device_motor_counts):  
   - Minimum occurrences: 0  
   - Maximum occurrences: 1  
 - in [Coordinate_Space_Definition](#coordinate_space_definition):  
   - Minimum occurrences: 1  
-  - Maximum occurrences: unbounded  
-- in [Reference_Frame_Identification](#reference_frame_identification):  
-  - Minimum occurrences: 0  
-  - Maximum occurrences: 1  
-- in [Rotate_From](#rotate_from):  
-  - Minimum occurrences: 0  
-  - Maximum occurrences: 1  
-- in [Rotate_To](#rotate_to):  
-  - Minimum occurrences: 0  
-  - Maximum occurrences: 1  
-- in [Device_Component_State](#device_component_state):  
-  - Minimum occurrences: 0  
-  - Maximum occurrences: 1  
-- in [Motion_Counter](#motion_counter):  
-  - Minimum occurrences: 0  
-  - Maximum occurrences: 1  
-- in [Device_Motor_Counts](#device_motor_counts):  
-  - Minimum occurrences: 0  
-  - Maximum occurrences: 1  
-- in [Articulation_Device_Parameters](#articulation_device_parameters):  
-  - Minimum occurrences: 0  
   - Maximum occurrences: unbounded  
 - in [Central_Body_Identification](#central_body_identification):  
   - Minimum occurrences: 0  
@@ -4258,7 +4238,31 @@ The local_identifier attribute provides a character string which uniquely identi
 - in [Observer_Identification](#observer_identification):  
   - Minimum occurrences: 0  
   - Maximum occurrences: 1  
+- in [Device_Temperature](#device_temperature):  
+  - Minimum occurrences: 0  
+  - Maximum occurrences: 1  
+- in [Motion_Counter](#motion_counter):  
+  - Minimum occurrences: 0  
+  - Maximum occurrences: 1  
+- in [Device_Component_State](#device_component_state):  
+  - Minimum occurrences: 0  
+  - Maximum occurrences: 1  
+- in [Geometry_Lander](#geometry_lander):  
+  - Minimum occurrences: 0  
+  - Maximum occurrences: 1  
+- in [Articulation_Device_Parameters](#articulation_device_parameters):  
+  - Minimum occurrences: 0  
+  - Maximum occurrences: unbounded  
 - in [Device_Angle](#device_angle):  
+  - Minimum occurrences: 0  
+  - Maximum occurrences: 1  
+- in [Reference_Frame_Identification](#reference_frame_identification):  
+  - Minimum occurrences: 0  
+  - Maximum occurrences: 1  
+- in [Rotate_From](#rotate_from):  
+  - Minimum occurrences: 0  
+  - Maximum occurrences: 1  
+- in [Rotate_To](#rotate_to):  
   - Minimum occurrences: 0  
   - Maximum occurrences: 1  
   
@@ -4727,8 +4731,20 @@ The name attribute provides a word or combination of words by which the object i
 - Minimum Length: 1  
 - Maximum Length: 255  
 - Nillable: No  
+- in [Motion_Counter](#motion_counter):  
+  - Minimum occurrences: 0  
+  - Maximum occurrences: 1  
 - in [Device_Pose](#device_pose):  
   - Minimum occurrences: 1  
+  - Maximum occurrences: 1  
+- in [Reference_Frame_Identification](#reference_frame_identification):  
+  - Minimum occurrences: 0  
+  - Maximum occurrences: 1  
+- in [Rotate_From](#rotate_from):  
+  - Minimum occurrences: 0  
+  - Maximum occurrences: 1  
+- in [Rotate_To](#rotate_to):  
+  - Minimum occurrences: 0  
   - Maximum occurrences: 1  
 - in [Central_Body_Identification](#central_body_identification):  
   - Minimum occurrences: 0  
@@ -4740,18 +4756,6 @@ The name attribute provides a word or combination of words by which the object i
   - Minimum occurrences: 0  
   - Maximum occurrences: 1  
 - in [Observer_Identification](#observer_identification):  
-  - Minimum occurrences: 0  
-  - Maximum occurrences: 1  
-- in [Reference_Frame_Identification](#reference_frame_identification):  
-  - Minimum occurrences: 0  
-  - Maximum occurrences: 1  
-- in [Rotate_From](#rotate_from):  
-  - Minimum occurrences: 0  
-  - Maximum occurrences: 1  
-- in [Rotate_To](#rotate_to):  
-  - Minimum occurrences: 0  
-  - Maximum occurrences: 1  
-- in [Motion_Counter](#motion_counter):  
   - Minimum occurrences: 0  
   - Maximum occurrences: 1  
   
@@ -4930,11 +4934,11 @@ Specifies the method by which the coordinate space was measured. This provides a
 - Minimum Length: 1  
 - Maximum Length: 255  
 - Nillable: No  
-- in [Coordinate_Space_Definition](#coordinate_space_definition):  
-  - Minimum occurrences: 0  
-  - Maximum occurrences: 1  
 - in [Coordinate_Space_Quality](#coordinate_space_quality):  
   - Minimum occurrences: 1  
+  - Maximum occurrences: 1  
+- in [Coordinate_Space_Definition](#coordinate_space_definition):  
+  - Minimum occurrences: 0  
   - Maximum occurrences: 1  
   
 ### *radial_velocity*  
@@ -5974,11 +5978,15 @@ The z component of a Cartesian velocity vector.
 - Nillable: No  
 - Minimum occurrences: 1  
 - Maximum occurrences: 1  
-</details>
+</details>  
   
 # Examples  
   
   
 # Edit History  
 *See also: [GEOM change log](https://github.com/pds-data-dictionaries/ldd-geom/blob/main/CHANGELOG.md).*  
-2025-04-03  Edward A. Guinness
+<details>  
+<summary><i>&lt;Click to expand/collapse&gt;</i></summary>  
+  
+2025-04-04  Edward A. Guinness  
+</details>
