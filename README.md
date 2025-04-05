@@ -17,8 +17,8 @@ Steward: Edward A. Guinness, PDS Geosciences Node, geosci@wunder.wustl.edu
     1. [Class Organization](#class-organization)  
     2. [Attributes by Class](#attributes-by-class)  
 3. [Definitions](#definitions)  
-    1. [Classes (in alphabetical order)](classes--in-alphabetical-order)  
-    2. [Attributes (in alphabetical order)](attributes--in-alphabetical-order)  
+    1. [Classes (in alphabetical order)](classes-in-alphabetical-order)  
+    2. [Attributes (in alphabetical order)](attributes-in-alphabetical-order)  
 4. [Examples](#examples)  
 5. [Edit History](#edit-history)  
   
