@@ -768,13 +768,11 @@ The following is a schematic example showing the location of every Imaging Disci
         </img:White_Balance>
       </img:Commanded_Parameters>
     </img:Imaging>
-    <img:List_Index_No_Units_Imaging>
       <img:sequence_number/>
       <img:name/>
       <img:id/>
       <img:value_number/>
       <img:value_string/>
-    </img:List_Index_No_Units_Imaging>
   </Discipline_Area>
   ...
 </Observation_Area>
@@ -939,7 +937,7 @@ Below is a structured list showing the organization of classes, ordered by appea
     - [Tiling](#tiling)  
     - [Video](#video)  
     - [White_Balance](#white_balance)  
-- [List_Index_No_Units_Imaging](#list_index_no_units_imaging)  `*abstract*`  
+- [List_Index_No_Units_Imaging](#list_index_no_units_imaging--abstract)  `*abstract*`  
   
 ## Attributes by Class  
 The attributes immediately under each class (if any) are listed below. Both classes and attributes are ordered by appearance in the PDS4 label; however, each class is listed only once, even if that class can appear in more than one place in a PDS4 label. Each class and attribute name is linked to its complete definition in the [Definitions](#definitions) section.  
@@ -1522,7 +1520,7 @@ The attributes immediately under each class (if any) are listed below. Both clas
 ### [Commanded_Parameters](#commanded_parameters) (attribute list)  
 - [description](#description)  
   
-### [List_Index_No_Units_Imaging](#list_index_no_units_imaging) (attribute list)  `*abstract*`  
+### [List_Index_No_Units_Imaging](#list_index_no_units_imaging--abstract) (attribute list)  `*abstract*`  
 - [sequence_number](#sequence_number)  
 - [name](#name)  
 - [id](#id)  
@@ -2985,13 +2983,13 @@ The first_line attribute indicates the line within a source image that correspon
 - Maximum value: 18446744073709551615  
 - Regex Pattern: [0-9]+  
 - Nillable: No  
-- in [Subframe](#subframe):  
+- in [Detector](#detector):  
   - Minimum occurrences: 0  
   - Maximum occurrences: 1  
 - in [Image_Compression_Segment](#image_compression_segment):  
   - Minimum occurrences: 1  
   - Maximum occurrences: 1  
-- in [Detector](#detector):  
+- in [Subframe](#subframe):  
   - Minimum occurrences: 0  
   - Maximum occurrences: 1  
   
@@ -3543,11 +3541,11 @@ The lines attribute indicates the total number of data instances along the verti
 - Maximum value: 18446744073709551615  
 - Regex Pattern: [0-9]+  
 - Nillable: No  
-- in [Image_Compression_Segment](#image_compression_segment):  
-  - Minimum occurrences: 1  
-  - Maximum occurrences: 1  
 - in [Detector](#detector):  
   - Minimum occurrences: 0  
+  - Maximum occurrences: 1  
+- in [Image_Compression_Segment](#image_compression_segment):  
+  - Minimum occurrences: 1  
   - Maximum occurrences: 1  
 - in [Subframe](#subframe):  
   - Minimum occurrences: 0  
@@ -3683,22 +3681,22 @@ The name attribute provides a word or combination of words by which the object i
 - Minimum Length: 1  
 - Maximum Length: 255  
 - Nillable: No  
-- in [Special_Point](#special_point):  
+- in [Illumination](#illumination):  
+  - Minimum occurrences: 0  
+  - Maximum occurrences: 1  
+- in [Subframe](#subframe):  
+  - Minimum occurrences: 0  
+  - Maximum occurrences: 1  
+- in [LED_Illumination_Source](#led_illumination_source):  
   - Minimum occurrences: 0  
   - Maximum occurrences: 1  
 - in [Correction_Parameter](#correction_parameter):  
   - Minimum occurrences: 1  
   - Maximum occurrences: 3  
-- in [List_Index_No_Units_Imaging](#list_index_no_units_imaging)  `*abstract*`:  
+- in [List_Index_No_Units_Imaging](#list_index_no_units_imaging--abstract)  `*abstract*`:  
   - Minimum occurrences: 1  
   - Maximum occurrences: 3  
-- in [Image_Mask_File](#image_mask_file):  
-  - Minimum occurrences: 0  
-  - Maximum occurrences: 1  
-- in [Illumination](#illumination):  
-  - Minimum occurrences: 0  
-  - Maximum occurrences: 1  
-- in [Subframe](#subframe):  
+- in [Special_Point](#special_point):  
   - Minimum occurrences: 0  
   - Maximum occurrences: 1  
 - in [Brightness_Correction_File](#brightness_correction_file):  
@@ -3719,7 +3717,7 @@ The name attribute provides a word or combination of words by which the object i
 - in [Pointing_Correction_File](#pointing_correction_file):  
   - Minimum occurrences: 0  
   - Maximum occurrences: 1  
-- in [LED_Illumination_Source](#led_illumination_source):  
+- in [Image_Mask_File](#image_mask_file):  
   - Minimum occurrences: 0  
   - Maximum occurrences: 1  
 - in [Pointing_Model_Parameter](#pointing_model_parameter):  
@@ -4339,14 +4337,14 @@ The sample_fov attribute specifies the angular measure of the field of view of a
 - Maximum value: 18446744073709551615  
 - Regex Pattern: [0-9]+  
 - Nillable: No  
+- in [Image_Compression_Segment](#image_compression_segment):  
+  - Minimum occurrences: 1  
+  - Maximum occurrences: 1  
 - in [Detector](#detector):  
   - Minimum occurrences: 0  
   - Maximum occurrences: 1  
 - in [Subframe](#subframe):  
   - Minimum occurrences: 0  
-  - Maximum occurrences: 1  
-- in [Image_Compression_Segment](#image_compression_segment):  
-  - Minimum occurrences: 1  
   - Maximum occurrences: 1  
   
 ### *sampling_factor*  
@@ -4439,7 +4437,25 @@ The sequence_number attribute supplies the sequence identifier for the associate
 - in [Correction_Parameter](#correction_parameter):  
   - Minimum occurrences: 1  
   - Maximum occurrences: 3  
-- in [List_Index_No_Units_Imaging](#list_index_no_units_imaging)  `*abstract*`:  
+- in [List_Index_No_Units_Imaging](#list_index_no_units_imaging--abstract)  `*abstract*`:  
+  - Minimum occurrences: 1  
+  - Maximum occurrences: 3  
+- in [Device_Component_State](#device_component_state):  
+  - Minimum occurrences: 1  
+  - Maximum occurrences: 3  
+- in [Device_Current](#device_current):  
+  - Minimum occurrences: 1  
+  - Maximum occurrences: 3  
+- in [Device_Motor_Count](#device_motor_count):  
+  - Minimum occurrences: 1  
+  - Maximum occurrences: 3  
+- in [Device_Parameters](#device_parameters):  
+  - Minimum occurrences: 1  
+  - Maximum occurrences: 3  
+- in [Device_Temperature](#device_temperature):  
+  - Minimum occurrences: 1  
+  - Maximum occurrences: 3  
+- in [Device_Voltage](#device_voltage):  
   - Minimum occurrences: 1  
   - Maximum occurrences: 3  
 - in [Autoexposure](#autoexposure):  
@@ -4493,24 +4509,6 @@ The sequence_number attribute supplies the sequence identifier for the associate
 - in [White_Balance](#white_balance):  
   - Minimum occurrences: 0  
   - Maximum occurrences: 1  
-- in [Device_Component_State](#device_component_state):  
-  - Minimum occurrences: 1  
-  - Maximum occurrences: 3  
-- in [Device_Current](#device_current):  
-  - Minimum occurrences: 1  
-  - Maximum occurrences: 3  
-- in [Device_Motor_Count](#device_motor_count):  
-  - Minimum occurrences: 1  
-  - Maximum occurrences: 3  
-- in [Device_Parameters](#device_parameters):  
-  - Minimum occurrences: 1  
-  - Maximum occurrences: 3  
-- in [Device_Temperature](#device_temperature):  
-  - Minimum occurrences: 1  
-  - Maximum occurrences: 3  
-- in [Device_Voltage](#device_voltage):  
-  - Minimum occurrences: 1  
-  - Maximum occurrences: 3  
   
 ### *sequence_terminated_flag*  
 A boolean value that denotes that there exists pixels within the image that have reached or exceeded the maximum pixel value.  
