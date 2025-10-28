@@ -1944,7 +1944,8 @@ The attributes immediately under each class (if any) are listed below. Both clas
 - [device_phase](#device_phase)  
 - [selected_instrument_id](#selected_instrument_id)
 <h3 id="foobar" Maybe this will work?>This is a test</h3>
-### Yet another option {#barfoo}
+
+### Yet another option {#barfoo}  
   
 ### [Device_Angle](#device_angle) (attribute list)  
 - [local_identifier](#local_identifier)  
