@@ -1942,7 +1942,9 @@ The attributes immediately under each class (if any) are listed below. Both clas
 - [device_name](#device_name)  
 - [device_mode](#device_mode)  
 - [device_phase](#device_phase)  
-- [selected_instrument_id](#selected_instrument_id)  
+- [selected_instrument_id](#selected_instrument_id)
+<h3 id="foobar" Maybe this will work?>This is a test</h3>
+### Yet another option {#barfoo}
   
 ### [Device_Angle](#device_angle) (attribute list)  
 - [local_identifier](#local_identifier)  
@@ -2272,7 +2274,9 @@ The attributes immediately under each class (if any) are listed below. Both clas
 ### Articulation_Device_Parameters  
 The Articulation_Device_Parameters class contains those attributes and sub-classes that describe an articulation device. An articulation device is anything that can move independently of the spacecraft to which it is attached. Examples include mast heads, wheel bogies, arms, filter wheel, scan platforms.  
 - [go to attribute list](#articulation_device_parameters-attribute-list)  
-- [or maybe this one?](#articulation-device-parameters-attribute-list)  
+- [or maybe this one?](#articulation-device-parameters-attribute-list)
+- [or possibly this one?](#foobar)
+- [HOPEFULLY this one?](#barfoo)  
 - Minimum occurrences: 0  
 - Maximum occurrences: unbounded  
   
