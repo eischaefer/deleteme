@@ -1936,7 +1936,7 @@ The attributes immediately under each class (if any) are listed below. Both clas
 - [description](#description)  
 - [local_identifier](#local_identifier)  
   
-### [Articulation_Device_Parameters](#articulation_device_parameters) (attribute list)  
+### [Articulation_Device_Parameters](#articulation_device_parameters) (attribute list) {foobar}  
 - [local_identifier](#local_identifier)  
 - [device_id](#device_id)  
 - [device_name](#device_name)  
@@ -2272,6 +2272,7 @@ The attributes immediately under each class (if any) are listed below. Both clas
 ### Articulation_Device_Parameters  
 The Articulation_Device_Parameters class contains those attributes and sub-classes that describe an articulation device. An articulation device is anything that can move independently of the spacecraft to which it is attached. Examples include mast heads, wheel bogies, arms, filter wheel, scan platforms.  
 - [go to attribute list](#articulation_device_parameters-attribute-list)  
+- [or maybe this one?](#foobar)  
 - Minimum occurrences: 0  
 - Maximum occurrences: unbounded  
   
